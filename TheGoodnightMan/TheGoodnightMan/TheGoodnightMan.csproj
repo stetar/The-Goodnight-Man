@@ -121,9 +121,6 @@
     <Content Include="doodlebackgroundtest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="enemyBlack1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Levels\level0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
