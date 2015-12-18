@@ -1,19 +1,19 @@
-﻿using System;
+﻿using GameLoopOne.Props;
+using GameLoopOne.Weapons;
+using IrrKlang;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameLoopOne.Props;
-using GameLoopOne.Weapons;
 
 namespace GameLoopOne
 {
-
-    class GameWorld
+    internal class GameWorld
     {
         private Graphics dc;
         public static List<GameObject> objects;
@@ -21,13 +21,14 @@ namespace GameLoopOne
         private DateTime endTime;
         private float currentFps;
         private BufferedGraphics backBuffer;
-        static Image level0Image = Image.FromFile("Levels/level0.png");
-        static Image level1Image = Image.FromFile("Levels/level0.png");
-        static Rectangle displayRectangle;
+        private static Image level0Image = Image.FromFile("Levels/level0.png");
+        private static Image level1Image = Image.FromFile("Levels/level0.png");
+        private static Rectangle displayRectangle;
         public static int iLevel = 0;
         public static int iIncorrectness = 0;
         public static List<Weapon> GameWeapons = new List<Weapon>();
 
+        public static ISoundEngine eng = new ISoundEngine();
 
         public static Rectangle WindowRectangle
         {
@@ -57,6 +58,7 @@ namespace GameLoopOne
             get { return objects; }
             set { objects = value; }
         }
+
         public void SetupWorld()
         {
             endTime = DateTime.Now;
@@ -69,7 +71,7 @@ namespace GameLoopOne
             objects.Add(new Sky(new Vector2D(850, 50), 1));
             objects.Add(new Sky(new Vector2D(440, 75), 1));
             string text = File.ReadAllText("test.txt");
-           
+
             //string[] lines = System.IO.File.ReadAllLines("test.txt");
             ////if (lines[0] != null)
             ////{
@@ -87,8 +89,6 @@ namespace GameLoopOne
             //{
             //    savedLines[lines.Count()];
             //}
-              
-
 
             //foreach (string line in lines)
             //{
@@ -100,14 +100,11 @@ namespace GameLoopOne
             //    lines[2] = "line 43";
             //    File.WriteAllLines("test.txt", lines);
             //}
-           
+
             //text = text.Replace("weapon", "new value");
             //string penis = Player.currentPlayerWeapon.ToString();
             //File.WriteAllText("test.txt", penis);
-            
-
         }
-
 
         private void UpdateAnimations(float fps)
         {
@@ -119,8 +116,8 @@ namespace GameLoopOne
             {
                 wep.UpdateAnimation(fps);
             }
-
         }
+
         public void GameLoop()
         {
             DateTime startTime = DateTime.Now;
@@ -134,7 +131,6 @@ namespace GameLoopOne
 
         private void Update(float fps)
         {
-            
             foreach (GameObject go in objects.ToList()) //To list as you can't modify it in runtime elsewise.
             {
                 go.Update(fps);
@@ -159,11 +155,9 @@ namespace GameLoopOne
                     objects.Remove(go);
                 }
             }
-           
+
             // Clear toremove
             removeList.Clear();
-
-
         }
 
         private void ResolveRigidbodyCollisions()
@@ -186,7 +180,6 @@ namespace GameLoopOne
                             }
                         }
                     }
-
                 }
             }
         }
@@ -241,7 +234,6 @@ namespace GameLoopOne
             }
         }
 
-
         private void Draw()
         {
             // Top background image
@@ -251,19 +243,19 @@ namespace GameLoopOne
                 default:
                     dc.DrawImage(level0Image, 0, 0, level0Image.Width, level0Image.Height);
                     break;
+
                 case 1:
                     dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
                     break;
+
                 case 2:
                     dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
                     break;
-
             }
 
             foreach (GameObject go in objects.ToList())
             {
                 go.Draw(dc);
-
             }
             foreach (Weapon wep in GameWorld.GameWeapons.ToList())
             {
@@ -284,7 +276,6 @@ namespace GameLoopOne
             backBuffer.Render();
         }
 
-
         public static void SetupDifferentWorlds()
         {
             foreach (GameObject go in objects.ToList())
@@ -292,8 +283,6 @@ namespace GameLoopOne
                 if (!(go is Player || go is Sky))//dont remove the player or the sky
                 {
                     removeList.Add(go);
-
-                    
                 }
             }
 
@@ -303,14 +292,13 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(400, 590), .5f));
                     objects.Add(new Crate(new Vector2D(540, 590), .5f));
                     objects.Add(new Crate(new Vector2D(470, 508), .5f));
-                    
-
 
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new Wrench(new Vector2D(770, 590), .3f))));
 
                     break;
+
                 case 1:
 
                     objects.Add(new Crate(new Vector2D(540, 590), .5f));
@@ -319,6 +307,7 @@ namespace GameLoopOne
                     objects.Add(new Bridge(new Vector2D(770, 500), .75f));
 
                     break;
+
                 case 2:
 
                     objects.Add(new Crate(new Vector2D(570, 590), .5f));
@@ -329,7 +318,6 @@ namespace GameLoopOne
                     objects.Add(new CratePhys(new Vector2D(300, 590), .5f));
                     break;
             }
-
         }
 
         public static void SaveGameState()
@@ -348,20 +336,16 @@ namespace GameLoopOne
             //    }
             //}
             string[] lines = new string[] { GameWorld.iIncorrectness.ToString(), GameWorld.iLevel.ToString(), Player.currentPlayerWeapon.ToString() };
-           // WriteAllLines creates a file, writes a collection of strings to the file, 
+            // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.
             System.IO.File.WriteAllLines("test.txt", lineList);
         }
+
         public static void LoadGameState()
         {
             string[] lines = File.ReadAllLines("test.txt");
             GameWorld.iIncorrectness = Convert.ToInt32(lines[0]);
             GameWorld.iLevel = Convert.ToInt32(lines[1]);
-
-
         }
-
     }
-
 }
-
