@@ -75,8 +75,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Weapons\Weapon.cs" />
     <Compile Include="Weapons\Pistol.cs" />
-    <Compile Include="Weapons\Knife.cs" />
-    <Compile Include="Weapons\Wrench.cs" />
+    <Compile Include="Weapons\Melee\Knife.cs" />
+    <Compile Include="Weapons\Melee\Wrench.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
