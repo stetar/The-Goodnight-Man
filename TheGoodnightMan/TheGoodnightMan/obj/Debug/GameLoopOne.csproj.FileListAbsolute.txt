@@ -1,0 +1,52 @@
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\bin\Debug\GameLoopOne.exe.config
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\bin\Debug\playerShip1_blue.png
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\bin\Debug\GameLoopOne.exe
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\bin\Debug\GameLoopOne.pdb
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.csprojResolveAssemblyReference.cache
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.Form1.resources
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.Properties.Resources.resources
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.csproj.GenerateResource.Cache
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.exe
+c:\users\kenneth\documents\visual studio 2015\Projects\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.pdb
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\GameLoopOne.exe.config
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.exe
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.pdb
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\GameLoopOne.exe
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\GameLoopOne.pdb
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.csprojResolveAssemblyReference.cache
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.Form1.resources
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.Properties.Resources.resources
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.csproj.GenerateResource.Cache
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\enemyBlack1.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Backgrounddoodle.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\BAM.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite1.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite2.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite3.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite4.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite5.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite6.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite7.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Player\Sprites\Playersprite8.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\doodlebackgroundtest.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Props\Crate\Crate.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\bullet.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\obj\Debug\GameLoopOne.Forms.MainMenuForm.resources
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Levels\level0.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Levels\mainmenubackground.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\mainmenubutton.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Props\Bridge\bridge.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\pow.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Props\Sky\Sky.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\WeaponSprite1.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\WeaponSprite2.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\WeaponSprite3.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\WeaponSprite4.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\AxeSprite1.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\AxeSprite2.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\AxeSprite3.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\AxeSprite4.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\KnifeSprite1.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\KnifeSprite2.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\KnifeSprite3.png
+C:\Users\NFMynster\Desktop\GameLoopOne\GameLoopOne\bin\Debug\Weapons\Sprites\KnifeSprite4.png
