@@ -1,0 +1,3 @@
+C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\GameLoopOne.exe.config
+C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.exe
+C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.pdb
