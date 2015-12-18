@@ -14,7 +14,6 @@ namespace GameLoopOne
         [STAThread]
         static void Main()
         {
-            //Penis
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Forms.MainMenuForm());
