@@ -1,2 +1,0 @@
-# The-Goodnight-Man
-Førstesemesterprojekt
