@@ -56,7 +56,8 @@ namespace GameLoopOne
                 "You soulless ginger\n piece of crap!",
                 "Fucking muggle!",
                 "You homeless\n greenlander!",
-                "You alchoholic\n muslim!"
+                "You alchoholic\n muslim!",
+                "Fucking wanke'!"
             };
             Random myRandom = new Random();
 
