@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2FBAE4A1-5906-4675-ACD7-4B1C31E1E155}</ProjectGuid>
+    <ProjectGuid>{99C46E68-848B-4F72-AB44-FB16FA7CC217}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GameLoopOne</RootNamespace>
