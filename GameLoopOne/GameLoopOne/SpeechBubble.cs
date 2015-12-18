@@ -57,7 +57,7 @@ namespace GameLoopOne
                 "Fucking muggle!",
                 "You homeless\n greenlander!",
                 "You alchoholic\n muslim!",
-                "Fucking wanke'!",
+                "Fucking wanker!",
                 "You faggot!",
                 "You stinkin' cripple!"
             };
