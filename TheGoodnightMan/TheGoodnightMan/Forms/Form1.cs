@@ -35,14 +35,15 @@ namespace GameLoopOne
             gw.GameLoop();
             if (Keyboard.IsKeyDown(Keys.Escape) && !hasPressedEsc)
             {
+                GameWorld.SaveGameState();
                 hasPressedEsc = true;
                 timer1.Stop();
                 DialogResult dialogResult = MessageBox.Show("What?! Are you pussying out?? Are you fukcing leaving?! Don't you dare be gone for long, you hear me?", "Pause menu (sucker!)", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     hasPressedEsc = false;
-                    GameWorld.removeList.AddRange(GameWorld.objects);
-                    GameWorld.removeList.AddRange(GameWorld.GameWeapons);
+                    GameWorld.objects.Clear();
+                    GameWorld.GameWeapons.Clear();
                     GameWorld.removeList.Clear();
                     ActiveForm.Dispose();
                     new MainMenuForm().Show();
