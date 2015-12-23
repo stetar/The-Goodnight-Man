@@ -42,7 +42,8 @@ namespace GameLoopOne
                 dc = CreateGraphics();
 
             gw = new GameWorld(CreateGraphics(), this.DisplayRectangle);
-
+            this.Controls.Add(SpeechBubble.insultText);
+            SpeechBubble.insultText.Hide();
 
 
 

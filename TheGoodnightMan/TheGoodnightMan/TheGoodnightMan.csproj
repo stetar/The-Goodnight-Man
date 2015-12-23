@@ -63,6 +63,9 @@
     <Compile Include="Props\Crate\Crate.cs" />
     <Compile Include="Props\Sky\Sky.cs" />
     <Compile Include="RigidBodyBox.cs" />
+    <Compile Include="SpeechBubble.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Vector2d.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Forms\Form1.cs">
@@ -175,6 +178,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Props\Sky\Sky.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Speech_bubble.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Weapons\Sprites\AxeSprite1.png">
