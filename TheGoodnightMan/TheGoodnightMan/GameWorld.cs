@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameLoopOne.Weapons.Melee;
 
 namespace GameLoopOne
 {
@@ -327,14 +328,6 @@ namespace GameLoopOne
             lineList.Add(GameWorld.iIncorrectness.ToString());
             lineList.Add(GameWorld.iLevel.ToString());
             lineList.Add(Player.currentPlayerWeapon.ToString());
-            //if (Weapon.gameWeapons != null)
-            //{
-            //    Weapon.gameWeapons.Clear();
-            //    foreach (Weapon go in Weapon.gameWeapons)
-            //    {
-            //        lineList.Add(go.ToString());//not working with other weapos
-            //    }
-            //}
             string[] lines = new string[] { GameWorld.iIncorrectness.ToString(), GameWorld.iLevel.ToString(), Player.currentPlayerWeapon.ToString() };
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.

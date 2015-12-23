@@ -15,7 +15,7 @@ namespace GameLoopOne.Weapons
         public float AttackSpeed = 0;
         private GameObject targetPlayer;
         private bool didAttack = false;
-        public int meleeRange = 1;
+        public float meleeRange = 1;
         public float moveWeaponUp = 0;
         public float moveWeaponRight = 0;
         private Graphics attackRange;
@@ -35,7 +35,7 @@ namespace GameLoopOne.Weapons
             Axe,
             Beaver,
             ISISFlag,
-            //rifles - enemy only
+            //Ranged weapons - enemy only
             AssualtRifle,
             RPG,
             SMG,

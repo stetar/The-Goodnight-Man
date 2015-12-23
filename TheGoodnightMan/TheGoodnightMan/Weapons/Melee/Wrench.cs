@@ -6,22 +6,21 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameLoopOne.Weapons
+namespace GameLoopOne.Weapons.Melee
 {
-    internal class Knife : Weapon
+    internal class Wrench : Weapon
     {
         //public override float AttackSpeed { get; set; }
-        private static string imagePath ="weapons/sprites/KnifeSprite1.png;weapons/sprites/KnifeSprite2.png;weapons/sprites/KnifeSprite3.png;weapons/sprites/KnifeSprite4.png";
+        private static string imagePath ="weapons/sprites/AxeSprite1.png;weapons/sprites/AxeSprite2.png;weapons/sprites/AxeSprite3.png;weapons/sprites/AxeSprite4.png";
 
-        public Knife(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        public Wrench(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
         {
-            damage = 1;
+            damage = 2;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
             meleeRange = 1;
-            moveWeaponUp = 2;
+            moveWeaponUp = -20;
             moveWeaponRight = 20;
-            
         }
     }
 }
