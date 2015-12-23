@@ -33,7 +33,26 @@ namespace GameLoopOne
     private void timer1_Tick(object sender, EventArgs e)
         {
             gw.GameLoop();
-        
+            if (Keyboard.IsKeyDown(Keys.Escape) && !hasPressedEsc)
+            {
+                hasPressedEsc = true;
+                timer1.Stop();
+                DialogResult dialogResult = MessageBox.Show("What?! Are you pussying out?? Are you fukcing leaving?! Don't you dare be gone for long, you hear me?", "Pause menu (sucker!)", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    hasPressedEsc = false;
+                    GameWorld.removeList.AddRange(GameWorld.objects);
+                    GameWorld.removeList.AddRange(GameWorld.GameWeapons);
+                    GameWorld.removeList.Clear();
+                    ActiveForm.Dispose();
+                    new MainMenuForm().Show();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    hasPressedEsc = false;
+                    timer1.Start();
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

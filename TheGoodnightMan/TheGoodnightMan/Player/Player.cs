@@ -42,7 +42,6 @@ namespace GameLoopOne
             
             currentPlayerWeapon = new Knife(new Vector2D(0,0), .3f);
             GameWorld.GameWeapons.Add(currentPlayerWeapon); //add it to objects as it should get drawn
-            //Weapon.GameWeapons.Add(currentPlayerWeapon);
         }
 
         public override void Update(float fps)

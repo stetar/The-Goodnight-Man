@@ -38,9 +38,10 @@
             // PlayButton
             // 
             this.PlayButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PlayButton.Location = new System.Drawing.Point(368, 136);
+            this.PlayButton.Location = new System.Drawing.Point(201, 74);
+            this.PlayButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayButton.Name = "PlayButton";
-            this.PlayButton.Size = new System.Drawing.Size(243, 64);
+            this.PlayButton.Size = new System.Drawing.Size(133, 35);
             this.PlayButton.TabIndex = 0;
             this.PlayButton.Text = "Play";
             this.PlayButton.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // HowToPlayButton
             // 
             this.HowToPlayButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.HowToPlayButton.Location = new System.Drawing.Point(368, 286);
+            this.HowToPlayButton.Location = new System.Drawing.Point(201, 155);
+            this.HowToPlayButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HowToPlayButton.Name = "HowToPlayButton";
-            this.HowToPlayButton.Size = new System.Drawing.Size(243, 64);
+            this.HowToPlayButton.Size = new System.Drawing.Size(133, 35);
             this.HowToPlayButton.TabIndex = 1;
             this.HowToPlayButton.Text = "How to play";
             this.HowToPlayButton.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // Quit
             // 
             this.Quit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Quit.Location = new System.Drawing.Point(368, 586);
+            this.Quit.Location = new System.Drawing.Point(201, 317);
+            this.Quit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Quit.Name = "Quit";
-            this.Quit.Size = new System.Drawing.Size(243, 64);
+            this.Quit.Size = new System.Drawing.Size(133, 35);
             this.Quit.TabIndex = 2;
             this.Quit.Text = "Quit";
             this.Quit.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // GetInsulted
             // 
             this.GetInsulted.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GetInsulted.Location = new System.Drawing.Point(368, 436);
+            this.GetInsulted.Location = new System.Drawing.Point(201, 236);
+            this.GetInsulted.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GetInsulted.Name = "GetInsulted";
-            this.GetInsulted.Size = new System.Drawing.Size(243, 64);
+            this.GetInsulted.Size = new System.Drawing.Size(133, 35);
             this.GetInsulted.TabIndex = 3;
             this.GetInsulted.Text = "Get insulted";
             this.GetInsulted.UseVisualStyleBackColor = true;
@@ -83,24 +87,27 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(447, 503);
+            this.label1.Location = new System.Drawing.Point(244, 272);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 704);
+            this.ClientSize = new System.Drawing.Size(545, 381);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.GetInsulted);
             this.Controls.Add(this.Quit);
             this.Controls.Add(this.HowToPlayButton);
             this.Controls.Add(this.PlayButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainMenuForm";
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
