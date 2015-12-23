@@ -140,6 +140,9 @@ namespace GameLoopOne.Weapons
             //base.Update(fps);
         }
 
-        
+        public static implicit operator Weapon(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameLoopOne.Props;
+using System.IO;
 using GameLoopOne.Weapons;
 
 
@@ -39,7 +41,7 @@ namespace GameLoopOne
             velocity = new Vector2D(0, 0);
             health = 100;
             isAlive = true;
-            
+
             currentPlayerWeapon = new Knife(new Vector2D(0,0), .3f);
             GameWorld.GameWeapons.Add(currentPlayerWeapon); //add it to objects as it should get drawn
         }
