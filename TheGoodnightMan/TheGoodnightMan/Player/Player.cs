@@ -172,6 +172,11 @@ namespace GameLoopOne
                 GameWorld.SetupDifferentWorlds();
             }
 
+            if (Keyboard.IsKeyDown(Keys.I) && !SpeechBubble.insultActive)
+            {
+                SpeechBubble.insultActive = true;
+                GameWorld.objects.Add(new SpeechBubble("Speech_bubble.png", new Vector2D(0, 0), .9f, this));
+            }
             base.Update(fps);
         }
 
