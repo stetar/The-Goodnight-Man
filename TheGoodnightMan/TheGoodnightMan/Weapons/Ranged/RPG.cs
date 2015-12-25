@@ -12,7 +12,9 @@ namespace GameLoopOne.Weapons.Ranged
         private static string imagePath =
             "weapons/sprites/weaponSprite1.png;weapons/sprites/weaponSprite2.png;weapons/sprites/weaponSprite3.png;weapons/sprites/weaponSprite4.png";
 
-        public RPG(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        private static int weaponIndex = 12;
+
+        public RPG(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
             damage = 10;
             this.AttackSpeed = 2;

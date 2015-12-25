@@ -18,35 +18,15 @@ namespace GameLoopOne.Weapons
         public float meleeRange = 1;
         public float moveWeaponUp = 0;
         public float moveWeaponRight = 0;
+        public int weaponIndex;
         private Graphics attackRange;
 
-
-
-        public enum Weapons
-        {
-            Wrench,
-            CricketPlayer,
-            Crowbar,
-            Knife,
-            Guitar,
-            Katana,
-            BaseballBat,
-            DildoSword,
-            Axe,
-            Beaver,
-            ISISFlag,
-            //Ranged weapons - enemy only
-            AssualtRifle,
-            RPG,
-            SMG,
-            LMG,
-            Shotgun,
-            Pistol
-        }
-        public Weapon(string imagePath, Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        public Weapon(string imagePath, Vector2D startPos, float scaleFactor, int weaponIndex) : base(imagePath, startPos, scaleFactor)
         {
             didAttack = false;
+            this.weaponIndex = weaponIndex;
         }
+
         public RectangleF attackRangeBox
         {
             get
@@ -54,6 +34,7 @@ namespace GameLoopOne.Weapons
                 return new RectangleF(position.X, position.Y, 50 * meleeRange, 50);
             }
         }
+
         public override void Draw(Graphics dc)
         {
             base.Draw(dc);

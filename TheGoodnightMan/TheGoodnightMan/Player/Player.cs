@@ -25,7 +25,7 @@ namespace GameLoopOne
         private float weaponTimer = 0;
         private float weaponPickupTimer = 0;
 
-        private int weaponIndexNumber;
+        public static int weaponIndexNumber = 3;
 
         //Player health
         public int health;
@@ -243,7 +243,9 @@ namespace GameLoopOne
             //GameWorld.removeList.Add(oldWeapon);
             GameWorld.GameWeapons.Add(newWeapon);
             GameWorld.GameWeapons.Remove(oldWeapon);
+            weaponIndexNumber = newWeapon.weaponIndex;
             currentPlayerWeapon = newWeapon;
+            
         }
         public override void UpdateAnimation(float fps)
         {

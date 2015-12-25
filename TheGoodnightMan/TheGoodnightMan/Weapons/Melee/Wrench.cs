@@ -12,8 +12,9 @@ namespace GameLoopOne.Weapons.Melee
     {
         //public override float AttackSpeed { get; set; }
         private static string imagePath ="weapons/sprites/AxeSprite1.png;weapons/sprites/AxeSprite2.png;weapons/sprites/AxeSprite3.png;weapons/sprites/AxeSprite4.png";
+        private static int weaponIndex = 0;
 
-        public Wrench(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        public Wrench(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
             damage = 2;
             this.AttackSpeed = 0.5f;

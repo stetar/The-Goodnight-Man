@@ -9,8 +9,9 @@ namespace GameLoopOne.Weapons.Melee
     class Axe : Weapon
     {
         private static string imagePath = "";
+        private static int weaponIndex = 8;
 
-        public Axe(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        public Axe(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
             damage = 4;
             this.AttackSpeed = 0.6f;

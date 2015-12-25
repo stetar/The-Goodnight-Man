@@ -327,7 +327,7 @@ namespace GameLoopOne
             lineList.Clear();
             lineList.Add(GameWorld.iIncorrectness.ToString());
             lineList.Add(GameWorld.iLevel.ToString());
-            lineList.Add(Player.currentPlayerWeapon.ToString());
+            lineList.Add(Player.weaponIndexNumber.ToString());
             string[] lines = new string[] { GameWorld.iIncorrectness.ToString(), GameWorld.iLevel.ToString(), Player.currentPlayerWeapon.ToString() };
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.
@@ -339,6 +339,7 @@ namespace GameLoopOne
             string[] lines = File.ReadAllLines("test.txt");
             GameWorld.iIncorrectness = Convert.ToInt32(lines[0]);
             GameWorld.iLevel = Convert.ToInt32(lines[1]);
+            Player.weaponIndexNumber = Convert.ToInt32(lines[2]);
         }
     }
 }
