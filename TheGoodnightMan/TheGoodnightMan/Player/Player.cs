@@ -25,7 +25,7 @@ namespace GameLoopOne
         private float weaponTimer = 0;
         private float weaponPickupTimer = 0;
 
-        public static int weaponIndexNumber = 3;
+        public static int weaponIndexNumber;
 
         //Player health
         public int health;
