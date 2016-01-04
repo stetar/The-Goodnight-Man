@@ -49,31 +49,43 @@ namespace GameLoopOne.Forms
             Random myRandom = new Random();
 
             //The insults
-            string randomInsult = "Fuck you";
-            string randomInsult1 = "Screw you";
-            string randomInsult2 = "Cunt";
-            string randomInsult3 = "Fuck1";
-            string randomInsult4 = "fuck2";
-            string randomInsult5 = "fuck3";
-            string randomInsult6 = "fuck4";
-            string randomInsult7 = "fuck5";
-            string randomInsult8 = "fuck6";
-            string randomInsult9 = "fuck7";
-            string randomInsult10 = "fuck8";
+            string[] insults =
+            {
+                "Fuck you!",
+                "Screw you!",
+                "Cunt!",
+                "You cunt!",
+                "Bitch!",
+                "You fuck!",
+                "You piece of shit!",
+                "Motherfucker!",
+                "Terrorist!",
+                "Midget!",
+                "You ugly!",
+                "You are a bitch!",
+                "Eat a dick!",
+                "You suck!",
+                "Jewish scum!",
+                "Damn son, you bad!",
+                "You fat fuck!",
+                "You play like a girl!",
+                "Nazi bitch!",
+                "Transvestite fuck!",
+                "ISIS loving shit!",
+                "Fucking hippie!",
+                "You retard!",
+                "You soulless ginger\n piece of crap!",
+                "Fucking muggle!",
+                "You homeless\n greenlander!",
+                "You alchoholic\n muslim!",
+                "Fucking wanker!",
+                "You faggot!",
+                "You stinkin' cripple!"
+            };
 
             //List needed to get random insult
-            List<string> randomInsultList = new List<string>();
-            randomInsultList.Add(randomInsult);
-            randomInsultList.Add(randomInsult1);
-            randomInsultList.Add(randomInsult2);
-            randomInsultList.Add(randomInsult3);
-            randomInsultList.Add(randomInsult4);
-            randomInsultList.Add(randomInsult5);
-            randomInsultList.Add(randomInsult6);
-            randomInsultList.Add(randomInsult7);
-            randomInsultList.Add(randomInsult8);
-            randomInsultList.Add(randomInsult9);
-            randomInsultList.Add(randomInsult10);
+            List<string> randomInsultList = new List<string>(27);
+            randomInsultList.AddRange(insults);
 
             //Geting the final insult
             int randomInsultSelected = myRandom.Next(randomInsultList.Count);
@@ -94,6 +106,10 @@ namespace GameLoopOne.Forms
             Application.Exit();
         }
 
-        
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameLoopOne.Props;
+using System.IO;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.Melee;
+using GameLoopOne.Weapons.Ranged;
 
 
 namespace GameLoopOne
@@ -20,6 +24,8 @@ namespace GameLoopOne
 
         private float weaponTimer = 0;
         private float weaponPickupTimer = 0;
+
+        public static int weaponIndexNumber;
 
         //Player health
         public int health;
@@ -39,10 +45,62 @@ namespace GameLoopOne
             velocity = new Vector2D(0, 0);
             health = 100;
             isAlive = true;
-            
-            currentPlayerWeapon = new Knife(new Vector2D(0,0), .3f);
+
+            switch (weaponIndexNumber)
+            {
+                case 0:
+                    currentPlayerWeapon = new Wrench(new Vector2D(0,0), .3f);
+                    break;
+                case 1:
+                    currentPlayerWeapon = new CricketPlayer(new Vector2D(0,0), .3f);
+                    break;
+                case 2:
+                    currentPlayerWeapon = new Crowbar(new Vector2D(0,0), .3f);
+                    break;
+                case 3:
+                    currentPlayerWeapon = new Knife(new Vector2D(0, 0), .3f);
+                    break;
+                case 4:
+                    currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .3f);
+                    break;
+                case 5:
+                    currentPlayerWeapon = new Katana(new Vector2D(0, 0), .3f);
+                    break;
+                case 6:
+                    currentPlayerWeapon = new BaseballBat(new Vector2D(0, 0), .3f);
+                    break;
+                case 7:
+                    currentPlayerWeapon = new DildoSword(new Vector2D(0, 0), .3f);
+                    break;
+                case 8:
+                    currentPlayerWeapon = new Axe(new Vector2D(0, 0), .3f);
+                    break;
+                case 9:
+                    currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .3f);
+                    break;
+                case 10:
+                    currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .3f);
+                    break;
+                case 11:
+                    currentPlayerWeapon = new AssultRifle(new Vector2D(0,0), .3f);
+                    break;
+                case 12:
+                    currentPlayerWeapon = new RPG(new Vector2D(0, 0), .3f);
+                    break;
+                case 13:
+                    currentPlayerWeapon = new SMG(new Vector2D(0, 0), .3f);
+                    break;
+                case 14:
+                    currentPlayerWeapon = new LMG(new Vector2D(0, 0), .3f);
+                    break;
+                case 15:
+                    currentPlayerWeapon = new Shotgun(new Vector2D(0, 0), .3f);
+                    break;
+                case 16:
+                    currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .3f);
+                    break;
+            }
             GameWorld.GameWeapons.Add(currentPlayerWeapon); //add it to objects as it should get drawn
-            //Weapon.GameWeapons.Add(currentPlayerWeapon);
         }
 
         public override void Update(float fps)
@@ -172,6 +230,11 @@ namespace GameLoopOne
                 GameWorld.SetupDifferentWorlds();
             }
 
+            if (Keyboard.IsKeyDown(Keys.I) && !SpeechBubble.insultActive)
+            {
+                SpeechBubble.insultActive = true;
+                GameWorld.objects.Add(new SpeechBubble("Speech_bubble.png", new Vector2D(0, 0), .9f, this));
+            }
             base.Update(fps);
         }
 
@@ -180,7 +243,9 @@ namespace GameLoopOne
             //GameWorld.removeList.Add(oldWeapon);
             GameWorld.GameWeapons.Add(newWeapon);
             GameWorld.GameWeapons.Remove(oldWeapon);
+            weaponIndexNumber = newWeapon.weaponIndex;
             currentPlayerWeapon = newWeapon;
+            
         }
         public override void UpdateAnimation(float fps)
         {

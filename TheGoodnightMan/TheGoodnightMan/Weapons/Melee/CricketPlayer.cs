@@ -9,8 +9,9 @@ namespace GameLoopOne.Weapons.Melee
     class CricketPlayer : Weapon
     {
         private static string imagePath = "";
+        private static int weaponIndex = 1;
 
-        public CricketPlayer(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        public CricketPlayer(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
             damage = 3;
             this.AttackSpeed = 1;

@@ -63,6 +63,9 @@
     <Compile Include="Props\Crate\Crate.cs" />
     <Compile Include="Props\Sky\Sky.cs" />
     <Compile Include="RigidBodyBox.cs" />
+    <Compile Include="SpeechBubble.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Vector2d.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Forms\Form1.cs">
@@ -77,10 +80,24 @@
     <Compile Include="Player\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Weapons\Melee\Axe.cs" />
+    <Compile Include="Weapons\Melee\BaseballBat.cs" />
+    <Compile Include="Weapons\Melee\Beaver.cs" />
+    <Compile Include="Weapons\Melee\CricketPlayer.cs" />
+    <Compile Include="Weapons\Melee\Crowbar.cs" />
+    <Compile Include="Weapons\Melee\DildoSword.cs" />
+    <Compile Include="Weapons\Melee\Guitar.cs" />
+    <Compile Include="Weapons\Melee\ISISFlag.cs" />
+    <Compile Include="Weapons\Melee\Katana.cs" />
+    <Compile Include="Weapons\Ranged\AssultRifle.cs" />
+    <Compile Include="Weapons\Ranged\LMG.cs" />
+    <Compile Include="Weapons\Ranged\RPG.cs" />
+    <Compile Include="Weapons\Ranged\Shotgun.cs" />
+    <Compile Include="Weapons\Ranged\SMG.cs" />
     <Compile Include="Weapons\Weapon.cs" />
-    <Compile Include="Weapons\Pistol.cs" />
-    <Compile Include="Weapons\Knife.cs" />
-    <Compile Include="Weapons\Wrench.cs" />
+    <Compile Include="Weapons\Ranged\Pistol.cs" />
+    <Compile Include="Weapons\Melee\Knife.cs" />
+    <Compile Include="Weapons\Melee\Wrench.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +192,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Props\Sky\Sky.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Speech_bubble.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Weapons\Sprites\AxeSprite1.png">
