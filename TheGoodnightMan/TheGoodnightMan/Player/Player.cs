@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameLoopOne.Props;
 using System.IO;
+using System.Xml.Schema;
 using GameLoopOne.Weapons;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
@@ -28,7 +29,7 @@ namespace GameLoopOne
         public static int weaponIndexNumber;
 
         //Player health
-        public int health;
+        public static int health;
         //Player animations
         private bool movingLeft;
         private bool movingRight;
@@ -135,13 +136,7 @@ namespace GameLoopOne
                 weaponTimer = 0;
             }
             weaponTimer += deltaTime;
-           
 
-            if (Keyboard.IsKeyDown(Keys.B))
-            {
-                GameWorld.SaveGameState();
-
-            }
             if (Keyboard.IsKeyDown(Keys.S) && weaponPickupTimer > 3)
             {
                 //Weapon
@@ -233,7 +228,7 @@ namespace GameLoopOne
             if (Keyboard.IsKeyDown(Keys.I) && !SpeechBubble.insultActive)
             {
                 SpeechBubble.insultActive = true;
-                GameWorld.objects.Add(new SpeechBubble("Speech_bubble.png", new Vector2D(0, 0), .9f, this));
+                GameWorld.objects.Add(new SpeechBubble("Speech_bubble.png", new Vector2D(Position.X + 30, Position.Y - 100), .9f, this));
             }
             base.Update(fps);
         }

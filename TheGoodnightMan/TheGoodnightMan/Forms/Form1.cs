@@ -16,7 +16,7 @@ namespace GameLoopOne
     {
         public static Graphics dc;
         GameWorld gw;
-        private bool hasPressedEsc;
+
         /// <summary>
         /// Initalizes the main game and sets the max and min resolution
         /// </summary>
@@ -27,21 +27,20 @@ namespace GameLoopOne
             this.MaximumSize = new Size(1024, 768);
             this.CenterToScreen();
             WindowState = FormWindowState.Normal;
-            hasPressedEsc = false;
+            MainMenuForm.hasPressedEsc = false;
         }
         
     private void timer1_Tick(object sender, EventArgs e)
         {
             gw.GameLoop();
-            if (Keyboard.IsKeyDown(Keys.Escape) && !hasPressedEsc)
+            if (Keyboard.IsKeyDown(Keys.Escape) && !MainMenuForm.hasPressedEsc)
             {
                 GameWorld.SaveGameState();
-                hasPressedEsc = true;
+                MainMenuForm.hasPressedEsc = true;
                 timer1.Stop();
                 DialogResult dialogResult = MessageBox.Show("What?! Are you pussying out?? Are you fukcing leaving?! Don't you dare be gone for long, you hear me?", "Pause menu (sucker!)", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    hasPressedEsc = false;
                     GameWorld.objects.Clear();
                     GameWorld.GameWeapons.Clear();
                     GameWorld.removeList.Clear();
@@ -50,7 +49,7 @@ namespace GameLoopOne
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-                    hasPressedEsc = false;
+                    MainMenuForm.hasPressedEsc = false;
                     timer1.Start();
                 }
             }
