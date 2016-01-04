@@ -61,6 +61,53 @@ namespace GameLoopOne.Weapons
                         GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
                     }
                 }
+
+                switch (Player.weaponIndexNumber)
+                {
+                    case 0:
+                        GameWorld.eng.Play2D("Wrench.wav");
+                        break;
+
+                    case 1:
+                        GameWorld.eng.Play2D("CricketPlayer.wav");
+                        break;
+
+                    case 2:
+                        GameWorld.eng.Play2D("Wrench.wav");
+                        break;
+
+                    case 3:
+                        GameWorld.eng.Play2D("Knife.wav");
+                        break;
+
+                    case 4:
+                        GameWorld.eng.Play2D("Guitar slag.wav");
+                        break;
+
+                    case 5:
+                        GameWorld.eng.Play2D("Knife.wav");
+                        break;
+
+                    case 6:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+
+                    case 7:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+
+                    case 8:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+
+                    case 9:
+                        GameWorld.eng.Play2D("CricketPlayer.wav");
+                        break;
+
+                    case 10:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+                }
             }
         }
 
