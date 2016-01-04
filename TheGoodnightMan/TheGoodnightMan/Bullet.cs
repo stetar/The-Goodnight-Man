@@ -39,7 +39,7 @@ namespace GameLoopOne
            
             position.X += 1 / fps * (velocity.X * speed);
             position.Y += 1 / fps * (velocity.Y * speed);
-            if (CollisionBox.Right < 0 || CollisionBox.Left < 0) //optimaahzation
+            if (CollisionBox.Right < 0 || CollisionBox.Left < 0 || CollisionBox.Top < 0) //optimaahzation
             {
                 GameWorld.removeList.Add(this);
             }
@@ -58,8 +58,8 @@ namespace GameLoopOne
             {
                 if (pewpew == )
                 {
-                    
-                }
+
+            }
             }
             //not removing bullets here, as they all would be removed when one collided with ANYTHING.
             //GameWorld.removeList.Add(this); 
