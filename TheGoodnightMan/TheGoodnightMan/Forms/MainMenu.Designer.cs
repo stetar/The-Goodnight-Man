@@ -66,7 +66,7 @@
             this.Quit.Margin = new System.Windows.Forms.Padding(2);
             this.Quit.Name = "Quit";
             this.Quit.Size = new System.Drawing.Size(133, 35);
-            this.Quit.TabIndex = 2;
+            this.Quit.TabIndex = 3;
             this.Quit.Text = "Pussy out";
             this.Quit.UseVisualStyleBackColor = true;
             this.Quit.Click += new System.EventHandler(this.Quit_Click);
@@ -78,7 +78,7 @@
             this.GetInsulted.Margin = new System.Windows.Forms.Padding(2);
             this.GetInsulted.Name = "GetInsulted";
             this.GetInsulted.Size = new System.Drawing.Size(133, 35);
-            this.GetInsulted.TabIndex = 3;
+            this.GetInsulted.TabIndex = 2;
             this.GetInsulted.Text = "Get insulted";
             this.GetInsulted.UseVisualStyleBackColor = true;
             this.GetInsulted.Click += new System.EventHandler(this.GetInsulted_Click);

@@ -64,11 +64,11 @@ namespace GameLoopOne
             Random myRandom = new Random();
 
             //List needed to get random insult
-            List<string> randomInsultList = new List<string>(27);
+            List<string> randomInsultList = new List<string>();
             randomInsultList.AddRange(insults);
 
             //Getting the final insult
-            int randomInsultSelected = myRandom.Next(0, randomInsultList.Count + 1);
+            int randomInsultSelected = myRandom.Next(0, randomInsultList.Count);
             insult = randomInsultList[randomInsultSelected];
 
             insultText.Text = insult;
