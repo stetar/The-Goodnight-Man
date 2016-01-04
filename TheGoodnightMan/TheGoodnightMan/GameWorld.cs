@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameLoopOne.Weapons.Melee;
 
 namespace GameLoopOne
 {
@@ -170,7 +171,7 @@ namespace GameLoopOne
                     {
                         if (a != b)
                         {
-                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon)) //Don't calculate solid collisions for these classes
+                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble)) //Don't calculate solid collisions for these classes
                             {
                                 this.ResolveAABBCollision(a, b);
                             }
@@ -326,15 +327,7 @@ namespace GameLoopOne
             lineList.Clear();
             lineList.Add(GameWorld.iIncorrectness.ToString());
             lineList.Add(GameWorld.iLevel.ToString());
-            lineList.Add(Player.currentPlayerWeapon.ToString());
-            //if (Weapon.gameWeapons != null)
-            //{
-            //    Weapon.gameWeapons.Clear();
-            //    foreach (Weapon go in Weapon.gameWeapons)
-            //    {
-            //        lineList.Add(go.ToString());//not working with other weapos
-            //    }
-            //}
+            lineList.Add(Player.weaponIndexNumber.ToString());
             string[] lines = new string[] { GameWorld.iIncorrectness.ToString(), GameWorld.iLevel.ToString(), Player.currentPlayerWeapon.ToString() };
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.
@@ -346,6 +339,7 @@ namespace GameLoopOne
             string[] lines = File.ReadAllLines("test.txt");
             GameWorld.iIncorrectness = Convert.ToInt32(lines[0]);
             GameWorld.iLevel = Convert.ToInt32(lines[1]);
+            Player.weaponIndexNumber = Convert.ToInt32(lines[2]);
         }
     }
 }

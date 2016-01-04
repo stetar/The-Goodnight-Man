@@ -9,8 +9,9 @@ namespace GameLoopOne.Weapons.Melee
     class ISISFlag : Weapon
     {
         private static string imagePath = "";
+        private static int weaponIndex = 10;
 
-        public ISISFlag(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        public ISISFlag(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
             damage = 2;
             this.AttackSpeed = 0.1f;

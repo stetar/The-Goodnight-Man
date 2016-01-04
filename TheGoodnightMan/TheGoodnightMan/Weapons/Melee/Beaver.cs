@@ -9,8 +9,9 @@ namespace GameLoopOne.Weapons.Melee
     class Beaver : Weapon
     {
         private static string imagePath = "";
+        private static int weaponIndex = 9;
 
-        public Beaver(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
+        public Beaver(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
             damage = 1;
             this.AttackSpeed = 0.2f;
