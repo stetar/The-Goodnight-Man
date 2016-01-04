@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameLoopOne.Weapons.Ranged
 {
-    class AssaultRifle : Weapon
+    internal class AssaultRifle : Weapon
     {
         private static string imagePath = "weapons/sprites/AssaultRifle1.png;weapons/sprites/AssaultRifle2.png;weapons/sprites/AssaultRifle3.png;weapons/sprites/AssaultRifle4.png";
         private static int weaponIndex = 11;
