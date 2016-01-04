@@ -83,7 +83,7 @@ namespace GameLoopOne
                     currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .5f);
                     break;
                 case 11:
-                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0,0), .3f);
+                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0,0), .2f);
                     break;
                 case 12:
                     currentPlayerWeapon = new RPG(new Vector2D(0, 0), .3f);
