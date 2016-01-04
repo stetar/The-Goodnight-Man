@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.Ranged;
 
 namespace GameLoopOne
 {
@@ -51,7 +52,14 @@ namespace GameLoopOne
             if (other is Crate)
             {
                 GameWorld.removeList.Add(this); 
+            }
 
+            foreach (Weapon pewpew in GameWorld.objects)
+            {
+                if (pewpew == )
+                {
+                    
+                }
             }
             //not removing bullets here, as they all would be removed when one collided with ANYTHING.
             //GameWorld.removeList.Add(this); 

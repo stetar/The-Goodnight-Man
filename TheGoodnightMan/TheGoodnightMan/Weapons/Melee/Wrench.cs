@@ -16,7 +16,7 @@ namespace GameLoopOne.Weapons.Melee
 
         public Wrench(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 50;
+            damage = 2;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
             meleeRangeX = 1;
