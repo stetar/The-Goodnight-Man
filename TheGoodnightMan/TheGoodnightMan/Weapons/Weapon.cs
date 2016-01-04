@@ -33,7 +33,7 @@ namespace GameLoopOne.Weapons
         {
             get
             {
-                return new RectangleF(position.X, position.Y,meleeRangeX,meleeRangeY);
+                return new RectangleF(position.X, position.Y, meleeRangeX, meleeRangeY);
             }
         }
 
@@ -63,6 +63,53 @@ namespace GameLoopOne.Weapons
                         GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
                     }
                 }
+
+                switch (Player.weaponIndexNumber)
+                {
+                    case 0:
+                        GameWorld.eng.Play2D("Wrench.wav");
+                        break;
+
+                    case 1:
+                        GameWorld.eng.Play2D("CricketPlayer.wav");
+                        break;
+
+                    case 2:
+                        GameWorld.eng.Play2D("Wrench.wav");
+                        break;
+
+                    case 3:
+                        GameWorld.eng.Play2D("Knife.wav");
+                        break;
+
+                    case 4:
+                        GameWorld.eng.Play2D("Guitar slag.wav");
+                        break;
+
+                    case 5:
+                        GameWorld.eng.Play2D("Knife.wav");
+                        break;
+
+                    case 6:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+
+                    case 7:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+
+                    case 8:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+
+                    case 9:
+                        GameWorld.eng.Play2D("CricketPlayer.wav");
+                        break;
+
+                    case 10:
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        break;
+                }
             }
         }
 
@@ -82,39 +129,27 @@ namespace GameLoopOne.Weapons
             switch (Player.weaponIndexNumber)
             {
                 case 11:
-
                     GameWorld.eng.Play2D("Machinegun.wav");
-
                     break;
 
                 case 12:
-
                     GameWorld.eng.Play2D("RPG.flac");
-
                     break;
 
                 case 13:
-
                     GameWorld.eng.Play2D("Submachinegun.wav");
-
                     break;
 
                 case 14:
-
                     GameWorld.eng.Play2D("LMG.wav");
-
                     break;
 
                 case 15:
-
                     GameWorld.eng.Play2D("Shotgun.wav");
-
                     break;
 
                 case 16:
-
                     GameWorld.eng.Play2D("GunshotPistol.wav");
-
                     break;
             }
             float x = position.X + 30;

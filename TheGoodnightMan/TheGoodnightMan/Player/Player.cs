@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GameLoopOne.Props;
 using System.IO;
 using System.Xml.Schema;
+using GameLoopOne.Forms;
 using GameLoopOne.Weapons;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
@@ -291,12 +292,22 @@ namespace GameLoopOne
                 GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
                 GameWorld.removeList.Add(other);
 
-            }
-            if (other is Weapon)
-            {
-                if (other != currentPlayerWeapon)
+                if (health <= 0)
                 {
-                    
+                    Form1.timer1.Stop();
+                    DialogResult dialogResult = MessageBox.Show("You got yourself killed, you idiot! What the hell kinda retarded move is that? Do you even know how to play video games? Just click yes to return to the main menu, scrub. Or you can just quit now. That wouldn't suprise me at all, since you're such a fucking cunt!", "Game fucking over!", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        GameWorld.objects.Clear();
+                        GameWorld.GameWeapons.Clear();
+                        GameWorld.removeList.Clear();
+                        Form1.ActiveForm.Hide();
+                        new MainMenuForm().Show();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        Environment.Exit(0);
+                    }
                 }
             }
             
