@@ -15,7 +15,9 @@ namespace GameLoopOne.Weapons
         public float AttackSpeed = 0;
         private GameObject targetPlayer;
         private bool didAttack = false;
-        public float meleeRange = 1;
+        public float meleeRangeY = 1;
+        public float meleeRangeX = 1;
+
         public float moveWeaponUp = 0;
         public float moveWeaponRight = 0;
         public int weaponIndex;
@@ -31,7 +33,7 @@ namespace GameLoopOne.Weapons
         {
             get
             {
-                return new RectangleF(position.X, position.Y, 50 * meleeRange, 50);
+                return new RectangleF(position.X, position.Y,meleeRangeX,meleeRangeY);
             }
         }
 

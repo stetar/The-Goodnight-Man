@@ -8,7 +8,8 @@ namespace GameLoopOne.Weapons.Melee
 {
     class Guitar : Weapon
     {
-        private static string imagePath = "";
+        private static string imagePath = "weapons/sprites/Guitar1.png;weapons/sprites/Guitar2.png;weapons/sprites/Guitar3.png;weapons/sprites/Guitar4.png";
+
         private static int weaponIndex = 4;
 
         public Guitar(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
@@ -16,7 +17,11 @@ namespace GameLoopOne.Weapons.Melee
             damage = 2;
             this.AttackSpeed = 0.7f;
             this.animationSpeed = 30;
-            meleeRange = .8f;
+            meleeRangeX = 50f;
+            meleeRangeY = 100f;
+
+            this.moveWeaponRight = 20;
+            moveWeaponUp = -30;
         }
     }
 }

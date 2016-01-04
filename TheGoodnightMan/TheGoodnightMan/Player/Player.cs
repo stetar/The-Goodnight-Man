@@ -49,7 +49,7 @@ namespace GameLoopOne
             switch (weaponIndexNumber)
             {
                 case 0:
-                    currentPlayerWeapon = new Wrench(new Vector2D(0,0), .3f);
+                    currentPlayerWeapon = new Wrench(new Vector2D(0,0), 1f);
                     break;
                 case 1:
                     currentPlayerWeapon = new CricketPlayer(new Vector2D(0,0), .3f);
@@ -61,7 +61,7 @@ namespace GameLoopOne
                     currentPlayerWeapon = new Knife(new Vector2D(0, 0), .3f);
                     break;
                 case 4:
-                    currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .5f);
                     break;
                 case 5:
                     currentPlayerWeapon = new Katana(new Vector2D(0, 0), .3f);
@@ -76,13 +76,13 @@ namespace GameLoopOne
                     currentPlayerWeapon = new Axe(new Vector2D(0, 0), .3f);
                     break;
                 case 9:
-                    currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .5f);
                     break;
                 case 10:
-                    currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .5f);
                     break;
                 case 11:
-                    currentPlayerWeapon = new AssultRifle(new Vector2D(0,0), .3f);
+                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0,0), .3f);
                     break;
                 case 12:
                     currentPlayerWeapon = new RPG(new Vector2D(0, 0), .3f);
