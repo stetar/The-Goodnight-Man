@@ -94,39 +94,27 @@ namespace GameLoopOne.Weapons
             switch (Player.weaponIndexNumber)
             {
                 case 11:
-
                     GameWorld.eng.Play2D("Machinegun.wav");
-
                     break;
 
                 case 12:
-
                     GameWorld.eng.Play2D("RPG.flac");
-
                     break;
 
                 case 13:
-
                     GameWorld.eng.Play2D("Submachinegun.wav");
-
                     break;
 
                 case 14:
-
                     GameWorld.eng.Play2D("LMG.wav");
-
                     break;
 
                 case 15:
-
                     GameWorld.eng.Play2D("Shotgun.wav");
-
                     break;
 
                 case 16:
-
                     GameWorld.eng.Play2D("GunshotPistol.wav");
-
                     break;
             }
             float x = position.X + 30;
