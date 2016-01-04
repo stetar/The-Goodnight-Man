@@ -16,7 +16,7 @@ namespace GameLoopOne.Weapons.Melee
             damage = 5;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
-            meleeRange = .8f;
+            meleeRangeX = .8f;
         }
     }
 }
