@@ -27,16 +27,16 @@ namespace GameLoopOne
             this.MaximumSize = new Size(1024, 768);
             this.CenterToScreen();
             WindowState = FormWindowState.Normal;
-            MainMenuForm.hasPressedEsc = false;
+            MainMenuForm.showWarning = false;
         }
         
     private void timer1_Tick(object sender, EventArgs e)
         {
             gw.GameLoop();
-            if (Keyboard.IsKeyDown(Keys.Escape) && !MainMenuForm.hasPressedEsc)
+            if (Keyboard.IsKeyDown(Keys.Escape))
             {
                 GameWorld.SaveGameState();
-                MainMenuForm.hasPressedEsc = true;
+                MainMenuForm.showWarning = false;
                 timer1.Stop();
                 DialogResult dialogResult = MessageBox.Show("What?! Are you pussying out?? Are you fukcing leaving?! Don't you dare be gone for long, you hear me?", "Pause menu (sucker!)", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -49,7 +49,7 @@ namespace GameLoopOne
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-                    MainMenuForm.hasPressedEsc = false;
+                    MainMenuForm.showWarning = true;
                     timer1.Start();
                 }
             }
