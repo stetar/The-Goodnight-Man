@@ -8,7 +8,9 @@ namespace GameLoopOne.Weapons.Melee
 {
     class Katana : Weapon
     {
-        private static string imagePath = "weapons/sprites/Katana1.png;weapons/sprites/Katana2.png;weapons/sprites/Katana3.png;weapons/sprites/Katana4.png;weapons/sprites/Katana5.png";
+        private static string imagePath = "weapons/sprites/Katana1.png;weapons/sprites/Katana2.png;weapons/sprites/Katana3.png;weapons/sprites/Katana4.png;weapons/sprites/Katana5.png;weapons/sprites/Baseballbat1.png;weapons/sprites/Baseballbat2.png;weapons/sprites/Baseballbat3.png;weapons/sprites/Baseballbat4.png;weapons/sprites/Baseballbat1.png;weapons/sprites/Baseballbat2.png;weapons/sprites/Baseballbat3.png;weapons/sprites/Baseballbat4.png;weapons/sprites/Beaver1.png;weapons/sprites/Beaver2.png;weapons/sprites/Beaver3.png;weapons/sprites/Beaver4.png";
+
+       // private static string imagePath = "weapons/sprites/Katana1.png;weapons/sprites/Katana2.png;weapons/sprites/Katana3.png;weapons/sprites/Katana4.png;weapons/sprites/Katana5.png";
 
         private static int weaponIndex = 5;
 

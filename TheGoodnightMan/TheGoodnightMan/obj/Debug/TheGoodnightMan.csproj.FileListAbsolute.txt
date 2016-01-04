@@ -174,3 +174,9 @@ C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\ISISFlag2.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\ISISFlag3.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\ISISFlag4.png
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\GunshotPistol.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\LMG.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Machinegun.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\RPG.flac
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Shotgun.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Submachinegun.wav
