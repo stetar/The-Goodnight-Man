@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using GameLoopOne.Props;
+using GameLoopOne.Weapons;
 
 namespace GameLoopOne
 {
@@ -20,7 +22,6 @@ namespace GameLoopOne
         {
             this.player = player;
             this.speed = speed;
-            
         }
 
 

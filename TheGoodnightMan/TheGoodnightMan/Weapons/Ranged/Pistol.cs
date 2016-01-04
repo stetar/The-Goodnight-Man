@@ -19,7 +19,7 @@ namespace GameLoopOne.Weapons.Ranged
             damage = 3;
             this.AttackSpeed = 1;
             this.animationSpeed = 10;
-            meleeRange = 10;
+            meleeRangeX = 10;
         }
     }
 }

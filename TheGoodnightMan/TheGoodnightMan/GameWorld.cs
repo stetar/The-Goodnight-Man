@@ -273,6 +273,7 @@ namespace GameLoopOne
             //dc.DrawString(string.Format("INCORRECTNESS:{0}", iIncorrectness), f1, Brushes.Black, displayRectangle.Width / 2, 0);
             dc.DrawString(string.Format("INCORRECTNESS: {0}", iIncorrectness), f, Brushes.DarkRed, 0, 30);
             dc.DrawString(string.Format("LEVEL: {0}", iLevel), f, Brushes.Black, 0, 60);
+            dc.DrawString(string.Format("HEALTH: {0}", Player.health), f, Brushes.Black, 0, 90);
 
             backBuffer.Render();
         }
