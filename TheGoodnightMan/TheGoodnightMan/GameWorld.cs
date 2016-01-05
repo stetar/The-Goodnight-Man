@@ -1,5 +1,7 @@
 ﻿using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.Melee;
+using GameLoopOne.Weapons.Ranged;
 using IrrKlang;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameLoopOne.Weapons.Melee;
-using GameLoopOne.Weapons.Ranged;
-using GameLoopOne.Weapons.Sprites;
 
 namespace GameLoopOne
 {
@@ -30,6 +29,10 @@ namespace GameLoopOne
         public static int iLevel = 0;
         public static int iIncorrectness = 0;
         public static List<Weapon> GameWeapons = new List<Weapon>();
+        private static float timer1 = 0;
+        private static float timeOut1 = 10f; //5 secs
+        private static bool playSound;
+        private static ISound levelChangeSound;
 
         public static ISoundEngine eng = new ISoundEngine();
 
@@ -134,6 +137,20 @@ namespace GameLoopOne
 
         private void Update(float fps)
         {
+            if (timer1 > timeOut1)
+            {
+                if (playSound)
+                {
+                    if (levelChangeSound == null || levelChangeSound.Finished)
+                    {
+                        levelChangeSound = eng.Play2D("Drawing.wav", false);
+                        timer1 = 10;
+                    }
+                }
+            }
+            playSound = false;
+
+            timer1 += fps;
             foreach (Weapon go in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
             {
                 //go.Update(fps);
@@ -144,7 +161,7 @@ namespace GameLoopOne
                 go.Update(fps);
                 go.UpdateAnimation(fps);
             }
-            
+
             ResolveRigidbodyCollisions();
 
             //remove list
@@ -174,7 +191,7 @@ namespace GameLoopOne
                     {
                         if (a != b)
                         {
-                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble || b is Explosion)) //Don't calculate solid collisions for these classes
+                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble)) //Don't calculate solid collisions for these classes
                             {
                                 this.ResolveAABBCollision(a, b);
                             }
@@ -283,6 +300,7 @@ namespace GameLoopOne
 
         public static void SetupDifferentWorlds()
         {
+            playSound = true;
             foreach (GameObject go in objects.ToList())
             {
                 if (!(go is Player || go is Sky))//dont remove the player or the sky
@@ -290,7 +308,7 @@ namespace GameLoopOne
                     removeList.Add(go);
                 }
             }
-            eng.Play2D("Drawing.wav");
+
             switch (iLevel)
             {
                 case 0:
