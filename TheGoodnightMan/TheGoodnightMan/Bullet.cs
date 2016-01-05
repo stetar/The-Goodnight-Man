@@ -60,7 +60,6 @@ namespace GameLoopOne
                         GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - 65, this.position.Y - 65), 1));
                         hasAttacked = false;
                     }
-                   
                 }
             }
             //not removing bullets here, as they all would be removed when one collided with ANYTHING.
