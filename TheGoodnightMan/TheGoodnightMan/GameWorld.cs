@@ -29,6 +29,10 @@ namespace GameLoopOne
         public static int iLevel = 0;
         public static int iIncorrectness = 0;
         public static List<Weapon> GameWeapons = new List<Weapon>();
+        private static float timer1 = 0;
+        private static float timeOut1 = 10f; //5 secs
+        private static bool playSound;
+        private static ISound levelChangeSound;
 
         public static ISoundEngine eng = new ISoundEngine();
 
@@ -133,6 +137,20 @@ namespace GameLoopOne
 
         private void Update(float fps)
         {
+            if (timer1 > timeOut1)
+            {
+                if (playSound)
+                {
+                    if (levelChangeSound == null || levelChangeSound.Finished)
+                    {
+                        levelChangeSound = eng.Play2D("Drawing.wav", false);
+                        timer1 = 10;
+                    }
+                }
+            }
+            playSound = false;
+
+            timer1 += fps;
             foreach (Weapon go in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
             {
                 //go.Update(fps);
@@ -282,6 +300,7 @@ namespace GameLoopOne
 
         public static void SetupDifferentWorlds()
         {
+            playSound = true;
             foreach (GameObject go in objects.ToList())
             {
                 if (!(go is Player || go is Sky))//dont remove the player or the sky
@@ -289,7 +308,7 @@ namespace GameLoopOne
                     removeList.Add(go);
                 }
             }
-            eng.Play2D("Drawing.wav");
+
             switch (iLevel)
             {
                 case 0:
