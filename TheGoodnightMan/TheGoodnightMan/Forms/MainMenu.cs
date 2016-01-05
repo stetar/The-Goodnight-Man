@@ -41,8 +41,8 @@ namespace GameLoopOne.Forms
         {
             Form1 game = new Form1();
             game.Show();
-            GameWorld.eng.StopAllSounds();
             this.Hide();
+            GameWorld.eng.StopAllSounds();
         }
 
         private void HowToPlayButton_Click(object sender, EventArgs e)

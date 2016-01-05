@@ -1,5 +1,7 @@
 ﻿using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.Melee;
+using GameLoopOne.Weapons.Ranged;
 using IrrKlang;
 using System;
 using System.Collections.Generic;
@@ -10,8 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameLoopOne.Weapons.Melee;
-using GameLoopOne.Weapons.Ranged;
 
 namespace GameLoopOne
 {
@@ -143,7 +143,7 @@ namespace GameLoopOne
                 go.Update(fps);
                 go.UpdateAnimation(fps);
             }
-            
+
             ResolveRigidbodyCollisions();
 
             //remove list
@@ -289,7 +289,7 @@ namespace GameLoopOne
                     removeList.Add(go);
                 }
             }
-
+            eng.Play2D("Drawing.wav");
             switch (iLevel)
             {
                 case 0:
