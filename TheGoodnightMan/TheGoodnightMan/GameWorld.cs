@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameLoopOne.Weapons.Melee;
+using GameLoopOne.Weapons.Ranged;
 
 namespace GameLoopOne
 {
@@ -132,16 +133,17 @@ namespace GameLoopOne
 
         private void Update(float fps)
         {
+            foreach (Weapon go in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
+            {
+                //go.Update(fps);
+                go.UpdateAnimation(fps);
+            }
             foreach (GameObject go in objects.ToList()) //To list as you can't modify it in runtime elsewise.
             {
                 go.Update(fps);
                 go.UpdateAnimation(fps);
             }
-            foreach (Weapon go in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
-            {
-                go.Update(fps);
-                go.UpdateAnimation(fps);
-            }
+            
             ResolveRigidbodyCollisions();
 
             //remove list
@@ -297,7 +299,7 @@ namespace GameLoopOne
 
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new Wrench(new Vector2D(770, 590), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new RPG(new Vector2D(770, 590), .3f))));
 
                     break;
 

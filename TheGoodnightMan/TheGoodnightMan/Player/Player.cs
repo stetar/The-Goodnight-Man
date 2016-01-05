@@ -10,9 +10,11 @@ using System.Windows.Forms;
 using GameLoopOne.Props;
 using System.IO;
 using System.Xml.Schema;
+using GameLoopOne.Forms;
 using GameLoopOne.Weapons;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
+using GameLoopOne.Weapons.Sprites;
 
 
 namespace GameLoopOne
@@ -50,7 +52,7 @@ namespace GameLoopOne
             switch (weaponIndexNumber)
             {
                 case 0:
-                    currentPlayerWeapon = new Wrench(new Vector2D(0,0), .3f);
+                    currentPlayerWeapon = new Wrench(new Vector2D(0,0), 1f);
                     break;
                 case 1:
                     currentPlayerWeapon = new CricketPlayer(new Vector2D(0,0), .3f);
@@ -62,7 +64,7 @@ namespace GameLoopOne
                     currentPlayerWeapon = new Knife(new Vector2D(0, 0), .3f);
                     break;
                 case 4:
-                    currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .5f);
                     break;
                 case 5:
                     currentPlayerWeapon = new Katana(new Vector2D(0, 0), .3f);
@@ -77,13 +79,13 @@ namespace GameLoopOne
                     currentPlayerWeapon = new Axe(new Vector2D(0, 0), .3f);
                     break;
                 case 9:
-                    currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .5f);
                     break;
                 case 10:
-                    currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .5f);
                     break;
                 case 11:
-                    currentPlayerWeapon = new AssultRifle(new Vector2D(0,0), .3f);
+                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0,0), .2f);
                     break;
                 case 12:
                     currentPlayerWeapon = new RPG(new Vector2D(0, 0), .3f);
@@ -280,7 +282,7 @@ namespace GameLoopOne
         /// <param name="other"></param>
         public override void OnCollision(GameObject other)
         {
-            if (other is Bullet)
+            if (other is Bullet || other is Explosion)
             {
                 float x = (position.X - sprite.Width / 2) - 75;
                 float y = position.Y - sprite.Height / 2;
@@ -291,12 +293,22 @@ namespace GameLoopOne
                 GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
                 GameWorld.removeList.Add(other);
 
-            }
-            if (other is Weapon)
-            {
-                if (other != currentPlayerWeapon)
+                if (health <= 0)
                 {
-                    
+                    Form1.timer1.Stop();
+                    DialogResult dialogResult = MessageBox.Show("You got yourself killed, you idiot! What the hell kinda retarded move is that? Do you even know how to play video games? Just click yes to return to the main menu, scrub. Or you can just quit now. That wouldn't suprise me at all, since you're such a fucking cunt!", "Game fucking over!", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        GameWorld.objects.Clear();
+                        GameWorld.GameWeapons.Clear();
+                        GameWorld.removeList.Clear();
+                        Form1.ActiveForm.Hide();
+                        new MainMenuForm().Show();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        Environment.Exit(0);
+                    }
                 }
             }
             
