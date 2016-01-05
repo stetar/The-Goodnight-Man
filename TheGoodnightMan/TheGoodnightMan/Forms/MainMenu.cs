@@ -13,7 +13,7 @@ namespace GameLoopOne.Forms
     public partial class MainMenuForm : Form
     {
         public static bool showWarning = true;
-
+        
         public MainMenuForm()
         {
             this.BackgroundImage = Image.FromFile("levels/mainmenubackground.png");
@@ -31,10 +31,11 @@ namespace GameLoopOne.Forms
                 }
             }
             GameWorld.LoadGameState();
+         
 
-            //PlayButton.BackgroundImage = Image.FromFile("mainmenubutton.png");
-            //PlayButton.BackColor = Color.Transparent;
-        }
+        //PlayButton.BackgroundImage = Image.FromFile("mainmenubutton.png");
+        //PlayButton.BackColor = Color.Transparent;
+    }
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
