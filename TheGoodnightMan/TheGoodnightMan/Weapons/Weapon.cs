@@ -14,7 +14,7 @@ namespace GameLoopOne.Weapons
         protected string imagePath;
         public float AttackSpeed = 0;
         private GameObject targetPlayer;
-        private bool didAttack = false;
+        public static bool didAttack = false;
         public float meleeRangeY = 1;
         public float meleeRangeX = 1;
 
@@ -43,7 +43,7 @@ namespace GameLoopOne.Weapons
 #if DEBUG
             dc.DrawRectangle(new Pen(Brushes.Red), position.X, position.Y, attackRangeBox.Width, attackRangeBox.Height);//don't draw the actual range in release
 #endif
-            Pen blackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 1);
+           
         }
 
         public virtual void AttackMelee()
@@ -113,21 +113,7 @@ namespace GameLoopOne.Weapons
             }
         }
 
-        //public virtual void DropWeapon(Weapon weapon)
-        //{
-        //    switch (weapon.ToString())//hack
-        //    {
-        //        case "GameLoopOne.Weapons.Wrench":
-        //            gameWeapons.Add(new Wrench(new Vector2D(weapon.position.X, weapon.position.Y), .3f));
-        //            break;
-        //        case "GameLoopOne.Weapons.Knife":
-        //            gameWeapons.Add(new Knife(new Vector2D(weapon.position.X, weapon.position.Y), .3f));
-        //            break;
-        //        case "GameLoopOne.Weapons.Pistol":
-        //            gameWeapons.Add(new Pistol(new Vector2D(weapon.position.X, weapon.position.Y), .3f));
-        //            break;
-        //    }
-        //}
+        
 
         public virtual void AttackRanged()
         {
@@ -188,6 +174,7 @@ namespace GameLoopOne.Weapons
                     currentFrameIndex = 0;
                     didAttack = false;
                 }
+
                 sprite = animationFrames[(int)currentFrameIndex];
             }
             //base.Update(fps);

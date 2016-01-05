@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.Ranged;
+using GameLoopOne.Weapons.Sprites;
 
 namespace GameLoopOne
 {
@@ -16,9 +18,9 @@ namespace GameLoopOne
         private float speed;
         private Vector2D targetPosition;
         private bool hasAttacked;
-        
+
         private Vector2D velocity; //for storing the value
-        public Bullet(string imagePath, Vector2D startPos, float scaleFactor,float speed, GameObject player) : base(imagePath, startPos, scaleFactor)
+        public Bullet(string imagePath, Vector2D startPos, float scaleFactor, float speed, GameObject player) : base(imagePath, startPos, scaleFactor)
         {
             this.player = player;
             this.speed = speed;
@@ -35,14 +37,14 @@ namespace GameLoopOne
                 velocity.Normalize();
                 hasAttacked = true;
             }
-           
+
             position.X += 1 / fps * (velocity.X * speed);
             position.Y += 1 / fps * (velocity.Y * speed);
-            if (CollisionBox.Right < 0 || CollisionBox.Left < 0) //optimaahzation
+            if (CollisionBox.Right < 0 || CollisionBox.Left < 0 || CollisionBox.Top < 0) //optimaahzation
             {
                 GameWorld.removeList.Add(this);
             }
-           
+
             base.Update(fps);
 
         }
@@ -50,8 +52,16 @@ namespace GameLoopOne
         {
             if (other is Crate)
             {
-                GameWorld.removeList.Add(this); 
+                GameWorld.removeList.Add(this);
+            }
 
+            foreach (GameObject pewpew in GameWorld.objects.ToList())
+            {
+                if (pewpew is RPG)
+                {
+                    GameWorld.removeList.Add(this);
+                    GameWorld.objects.Add(new Explosion(new Vector2D(position.X, position.Y), 1));
+                }
             }
             //not removing bullets here, as they all would be removed when one collided with ANYTHING.
             //GameWorld.removeList.Add(this); 
