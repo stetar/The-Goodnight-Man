@@ -174,3 +174,11 @@ C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\ISISFlag2.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\ISISFlag3.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\ISISFlag4.png
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\GameLoopOne.exe.config
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.exe
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.pdb
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\TheGoodnightMan.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.Form1.resources
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.Forms.MainMenuForm.resources
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.Properties.Resources.resources
+C:\Users\Peter\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\TheGoodnightMan.csproj.GenerateResource.Cache
