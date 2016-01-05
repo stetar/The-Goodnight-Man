@@ -14,7 +14,7 @@ namespace GameLoopOne.Weapons
         protected string imagePath;
         public float AttackSpeed = 0;
         private GameObject targetPlayer;
-        private bool didAttack = false;
+        public static bool didAttack = false;
         public float meleeRangeY = 1;
         public float meleeRangeX = 1;
 
