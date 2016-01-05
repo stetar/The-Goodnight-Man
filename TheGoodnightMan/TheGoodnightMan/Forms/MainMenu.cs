@@ -13,7 +13,7 @@ namespace GameLoopOne.Forms
     public partial class MainMenuForm : Form
     {
         public static bool showWarning = true;
-        
+
         public MainMenuForm()
         {
             this.BackgroundImage = Image.FromFile("levels/mainmenubackground.png");
@@ -23,6 +23,7 @@ namespace GameLoopOne.Forms
             this.CenterToScreen();
             WindowState = FormWindowState.Normal;
             label1.Hide();
+            GameWorld.eng.Play2D("Drawing.wav", true);
             if (showWarning)
             {
                 if (MessageBox.Show("ALRIGHT YOU PRECIOUS LITTLE MOTHERFUCKERS," + Environment.NewLine + Environment.NewLine + "ARE YOU FUCKTARDS ASSBUTTS READY TO CLINCH FROM INTENSE GAMEPLAY" + Environment.NewLine + Environment.NewLine + "SKULLFUCKINGLY AMAZING SOUND," + Environment.NewLine + Environment.NewLine + "MESMORIZING STORY THAT MAY, OR MAY NOT BE FUCKING RACIST TO SOME, BUT NOT SPECIFICLY TARGETED TERRORISTS! (MUSLIMS)" + Environment.NewLine + Environment.NewLine + "SO BUCKLE THE FUCK UP MEIN HITLER JUGEN, CAUSE OLD PAPA GOODNIGHT MAN IS GONNA SHANK YOU SORRY ASS, SO BAD YOU ARE CHILDREN ARE GONNA HAVING PROBLEMS BREATHING WITHOUT RAW OXYGEN TO THEIR SORRY CRIPPLED LUNGS." + Environment.NewLine + Environment.NewLine + "WARNING: GAME MAY NOT BE FOR HIPSTERS, NIGGAS, DWARFS AND OTHER FREAKS OF NATURE." + Environment.NewLine + Environment.NewLine + "SO IF YOU’RE A FUCKING PLEP, GO BACK TO YOUR CALL OF DUTY (YEP WE JUST FUCKING WENT THERE)" + Environment.NewLine + Environment.NewLine + "CAUSE THIS GAME IS GONNA BLOW YOU MIND UNTIL YOUR GAGGING REFLEX STOPS WORKING!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
@@ -31,22 +32,21 @@ namespace GameLoopOne.Forms
                 }
             }
             GameWorld.LoadGameState();
-         
 
-        //PlayButton.BackgroundImage = Image.FromFile("mainmenubutton.png");
-        //PlayButton.BackColor = Color.Transparent;
-    }
+            //PlayButton.BackgroundImage = Image.FromFile("mainmenubutton.png");
+            //PlayButton.BackColor = Color.Transparent;
+        }
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
             Form1 game = new Form1();
             game.Show();
+            GameWorld.eng.StopAllSounds();
             this.Hide();
         }
 
         private void HowToPlayButton_Click(object sender, EventArgs e)
         {
-
         }
 
         private void GetInsulted_Click(object sender, EventArgs e)
@@ -114,8 +114,6 @@ namespace GameLoopOne.Forms
 
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
-
         }
-
     }
 }
