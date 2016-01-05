@@ -29,7 +29,6 @@ namespace GameLoopOne.Weapons.Sprites
                     Weapon.didAttack = false;
                     GameWorld.removeList.Add(this);
                 }
-
                 sprite = animationFrames[(int)currentFrameIndex];
             }
         }
