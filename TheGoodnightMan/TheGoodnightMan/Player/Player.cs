@@ -14,6 +14,7 @@ using GameLoopOne.Forms;
 using GameLoopOne.Weapons;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
+using GameLoopOne.Weapons.Sprites;
 
 
 namespace GameLoopOne
@@ -281,7 +282,7 @@ namespace GameLoopOne
         /// <param name="other"></param>
         public override void OnCollision(GameObject other)
         {
-            if (other is Bullet)
+            if (other is Bullet || other is Explosion)
             {
                 float x = (position.X - sprite.Width / 2) - 75;
                 float y = position.Y - sprite.Height / 2;
