@@ -47,13 +47,13 @@ namespace GameLoopOne
             position = startPos;
             this.scaleFactor = scaleFactor;
             string[] imagePaths = imagePath.Split(';');
-            this.animationFrames = new List<Image>();
+            animationFrames = new List<Image>();
             foreach (string path in imagePaths)
             {
                 animationFrames.Add(Image.FromFile(path));
             }
 
-            this.sprite = this.animationFrames[0];
+            this.sprite = animationFrames[0];
         }
 
 
