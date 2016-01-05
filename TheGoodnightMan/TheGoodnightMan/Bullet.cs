@@ -50,17 +50,17 @@ namespace GameLoopOne
         }
         public override void OnCollision(GameObject other)
         {
-            if (other is Crate)
-            {
-                GameWorld.removeList.Add(this);
-            }
-
+            GameWorld.removeList.Add(this);
             foreach (GameObject pewpew in GameWorld.objects.ToList())
             {
                 if (pewpew is RPG)
                 {
-                    GameWorld.removeList.Add(this);
-                    GameWorld.objects.Add(new Explosion(new Vector2D(position.X, position.Y), 1));
+                    if (hasAttacked)
+                    {
+                        GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - 65, this.position.Y - 65), 1));
+                        hasAttacked = false;
+                    }
+                   
                 }
             }
             //not removing bullets here, as they all would be removed when one collided with ANYTHING.
