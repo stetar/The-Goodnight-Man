@@ -57,7 +57,7 @@ namespace GameLoopOne
                 {
                     if (hasAttacked)
                     {
-                        GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - 65, this.position.Y - 65), 1));
+                        GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - sprite.Width / 2, this.position.Y - sprite.Height / 2), 1));
                         hasAttacked = false;
                     }
                    
