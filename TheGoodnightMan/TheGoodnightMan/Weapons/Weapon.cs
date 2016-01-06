@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IrrKlang;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -17,6 +18,8 @@ namespace GameLoopOne.Weapons
         public static bool didAttack = false;
         public float meleeRangeY = 1;
         public float meleeRangeX = 1;
+        private static bool playSound;
+        private static ISound FlagSound;
 
         public float moveWeaponUp = 0;
         public float moveWeaponRight = 0;
@@ -43,7 +46,6 @@ namespace GameLoopOne.Weapons
 #if DEBUG
             dc.DrawRectangle(new Pen(Brushes.Red), position.X, position.Y, attackRangeBox.Width, attackRangeBox.Height);//don't draw the actual range in release
 #endif
-           
         }
 
         public virtual void AttackMelee()
@@ -91,15 +93,15 @@ namespace GameLoopOne.Weapons
                         break;
 
                     case 6:
-                        //GameWorld.eng.Play2D("BaseballBat.mp3");
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
                         break;
 
                     case 7:
-                        //aaGameWorld.eng.Play2D("BaseballBat.mp3");
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
                         break;
 
                     case 8:
-                        //GameWorld.eng.Play2D("BaseballBat.mp3");
+                        GameWorld.eng.Play2D("BaseballBat.mp3");
                         break;
 
                     case 9:
@@ -107,13 +109,16 @@ namespace GameLoopOne.Weapons
                         break;
 
                     case 10:
-                        GameWorld.eng.Play2D("BaseballBat.mp3");
+
+                        if (FlagSound == null || FlagSound.Finished)
+                        {
+                            FlagSound = GameWorld.eng.Play2D("Weapons/Sounds/ISISFlag.mp3", false);
+                        }
+
                         break;
                 }
             }
         }
-
-        
 
         public virtual void AttackRanged()
         {
@@ -171,13 +176,11 @@ namespace GameLoopOne.Weapons
                 currentFrameIndex += factor * animationSpeed;
                 if (currentFrameIndex >= animationFrames.Count)
                 {
-                   
                     currentFrameIndex = 0;
                     didAttack = false;
                 }
 
                 sprite = animationFrames[(int)currentFrameIndex];
-                
             }
             //
             base.Update(fps);
