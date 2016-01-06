@@ -82,7 +82,9 @@
     </Compile>
     <Compile Include="GameObject.cs" />
     <Compile Include="GameWorld.cs" />
-    <Compile Include="Keyboard.cs" />
+    <Compile Include="Keyboard.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Player\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,7 +100,6 @@
     <Compile Include="Weapons\Ranged\AssaultRifle.cs" />
     <Compile Include="Weapons\Ranged\LMG.cs" />
     <Compile Include="Weapons\Ranged\RPG.cs" />
-    <Compile Include="Weapons\Ranged\Shotgun.cs" />
     <Compile Include="Weapons\Ranged\SMG.cs" />
     <Compile Include="Weapons\Sprites\Explosion.cs" />
     <Compile Include="Weapons\Weapon.cs" />
@@ -147,6 +148,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Drawing.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sounds\ISISFlag.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Weapons\Sounds\BaseballBat.mp3">

@@ -2,6 +2,7 @@
 using GameLoopOne.Weapons;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
+using GameLoopOne.Weapons.Sprites;
 using IrrKlang;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameLoopOne.Weapons.Sprites;
 
 namespace GameLoopOne
 {
@@ -352,6 +352,22 @@ namespace GameLoopOne
                     break;
 
                 case 3:
+                    objects.Add(new Crate(new Vector2D(250, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(250, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(250, 426), .5f));
+                    objects.Add(new Crate(new Vector2D(250, 344), .5f));
+                    objects.Add(new Crate(new Vector2D(250, 344), .5f));
+                    objects.Add(new Crate(new Vector2D(250, 262), .5f));
+                    objects.Add(new Crate(new Vector2D(250, 180), .5f));
+                    objects.Add(new Crate(new Vector2D(0, 300), .5f));
+                    objects.Add(new Crate(new Vector2D(0, 382), .5f));
+                    objects.Add(new Crate(new Vector2D(0, 464), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 508), .5f));
+
+                    break;
+
+                case 4:
                     objects.Add(new Crate(new Vector2D(100, 590), .5f));
                     objects.Add(new Crate(new Vector2D(950, 590), .5f));
                     objects.Add(new Crate(new Vector2D(950, 508), .5f));
@@ -364,7 +380,7 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(200, 150), .5f));
                     objects.Add(new Crate(new Vector2D(300, 590), .5f));
                     objects.Add(new Crate(new Vector2D(50, 300), .5f));
-                    objects.Add(new Crate(new Vector2D(500, 300), .5f));
+                    objects.Add(new Crate(new Vector2D(700, 150), .5f));
                     objects.Add(new Crate(new Vector2D(400, 200), .5f));
                     objects.Add(new Crate(new Vector2D(600, 450), .5f));
 
