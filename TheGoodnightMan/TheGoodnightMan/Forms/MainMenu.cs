@@ -52,8 +52,8 @@ namespace GameLoopOne.Forms
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            Form1 game = new Form1();
-            game.Show();
+            LevelMenu LevelMenu = new LevelMenu();
+            LevelMenu.Show();
             this.Hide();
             GameWorld.eng.StopAllSounds();
         }
