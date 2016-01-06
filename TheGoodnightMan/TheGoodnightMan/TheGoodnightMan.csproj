@@ -151,10 +151,24 @@
     <Content Include="Drawing.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Props\Coin\Coin1.png" />
-    <Content Include="Props\Coin\Coin2.png" />
-    <Content Include="Props\Coin\Coin3.png" />
-    <Content Include="Props\Coin\Coin4.png" />
+    <Content Include="Props\Coin\Coin1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Props\Coin\Coin2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Props\Coin\Coin3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Props\Coin\Coin4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Props\Coin\Coin5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Props\Coin\Coin6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Weapons\Sounds\ISISFlag.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

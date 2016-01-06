@@ -212,16 +212,6 @@ C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Drawing.wav
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.Forms.LevelMenu.resources
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Drawing.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\BaseballBat.mp3
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\CricketPlayer.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\Guitar slag.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\Knife.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\GunshotPistol.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\LMG.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\Machinegun.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\RPG.flac
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\Shotgun.wav
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\Submachinegun.wav
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\Explosion1.png
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\Explosion10.png
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\Explosion11.png
@@ -234,7 +224,6 @@ C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodn
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\Explosion7.png
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\Explosion8.png
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\Explosion9.png
-C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sound for weapons\Wrench.wav
 C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Keyboard.cs
 C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.Forms.LevelMenu.resources
 C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\ISISFlag.mp3
@@ -263,3 +252,22 @@ C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\Wrench.wav
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Keyboard.cs
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.Forms.LevelMenu.resources
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\ISISFlag.mp3
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\BaseballBat.mp3
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\CricketPlayer.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\Guitar slag.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\Knife.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\GunshotPistol.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\LMG.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\Machinegun.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\RPG.flac
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\Shotgun.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\Submachinegun.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sounds\Wrench.wav
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Keyboard.cs
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin1.png
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin2.png
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin3.png
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin4.png
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin5.png
+C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin6.png

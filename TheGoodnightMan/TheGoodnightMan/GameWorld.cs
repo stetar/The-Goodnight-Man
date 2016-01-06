@@ -28,7 +28,7 @@ namespace GameLoopOne
         private static Image level1Image = Image.FromFile("Levels/level0.png");
         private static Rectangle displayRectangle;
         public static int iLevel = 0;
-        public static int iIncorrectness = 0;
+        public static int iIncorrectness;
         public static List<Weapon> GameWeapons = new List<Weapon>();
         private static float timer1 = 0;
         private static float timeOut1 = 10f; //5 secs
@@ -196,7 +196,7 @@ namespace GameLoopOne
                     {
                         if (a != b)
                         {
-                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble || b is Explosion)) //Don't calculate solid collisions for these classes
+                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble || b is Explosion || b is Coin)) //Don't calculate solid collisions for these classes
                             {
                                 this.ResolveAABBCollision(a, b);
                             }

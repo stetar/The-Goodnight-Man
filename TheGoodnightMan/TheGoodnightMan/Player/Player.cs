@@ -209,18 +209,19 @@ namespace GameLoopOne
             if (position.X > GameWorld.WindowRectangle.Right)
             {
                 GameWorld.iLevel++;
-                position.X = 0;
                 //Weapon.GameWeapons.Clear();
 
                 GameWorld.SetupDifferentWorlds();
+                position.X = sprite.Width;
+
             }
-            else if (position.X < GameWorld.WindowRectangle.Left)
+            else if (position.X < (GameWorld.WindowRectangle.Left - 50))
             {
-                GameWorld.iLevel--;
-                position.X = 900;
                 //Weapon.GameWeapons.Clear();
-
+                GameWorld.iLevel--;
                 GameWorld.SetupDifferentWorlds();
+                position.X = 900;
+
             }
 
             if (Keyboard.IsKeyDown(Keys.I) && !SpeechBubble.insultActive)
