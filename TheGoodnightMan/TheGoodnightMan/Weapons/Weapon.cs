@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IrrKlang;
 
 namespace GameLoopOne.Weapons
 {
@@ -17,6 +18,7 @@ namespace GameLoopOne.Weapons
         public static bool didAttack = false;
         public float meleeRangeY = 1;
         public float meleeRangeX = 1;
+        private static ISound FlagSound;
 
         public float moveWeaponUp = 0;
         public float moveWeaponRight = 0;
@@ -48,8 +50,6 @@ namespace GameLoopOne.Weapons
 
         public virtual void AttackMelee()
         {
-            float x = position.X - 80;
-            float y = position.Y - 50;
             didAttack = true;
 
             foreach (GameObject go in GameWorld.objects.ToList()) //ToList so we can modify it
@@ -60,7 +60,6 @@ namespace GameLoopOne.Weapons
                     if (attackRangeBox.IntersectsWith(go.CollisionBox))
                     {
                         e1.health -= damage;
-                        GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
                     }
                 }
 
@@ -107,7 +106,10 @@ namespace GameLoopOne.Weapons
                         break;
 
                     case 10:
-                        GameWorld.eng.Play2D("Weapons/Sounds/BaseballBat.mp3");
+                        if (FlagSound == null || FlagSound.Finished)
+                        {
+                            FlagSound = GameWorld.eng.Play2D("Weapons/Sounds/ISISFlag.mp3", false);
+                        }
                         break;
                 }
             }

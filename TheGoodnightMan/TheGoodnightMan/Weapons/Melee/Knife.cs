@@ -11,7 +11,8 @@
             damage = 1;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
-            meleeRangeX = 1;
+            meleeRangeX = 40;
+            meleeRangeY = 80;
             moveWeaponUp = 2;
             moveWeaponRight = 20;
             

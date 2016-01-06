@@ -330,7 +330,6 @@ namespace GameLoopOne
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new RPG(new Vector2D(770, 590), .3f))));
-                    objects.Add(new Wrench(new Vector2D(770, 590), 1));
                     break;
 
                 case 1:
