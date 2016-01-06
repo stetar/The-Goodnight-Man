@@ -243,6 +243,7 @@ namespace GameLoopOne
             currentPlayerWeapon = newWeapon;
             
         }
+
         public override void UpdateAnimation(float fps)
         {
             float factor = 1 / fps;
@@ -268,11 +269,12 @@ namespace GameLoopOne
             }
             else if (currentFrameIndex < 0)
             {
+
                 currentFrameIndex = animationFrames.Count - 1;
             }
-
+            
             sprite = animationFrames[(int)currentFrameIndex];
-
+            
         }
         
         /// <summary>

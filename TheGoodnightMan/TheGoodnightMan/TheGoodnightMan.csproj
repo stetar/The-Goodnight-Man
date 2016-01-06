@@ -149,25 +149,25 @@
     <Content Include="Drawing.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\BaseballBat.mp3">
+    <Content Include="Weapons\Sounds\BaseballBat.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bullet.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\CricketPlayer.wav">
+    <Content Include="Weapons\Sounds\CricketPlayer.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="doodlebackgroundtest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\Guitar slag.wav">
+    <Content Include="Weapons\Sounds\Guitar slag.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\Knife.wav">
+    <Content Include="Weapons\Sounds\Knife.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\GunshotPistol.wav">
+    <Content Include="Weapons\Sounds\GunshotPistol.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ikpFlac.dll">
@@ -183,10 +183,10 @@
     <Content Include="Levels\mainmenubackground.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\LMG.wav">
+    <Content Include="Weapons\Sounds\LMG.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\Machinegun.wav">
+    <Content Include="Weapons\Sounds\Machinegun.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="mainmenubutton.png">
@@ -228,16 +228,16 @@
     <Content Include="Props\Sky\Sky.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\RPG.flac">
+    <Content Include="Weapons\Sounds\RPG.flac">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\Shotgun.wav">
+    <Content Include="Weapons\Sounds\Shotgun.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Speech_bubble.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\Submachinegun.wav">
+    <Content Include="Weapons\Sounds\Submachinegun.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Weapons\Sprites\AssaultRifle1.png">
@@ -360,7 +360,7 @@
     <Content Include="Weapons\Sprites\WeaponSprite4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sound for weapons\Wrench.wav">
+    <Content Include="Weapons\Sounds\Wrench.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
