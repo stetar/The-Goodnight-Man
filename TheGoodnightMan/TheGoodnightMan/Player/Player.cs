@@ -97,9 +97,6 @@ namespace GameLoopOne
                     currentPlayerWeapon = new LMG(new Vector2D(0, 0), .3f);
                     break;
                 case 15:
-                    currentPlayerWeapon = new Shotgun(new Vector2D(0, 0), .3f);
-                    break;
-                case 16:
                     currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .3f);
                     break;
             }

@@ -92,7 +92,6 @@
     <Compile Include="Weapons\Ranged\AssaultRifle.cs" />
     <Compile Include="Weapons\Ranged\LMG.cs" />
     <Compile Include="Weapons\Ranged\RPG.cs" />
-    <Compile Include="Weapons\Ranged\Shotgun.cs" />
     <Compile Include="Weapons\Ranged\SMG.cs" />
     <Compile Include="Weapons\Sprites\Explosion.cs" />
     <Compile Include="Weapons\Weapon.cs" />
