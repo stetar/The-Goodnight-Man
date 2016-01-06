@@ -136,6 +136,7 @@ namespace GameLoopOne
             {
                 currentPlayerWeapon.AttackMelee();
                 weaponTimer = 0;
+                
             }
             weaponTimer += deltaTime;
 
