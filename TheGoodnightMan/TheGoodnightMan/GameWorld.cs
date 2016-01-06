@@ -27,7 +27,7 @@ namespace GameLoopOne
         private static Image level0Image = Image.FromFile("Levels/level0.png");
         private static Image level1Image = Image.FromFile("Levels/level0.png");
         private static Rectangle displayRectangle;
-        public static int iLevel = 0;
+        public static int iLevel;
         public static int iIncorrectness = 0;
         public static List<Weapon> GameWeapons = new List<Weapon>();
         private static float timer1 = 0;
@@ -352,8 +352,8 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(0, 300), .5f));
                     objects.Add(new Crate(new Vector2D(0, 382), .5f));
                     objects.Add(new Crate(new Vector2D(0, 464), .5f));
-                    objects.Add(new Crate(new Vector2D(950, 590), .5f));
-                    objects.Add(new Crate(new Vector2D(950, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(750, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(750, 508), .5f));
 
                     break;
 

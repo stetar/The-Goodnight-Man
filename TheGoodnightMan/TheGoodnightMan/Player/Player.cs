@@ -209,10 +209,12 @@ namespace GameLoopOne
             if (position.X > GameWorld.WindowRectangle.Right)
             {
                 GameWorld.iLevel++;
+                isGrounded = false;
+                GameWorld.SetupDifferentWorlds();
                 position.X = 0;
                 //Weapon.GameWeapons.Clear();
 
-                GameWorld.SetupDifferentWorlds();
+
             }
             else if (position.X < GameWorld.WindowRectangle.Left)
             {
