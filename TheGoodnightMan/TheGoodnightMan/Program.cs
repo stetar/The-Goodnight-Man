@@ -16,7 +16,7 @@ namespace GameLoopOne
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.LevelMenu());
+            Application.Run(new Forms.MainMenuForm());
            
         }
     }

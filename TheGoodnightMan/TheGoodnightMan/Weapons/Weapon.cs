@@ -91,15 +91,15 @@ namespace GameLoopOne.Weapons
                         break;
 
                     case 6:
-                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        //GameWorld.eng.Play2D("BaseballBat.mp3");
                         break;
 
                     case 7:
-                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        //aaGameWorld.eng.Play2D("BaseballBat.mp3");
                         break;
 
                     case 8:
-                        GameWorld.eng.Play2D("BaseballBat.mp3");
+                        //GameWorld.eng.Play2D("BaseballBat.mp3");
                         break;
 
                     case 9:
@@ -171,13 +171,16 @@ namespace GameLoopOne.Weapons
                 currentFrameIndex += factor * animationSpeed;
                 if (currentFrameIndex >= animationFrames.Count)
                 {
+                   
                     currentFrameIndex = 0;
                     didAttack = false;
                 }
 
                 sprite = animationFrames[(int)currentFrameIndex];
+                
             }
-            //base.Update(fps);
+            //
+            base.Update(fps);
         }
 
         public static implicit operator Weapon(string v)

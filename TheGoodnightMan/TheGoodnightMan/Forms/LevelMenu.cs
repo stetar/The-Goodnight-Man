@@ -45,5 +45,12 @@ namespace GameLoopOne.Forms
             game.Show();
             this.Hide();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            Application.Exit();
+            base.OnFormClosing(e);
+
+        }
     }
 }

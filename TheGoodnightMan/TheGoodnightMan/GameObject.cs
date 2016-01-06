@@ -47,13 +47,13 @@ namespace GameLoopOne
             position = startPos;
             this.scaleFactor = scaleFactor;
             string[] imagePaths = imagePath.Split(';');
-            this.animationFrames = new List<Image>();
+            animationFrames = new List<Image>();
             foreach (string path in imagePaths)
             {
                 animationFrames.Add(Image.FromFile(path));
             }
 
-            this.sprite = this.animationFrames[0];
+            this.sprite = animationFrames[0];
         }
 
 
@@ -61,7 +61,7 @@ namespace GameLoopOne
         {
            dc.DrawImage(sprite, position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
         #if DEBUG
-            //dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, CollisionBox.Width, CollisionBox.Height);
+            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, CollisionBox.Width, CollisionBox.Height);
         #endif
         }
 

@@ -1,5 +1,7 @@
 ﻿using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.Melee;
+using GameLoopOne.Weapons.Ranged;
 using IrrKlang;
 using System;
 using System.Collections.Generic;
@@ -10,8 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameLoopOne.Weapons.Melee;
-using GameLoopOne.Weapons.Ranged;
 
 namespace GameLoopOne
 {
@@ -29,6 +29,10 @@ namespace GameLoopOne
         public static int iLevel = 0;
         public static int iIncorrectness = 0;
         public static List<Weapon> GameWeapons = new List<Weapon>();
+        private static float timer1 = 0;
+        private static float timeOut1 = 10f; //5 secs
+        private static bool playSound;
+        private static ISound levelChangeSound;
 
         public static ISoundEngine eng = new ISoundEngine();
 
@@ -114,7 +118,7 @@ namespace GameLoopOne
             {
                 go.UpdateAnimation(fps);
             }
-            foreach (Weapon wep in GameWeapons)
+            foreach (GameObject wep in GameWeapons)
             {
                 wep.UpdateAnimation(fps);
             }
@@ -133,6 +137,20 @@ namespace GameLoopOne
 
         private void Update(float fps)
         {
+            if (timer1 > timeOut1)
+            {
+                if (playSound)
+                {
+                    if (levelChangeSound == null || levelChangeSound.Finished)
+                    {
+                        levelChangeSound = eng.Play2D("Drawing.wav", false);
+                        timer1 = 10;
+                    }
+                }
+            }
+            playSound = false;
+
+            timer1 += fps;
             foreach (Weapon go in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
             {
                 //go.Update(fps);
@@ -143,7 +161,7 @@ namespace GameLoopOne
                 go.Update(fps);
                 go.UpdateAnimation(fps);
             }
-            
+
             ResolveRigidbodyCollisions();
 
             //remove list
@@ -212,7 +230,7 @@ namespace GameLoopOne
                         rigidbody.Position.X += result.Width;
                     }
                 }
-                else
+                else if (result.Height < result.Width)
                 {
                     float distanceFromTop = Math.Abs(rigidbodyCenter.Y - b.CollisionBox.Top);
                     float distanceFromBottom = Math.Abs(rigidbodyCenter.Y - b.CollisionBox.Bottom);
@@ -220,18 +238,20 @@ namespace GameLoopOne
                     {
                         // Go up
                         rigidbody.Position.Y -= result.Height;
-                        Player.isGrounded = true;
                         if (Player.velocity.Y > 0) // Don't pull player down
                         {
                             Player.velocity.Y = 0;
                         }
+                        Player.isGrounded = true;
+
                     }
                     else
                     {
                         // Go down
-                        //Player.isGrounded = false;
+                        
                         //Don't make the position go down as we go below the map
                         rigidbody.Position.Y += result.Height;
+                        Player.isGrounded = false;
                     }
                 }
             }
@@ -255,15 +275,15 @@ namespace GameLoopOne
                     dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
                     break;
             }
-
+            foreach (Weapon wep in GameWeapons.ToList())
+            {
+                wep.Draw(dc);
+            }
             foreach (GameObject go in objects.ToList())
             {
                 go.Draw(dc);
             }
-            foreach (Weapon wep in GameWorld.GameWeapons.ToList())
-            {
-                wep.Draw(dc);
-            }
+            
 
             Font f = new Font("IMPACT", 16);
 
@@ -282,6 +302,7 @@ namespace GameLoopOne
 
         public static void SetupDifferentWorlds()
         {
+            playSound = true;
             foreach (GameObject go in objects.ToList())
             {
                 if (!(go is Player || go is Sky))//dont remove the player or the sky
@@ -299,7 +320,7 @@ namespace GameLoopOne
 
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new RPG(new Vector2D(770, 590), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new Wrench(new Vector2D(770, 590), .3f))));
 
                     break;
 
@@ -320,6 +341,25 @@ namespace GameLoopOne
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
                     objects.Add(new CratePhys(new Vector2D(300, 590), .5f));
+                    break;
+
+                case 3:
+                    objects.Add(new Crate(new Vector2D(100, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 426), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 344), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 262), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 180), .5f));
+                    objects.Add(new Crate(new Vector2D(850, 180), .5f));
+                    objects.Add(new Crate(new Vector2D(200, 450), .5f));
+                    objects.Add(new Crate(new Vector2D(200, 150), .5f));
+                    objects.Add(new Crate(new Vector2D(300, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(50, 300), .5f));
+                    objects.Add(new Crate(new Vector2D(500, 300), .5f));
+                    objects.Add(new Crate(new Vector2D(400, 200), .5f));
+                    objects.Add(new Crate(new Vector2D(600, 450), .5f));
+
                     break;
             }
         }

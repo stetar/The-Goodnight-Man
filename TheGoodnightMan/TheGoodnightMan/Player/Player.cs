@@ -27,6 +27,8 @@ namespace GameLoopOne
 
         private float weaponTimer = 0;
         private float weaponPickupTimer = 0;
+        private float JumpTimer = 0;
+        private float JumpDelay = 5;
 
         public static int weaponIndexNumber;
 
@@ -136,7 +138,6 @@ namespace GameLoopOne
             {
                 currentPlayerWeapon.AttackMelee();
                 weaponTimer = 0;
-                
             }
             weaponTimer += deltaTime;
 
@@ -176,17 +177,17 @@ namespace GameLoopOne
             //weaponPickupTimer += deltaTime;
 
             //Jump
-            if (Keyboard.IsKeyDown(Keys.W))
+            if (Keyboard.IsKeyDown(Keys.W) && isGrounded)
             {
                 if (isGrounded)
                 {
                     velocity.Y = jumpVelocity;
                     isGrounded = false;
-
                 }
+                JumpTimer = 0;
 
             }
-
+            weaponPickupTimer = 0;
             // Bottom collision
 
             if (position.Y > GameWorld.WindowRectangle.Bottom - (GameWorld.WindowRectangle.Bottom / 5)) //align it with the backgroundline
@@ -283,36 +284,41 @@ namespace GameLoopOne
         /// <param name="other"></param>
         public override void OnCollision(GameObject other)
         {
-            if (other is Bullet || other is Explosion)
+            if (other is Bullet)
             {
                 float x = (position.X - sprite.Width / 2) - 75;
                 float y = position.Y - sprite.Height / 2;
-                //float x = position.X - 90;
-                //float y = position.Y - 80;
-                health -= Enemy.currentEnemyWeapon.damage; //TODO Fix with different weapons
-                //GameWorld.objects.Add(new Impact(new Vector2D(x, y), 1.5f));
+                health -= Enemy.currentEnemyWeapon.damage;
                 GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
-                GameWorld.removeList.Add(other);
+            }
 
-                if (health <= 0)
+            if (other is Explosion)
+            {
+                if (!Explosion.damageTaken)
                 {
-                    Form1.timer1.Stop();
-                    DialogResult dialogResult = MessageBox.Show("You got yourself killed, you idiot! What the hell kinda retarded move is that? Do you even know how to play video games? Just click yes to return to the main menu, scrub. Or you can just quit now. That wouldn't suprise me at all, since you're such a fucking cunt!", "Game fucking over!", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        GameWorld.objects.Clear();
-                        GameWorld.GameWeapons.Clear();
-                        GameWorld.removeList.Clear();
-                        Form1.ActiveForm.Hide();
-                        new MainMenuForm().Show();
-                    }
-                    else if (dialogResult == DialogResult.No)
-                    {
-                        Environment.Exit(0);
-                    }
+                    health -= Enemy.currentEnemyWeapon.damage;
+                    Explosion.damageTaken = true;
                 }
             }
-            
+
+            if (health <= 0)
+            {
+                Form1.timer1.Stop();
+                DialogResult dialogResult = MessageBox.Show("You got yourself killed, you idiot! What the hell kinda retarded move is that? Do you even know how to play video games? Just click yes to return to the main menu, scrub. Or you can just quit now. That wouldn't suprise me at all, since you're such a fucking cunt!", "Game fucking over!", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GameWorld.objects.Clear();
+                    GameWorld.GameWeapons.Clear();
+                    GameWorld.removeList.Clear();
+                    Form1.ActiveForm.Hide();
+                    new MainMenuForm().Show();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    Environment.Exit(0);
+                }
+            }
+
         }
     }
 }
