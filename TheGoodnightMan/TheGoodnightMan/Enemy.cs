@@ -20,8 +20,8 @@ namespace GameLoopOne
             currentEnemyWeapon = enemyWeapon;
             GameWorld.objects.Add(currentEnemyWeapon);//Weapon should also be added 
             
-            health = 5; //TODO fix this, this should be overridden in the enemy types
-
+            Random hp = new Random();
+            health = hp.Next(40, 81);
         }
 
         
@@ -37,20 +37,12 @@ namespace GameLoopOne
             timer += fps;
             if (health <= 0)
             {
-                //currentWeapon.Position = this.position;
-                //Weapon.gameWeapons.Add(currentWeapon);//Add the enemy weapon to the list of weapons'
-                GameWorld.GameWeapons.Add(currentEnemyWeapon);//Weapon should also be added 
-                //GameWorld.removeList.Add(currentEnemyWeapon);//remove the weapon from the objects list
+                //GameWorld.GameWeapons.Add(currentEnemyWeapon);//Weapon should also be added
+                float x = (position.X - sprite.Width / 2) - 75;
+                float y = position.Y - sprite.Height / 2;
+                GameWorld.objects.Add(new Impact(new Vector2D(x,y), .5f));
+                GameWorld.removeList.Add(currentEnemyWeapon);
                 GameWorld.removeList.Add(this);
-
-                //currentEnemyWeapon.DropWeapon(currentEnemyWeapon);
-                //Weapon.removeWeapons.Add(currentEnemyWeapon);
-                //GameWorld.removeList.Add(Player.currentWeapon);
-                //Player.currentWeapon = currentWeapon;
-
-                //GameWorld.objects.Add(new Pistol(this.position, 1));
-                // GameWorld.ownedWeapons.Add(new Pistol(this.position, 1));
-
             }
         }
     }
