@@ -38,9 +38,9 @@ namespace GameLoopOne.Forms
                 if (random.Next(0, 101) > 90)
                 {
                     if (MessageBox.Show("ALRIGHT YOU PRECIOUS LITTLE MOTHERFUCKERS," + Environment.NewLine + Environment.NewLine + "ARE YOU FUCKTARDS ASSBUTTS READY TO CLINCH FROM INTENSE GAMEPLAY, SKULLFUCKINGLY AMAZING SOUND," + Environment.NewLine + Environment.NewLine + "MESMORIZING STORY THAT MAY, OR MAY NOT BE FUCKING RACIST TO SOME, BUT NOT SPECIFICLY TARGETED TERRORISTS! (MUSLIMS)" + Environment.NewLine + Environment.NewLine + "SO BUCKLE THE FUCK UP MEIN HITLERJUGEND, CAUSE OLD PAPA GOODNIGHT MAN IS GONNA SHANK YOUR SORRY ASS, SO BAD YOUR CHILDREN ARE GONNA HAVING PROBLEMS BREATHING WITHOUT RAW OXYGEN TO THEIR SORRY, CRIPPLED LUNGS." + Environment.NewLine + Environment.NewLine + "WARNING: THIS GAME MAY NOT BE FOR HIPSTERS, NIGGAS, DWARFS AND OTHER FREAKS OF NATURE." + Environment.NewLine + Environment.NewLine + "SO IF YOU’RE A FUCKING FAGGOT, GO BACK TO YOUR CALL OF DUTY (YEP, WE JUST FUCKING WENT THERE)" + Environment.NewLine + Environment.NewLine + "CAUSE THIS GAME IS GONNA BLOW YOUR MIND UNTIL YOUR GAGGING REFLEX STOPS WORKING!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
-                    {
-                        Environment.Exit(0);
-                    }
+                {
+                    Environment.Exit(0);
+                }
                 }
                 
             }
