@@ -244,7 +244,7 @@ namespace GameLoopOne
         public override void UpdateAnimation(float fps)
         {
             float factor = 1 / fps;
-
+    
             if (movingLeft)
             {
                 // Calculate current frame index
