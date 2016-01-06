@@ -308,7 +308,7 @@ namespace GameLoopOne
                     removeList.Add(go);
                 }
             }
-
+            eng.Play2D("Drawing.wav");
             switch (iLevel)
             {
                 case 0:
@@ -339,6 +339,25 @@ namespace GameLoopOne
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
                     objects.Add(new CratePhys(new Vector2D(300, 590), .5f));
+                    break;
+
+                case 3:
+                    objects.Add(new Crate(new Vector2D(100, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 426), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 344), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 262), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 180), .5f));
+                    objects.Add(new Crate(new Vector2D(850, 180), .5f));
+                    objects.Add(new Crate(new Vector2D(200, 450), .5f));
+                    objects.Add(new Crate(new Vector2D(200, 150), .5f));
+                    objects.Add(new Crate(new Vector2D(300, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(50, 300), .5f));
+                    objects.Add(new Crate(new Vector2D(500, 300), .5f));
+                    objects.Add(new Crate(new Vector2D(400, 200), .5f));
+                    objects.Add(new Crate(new Vector2D(600, 450), .5f));
+
                     break;
             }
         }
