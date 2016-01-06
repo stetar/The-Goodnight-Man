@@ -299,6 +299,7 @@ namespace GameLoopOne
             if (health <= 0)
             {
                 Form1.timer1.Stop();
+                GameWorld.eng.StopAllSounds();
                 DialogResult dialogResult = MessageBox.Show("You got yourself killed, you idiot! What the hell kinda retarded move is that? Do you even know how to play video games? Just click yes to return to the main menu, scrub. Or you can just quit now. That wouldn't suprise me at all, since you're such a fucking cunt!", "Game fucking over!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
