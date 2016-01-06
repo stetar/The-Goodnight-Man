@@ -308,7 +308,7 @@ namespace GameLoopOne
                     removeList.Add(go);
                 }
             }
-            eng.Play2D("Drawing.wav");
+
             switch (iLevel)
             {
                 case 0:
