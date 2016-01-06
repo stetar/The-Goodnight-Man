@@ -2,6 +2,7 @@
 using GameLoopOne.Weapons;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
+using GameLoopOne.Weapons.Sprites;
 using IrrKlang;
 using System;
 using System.Collections.Generic;
@@ -191,7 +192,7 @@ namespace GameLoopOne
                     {
                         if (a != b)
                         {
-                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble)) //Don't calculate solid collisions for these classes
+                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble || b is Explosion)) //Don't calculate solid collisions for these classes
                             {
                                 this.ResolveAABBCollision(a, b);
                             }
@@ -338,7 +339,6 @@ namespace GameLoopOne
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 420), .75f));
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
-                    objects.Add(new CratePhys(new Vector2D(300, 590), .5f));
                     break;
 
                 case 3:

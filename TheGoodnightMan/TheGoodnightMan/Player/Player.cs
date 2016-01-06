@@ -287,6 +287,7 @@ namespace GameLoopOne
                 float y = position.Y - sprite.Height / 2;
                 health -= Enemy.currentEnemyWeapon.damage;
                 GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
+                GameWorld.removeList.Add(other);
             }
 
             if (other is Explosion)
