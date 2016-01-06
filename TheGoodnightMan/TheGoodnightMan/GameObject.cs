@@ -68,7 +68,9 @@ namespace GameLoopOne
 
         public virtual void Update(float fps) //virtual because we want to override
         {
+            
             CheckCollision();
+            
         }
 
         public virtual void UpdateAnimation(float fps)
