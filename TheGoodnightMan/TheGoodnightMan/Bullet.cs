@@ -50,14 +50,17 @@ namespace GameLoopOne
         }
         public override void OnCollision(GameObject other)
         {
-            GameWorld.removeList.Add(this);
+            if (other is Crate)
+            {
+                GameWorld.removeList.Add(this);
+            }
             foreach (GameObject pewpew in GameWorld.objects.ToList())
             {
                 if (pewpew is RPG)
                 {
                     if (hasAttacked)
                     {
-                        GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - 65, this.position.Y - 65), 1));
+                        GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - (sprite.Width / 2), this.position.Y - (sprite.Height / 2)), 1));
                         hasAttacked = false;
                     }
                 }

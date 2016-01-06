@@ -26,10 +26,23 @@ namespace GameLoopOne.Forms
             GameWorld.eng.Play2D("Drawing.wav", true);
             if (showWarning)
             {
-                if (MessageBox.Show("ALRIGHT YOU PRECIOUS LITTLE MOTHERFUCKERS," + Environment.NewLine + Environment.NewLine + "ARE YOU FUCKTARDS ASSBUTTS READY TO CLINCH FROM INTENSE GAMEPLAY" + Environment.NewLine + Environment.NewLine + "SKULLFUCKINGLY AMAZING SOUND," + Environment.NewLine + Environment.NewLine + "MESMORIZING STORY THAT MAY, OR MAY NOT BE FUCKING RACIST TO SOME, BUT NOT SPECIFICLY TARGETED TERRORISTS! (MUSLIMS)" + Environment.NewLine + Environment.NewLine + "SO BUCKLE THE FUCK UP MEIN HITLER JUGEN, CAUSE OLD PAPA GOODNIGHT MAN IS GONNA SHANK YOU SORRY ASS, SO BAD YOU ARE CHILDREN ARE GONNA HAVING PROBLEMS BREATHING WITHOUT RAW OXYGEN TO THEIR SORRY CRIPPLED LUNGS." + Environment.NewLine + Environment.NewLine + "WARNING: GAME MAY NOT BE FOR HIPSTERS, NIGGAS, DWARFS AND OTHER FREAKS OF NATURE." + Environment.NewLine + Environment.NewLine + "SO IF YOU’RE A FUCKING PLEP, GO BACK TO YOUR CALL OF DUTY (YEP WE JUST FUCKING WENT THERE)" + Environment.NewLine + Environment.NewLine + "CAUSE THIS GAME IS GONNA BLOW YOU MIND UNTIL YOUR GAGGING REFLEX STOPS WORKING!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                Random random = new Random();
+
+                if (random.Next(0, 101) <= 90)
+                {
+                    if (MessageBox.Show("Warning! The game you are about to play contains an overall disturbing and offensive style, which includes, but is not limited to, langauge, imagery, sound and humor." + Environment.NewLine + Environment.NewLine + "Player discretion and parental guidance is advised. The game is intended for at mature audience." + Environment.NewLine + Environment.NewLine + "The opinions expressed in the game do not necessarily reflect the views of the game developers, the developing company or any other individuals connected to the development and publishing of this game." + Environment.NewLine + Environment.NewLine + "All characters and events in this game are completely fictional and have no intentions of representing any real life characters or groups." + Environment.NewLine + Environment.NewLine + "We, the developer team, hope you can tell, that this is a piece of fiction created for entertainment purpose and therefor will enjoy it as such." + Environment.NewLine + "In advance thank you.", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                    {
+                        Environment.Exit(0);
+                    }
+                }
+                if (random.Next(0, 101) > 90)
+                {
+                    if (MessageBox.Show("ALRIGHT YOU PRECIOUS LITTLE MOTHERFUCKERS," + Environment.NewLine + Environment.NewLine + "ARE YOU FUCKTARDS ASSBUTTS READY TO CLINCH FROM INTENSE GAMEPLAY, SKULLFUCKINGLY AMAZING SOUND," + Environment.NewLine + Environment.NewLine + "MESMORIZING STORY THAT MAY, OR MAY NOT BE FUCKING RACIST TO SOME, BUT NOT SPECIFICLY TARGETED TERRORISTS! (MUSLIMS)" + Environment.NewLine + Environment.NewLine + "SO BUCKLE THE FUCK UP MEIN HITLERJUGEND, CAUSE OLD PAPA GOODNIGHT MAN IS GONNA SHANK YOUR SORRY ASS, SO BAD YOUR CHILDREN ARE GONNA HAVING PROBLEMS BREATHING WITHOUT RAW OXYGEN TO THEIR SORRY, CRIPPLED LUNGS." + Environment.NewLine + Environment.NewLine + "WARNING: THIS GAME MAY NOT BE FOR HIPSTERS, NIGGAS, DWARFS AND OTHER FREAKS OF NATURE." + Environment.NewLine + Environment.NewLine + "SO IF YOU’RE A FUCKING FAGGOT, GO BACK TO YOUR CALL OF DUTY (YEP, WE JUST FUCKING WENT THERE)" + Environment.NewLine + Environment.NewLine + "CAUSE THIS GAME IS GONNA BLOW YOUR MIND UNTIL YOUR GAGGING REFLEX STOPS WORKING!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
                 {
                     Environment.Exit(0);
                 }
+                }
+                
             }
             GameWorld.LoadGameState();
 

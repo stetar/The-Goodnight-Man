@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameLoopOne.Weapons.Sprites;
 
 namespace GameLoopOne
 {
@@ -118,7 +119,7 @@ namespace GameLoopOne
             {
                 go.UpdateAnimation(fps);
             }
-            foreach (GameObject wep in GameWeapons)
+            foreach (Weapon wep in GameWeapons)
             {
                 wep.UpdateAnimation(fps);
             }
@@ -191,7 +192,7 @@ namespace GameLoopOne
                     {
                         if (a != b)
                         {
-                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble)) //Don't calculate solid collisions for these classes
+                            if (!(b is Bullet || b is Impact || b is Enemy || b is Sky || b is Weapon || b is SpeechBubble || b is Explosion)) //Don't calculate solid collisions for these classes
                             {
                                 this.ResolveAABBCollision(a, b);
                             }
@@ -230,7 +231,7 @@ namespace GameLoopOne
                         rigidbody.Position.X += result.Width;
                     }
                 }
-                else if (result.Height < result.Width)
+                else
                 {
                     float distanceFromTop = Math.Abs(rigidbodyCenter.Y - b.CollisionBox.Top);
                     float distanceFromBottom = Math.Abs(rigidbodyCenter.Y - b.CollisionBox.Bottom);
@@ -238,20 +239,18 @@ namespace GameLoopOne
                     {
                         // Go up
                         rigidbody.Position.Y -= result.Height;
+                        Player.isGrounded = true;
                         if (Player.velocity.Y > 0) // Don't pull player down
                         {
                             Player.velocity.Y = 0;
                         }
-                        Player.isGrounded = true;
-
                     }
                     else
                     {
                         // Go down
-                        
+                        //Player.isGrounded = false;
                         //Don't make the position go down as we go below the map
                         rigidbody.Position.Y += result.Height;
-                        Player.isGrounded = false;
                     }
                 }
             }
@@ -275,15 +274,15 @@ namespace GameLoopOne
                     dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
                     break;
             }
-            foreach (Weapon wep in GameWeapons.ToList())
-            {
-                wep.Draw(dc);
-            }
+
             foreach (GameObject go in objects.ToList())
             {
                 go.Draw(dc);
             }
-            
+            foreach (Weapon wep in GameWorld.GameWeapons.ToList())
+            {
+                wep.Draw(dc);
+            }
 
             Font f = new Font("IMPACT", 16);
 
@@ -320,7 +319,7 @@ namespace GameLoopOne
 
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new Wrench(new Vector2D(770, 590), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new RPG(new Vector2D(770, 590), .3f))));
 
                     break;
 
@@ -340,7 +339,6 @@ namespace GameLoopOne
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 420), .75f));
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
-                    objects.Add(new CratePhys(new Vector2D(300, 590), .5f));
                     break;
 
                 case 3:
