@@ -339,7 +339,6 @@ namespace GameLoopOne
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 420), .75f));
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
-                    objects.Add(new CratePhys(new Vector2D(300, 590), .5f));
                     break;
 
                 case 3:
