@@ -27,7 +27,7 @@ namespace GameLoopOne
         private static Image level0Image = Image.FromFile("Levels/level0.png");
         private static Image level1Image = Image.FromFile("Levels/level0.png");
         private static Rectangle displayRectangle;
-        public static int iLevel;
+        public static int iLevel = 0;
         public static int iIncorrectness = 0;
         public static List<Weapon> GameWeapons = new List<Weapon>();
         private static float timer1 = 0;
@@ -152,15 +152,17 @@ namespace GameLoopOne
             playSound = false;
 
             timer1 += fps;
-            foreach (Weapon go in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
+            foreach (Weapon wep in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
             {
-                //go.Update(fps);
-                go.UpdateAnimation(fps);
+                wep.UpdateAnimation(fps);
             }
             foreach (GameObject go in objects.ToList()) //To list as you can't modify it in runtime elsewise.
             {
-                go.Update(fps);
-                go.UpdateAnimation(fps);
+                if (!(go is Weapon))
+                {
+                    go.Update(fps);
+                    go.UpdateAnimation(fps);
+                }
             }
 
             ResolveRigidbodyCollisions();
@@ -274,14 +276,13 @@ namespace GameLoopOne
                     dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
                     break;
             }
-
-            foreach (GameObject go in objects.ToList())
-            {
-                go.Draw(dc);
-            }
             foreach (Weapon wep in GameWorld.GameWeapons.ToList())
             {
                 wep.Draw(dc);
+            }
+            foreach (GameObject go in objects.ToList())
+            {
+                go.Draw(dc);
             }
 
             Font f = new Font("IMPACT", 16);
@@ -309,6 +310,10 @@ namespace GameLoopOne
                     removeList.Add(go);
                 }
             }
+            foreach (GameObject go in GameWeapons.ToList())
+            {
+                removeList.Add(go);
+            }
 
             switch (iLevel)
             {
@@ -320,7 +325,7 @@ namespace GameLoopOne
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new RPG(new Vector2D(770, 590), .3f))));
-
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(470, 425), .75f, (new AssaultRifle(new Vector2D(470, 425), .3f))));
                     break;
 
                 case 1:
@@ -329,6 +334,8 @@ namespace GameLoopOne
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 420),.75f));
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(770, 500), .75f));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 417), .75f, (new AssaultRifle(new Vector2D(770, 417), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(400, 590), .75f, (new RPG(new Vector2D(400, 590), .3f))));
 
                     break;
 
@@ -339,6 +346,7 @@ namespace GameLoopOne
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 420), .75f));
                     //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(590, 518), .75f, (new AssaultRifle(new Vector2D(590, 518), .3f))));
                     break;
 
                 case 3:
@@ -352,8 +360,10 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(0, 300), .5f));
                     objects.Add(new Crate(new Vector2D(0, 382), .5f));
                     objects.Add(new Crate(new Vector2D(0, 464), .5f));
-                    objects.Add(new Crate(new Vector2D(750, 590), .5f));
-                    objects.Add(new Crate(new Vector2D(750, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 508), .5f));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(0, 217), .75f, (new AssaultRifle(new Vector2D(0, 217), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(950, 425), .75f, (new AssaultRifle(new Vector2D(950, 425), .3f))));
 
                     break;
 
@@ -373,6 +383,8 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(700, 150), .5f));
                     objects.Add(new Crate(new Vector2D(400, 200), .5f));
                     objects.Add(new Crate(new Vector2D(600, 450), .5f));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(600, 334), .75f, (new AssaultRifle(new Vector2D(600, 334), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(700, 67), .75f, (new AssaultRifle(new Vector2D(700, 67), .3f))));
 
                     break;
             }

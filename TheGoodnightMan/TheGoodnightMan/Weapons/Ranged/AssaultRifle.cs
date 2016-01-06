@@ -13,7 +13,7 @@ namespace GameLoopOne.Weapons.Ranged
 
         public AssaultRifle(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 10;
+            damage = 0;
             this.AttackSpeed = 0.7f;
             this.animationSpeed = 30;
             meleeRangeX = 50f;

@@ -209,20 +209,19 @@ namespace GameLoopOne
             if (position.X > GameWorld.WindowRectangle.Right)
             {
                 GameWorld.iLevel++;
-                isGrounded = false;
-                GameWorld.SetupDifferentWorlds();
-                position.X = 0;
                 //Weapon.GameWeapons.Clear();
 
+                GameWorld.SetupDifferentWorlds();
+                position.X = sprite.Width;
 
             }
-            else if (position.X < GameWorld.WindowRectangle.Left)
+            else if (position.X < (GameWorld.WindowRectangle.Left - 50))
             {
-                GameWorld.iLevel--;
-                position.X = 900;
                 //Weapon.GameWeapons.Clear();
-
+                GameWorld.iLevel--;
                 GameWorld.SetupDifferentWorlds();
+                position.X = 900;
+
             }
 
             if (Keyboard.IsKeyDown(Keys.I) && !SpeechBubble.insultActive)
@@ -242,10 +241,11 @@ namespace GameLoopOne
             currentPlayerWeapon = newWeapon;
             
         }
+
         public override void UpdateAnimation(float fps)
         {
             float factor = 1 / fps;
-
+    
             if (movingLeft)
             {
                 // Calculate current frame index
@@ -267,11 +267,12 @@ namespace GameLoopOne
             }
             else if (currentFrameIndex < 0)
             {
+
                 currentFrameIndex = animationFrames.Count - 1;
             }
-
+            
             sprite = animationFrames[(int)currentFrameIndex];
-
+            
         }
         
         /// <summary>
@@ -282,10 +283,7 @@ namespace GameLoopOne
         {
             if (other is Bullet)
             {
-                float x = (position.X - sprite.Width / 2) - 75;
-                float y = position.Y - sprite.Height / 2;
                 health -= Enemy.currentEnemyWeapon.damage;
-                GameWorld.objects.Add(new Impact(new Vector2D(x, y), .5f));
                 GameWorld.removeList.Add(other);
             }
 
@@ -301,6 +299,7 @@ namespace GameLoopOne
             if (health <= 0)
             {
                 Form1.timer1.Stop();
+                GameWorld.eng.StopAllSounds();
                 DialogResult dialogResult = MessageBox.Show("You got yourself killed, you idiot! What the hell kinda retarded move is that? Do you even know how to play video games? Just click yes to return to the main menu, scrub. Or you can just quit now. That wouldn't suprise me at all, since you're such a fucking cunt!", "Game fucking over!", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {

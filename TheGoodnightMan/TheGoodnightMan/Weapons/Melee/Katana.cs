@@ -14,11 +14,11 @@ namespace GameLoopOne.Weapons.Melee
 
         public Katana(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 5;
-            this.AttackSpeed = 0.5f;
+            damage = 10;
+            this.AttackSpeed = 1f;
             this.animationSpeed = 30;
-            meleeRangeX = 40;
-            meleeRangeY = 80;
+            meleeRangeX = 80;
+            meleeRangeY = 100;
             moveWeaponUp = -40;
             moveWeaponRight = 20;
         }
