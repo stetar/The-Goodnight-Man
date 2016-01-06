@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bullet.cs" />
+    <Compile Include="Props\Coin\Coin.cs" />
     <Compile Include="Forms\LevelMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,7 +101,6 @@
     <Compile Include="Weapons\Ranged\AssaultRifle.cs" />
     <Compile Include="Weapons\Ranged\LMG.cs" />
     <Compile Include="Weapons\Ranged\RPG.cs" />
-    <Compile Include="Weapons\Ranged\Shotgun.cs" />
     <Compile Include="Weapons\Ranged\SMG.cs" />
     <Compile Include="Weapons\Sprites\Explosion.cs" />
     <Compile Include="Weapons\Weapon.cs" />
@@ -151,6 +151,10 @@
     <Content Include="Drawing.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Props\Coin\Coin1.png" />
+    <Content Include="Props\Coin\Coin2.png" />
+    <Content Include="Props\Coin\Coin3.png" />
+    <Content Include="Props\Coin\Coin4.png" />
     <Content Include="Weapons\Sounds\ISISFlag.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

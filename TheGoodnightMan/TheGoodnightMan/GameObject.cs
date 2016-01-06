@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using GameLoopOne.Props;
 
 namespace GameLoopOne
 {
@@ -67,7 +68,9 @@ namespace GameLoopOne
 
         public virtual void Update(float fps) //virtual because we want to override
         {
+            
             CheckCollision();
+            
         }
 
         public virtual void UpdateAnimation(float fps)

@@ -152,15 +152,17 @@ namespace GameLoopOne
             playSound = false;
 
             timer1 += fps;
-            foreach (Weapon go in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
+            foreach (Weapon wep in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
             {
-                //go.Update(fps);
-                go.UpdateAnimation(fps);
+                wep.UpdateAnimation(fps);
             }
             foreach (GameObject go in objects.ToList()) //To list as you can't modify it in runtime elsewise.
             {
-                go.Update(fps);
-                go.UpdateAnimation(fps);
+                if (!(go is Weapon))
+                {
+                    go.Update(fps);
+                    go.UpdateAnimation(fps);
+                }
             }
 
             ResolveRigidbodyCollisions();
@@ -274,14 +276,13 @@ namespace GameLoopOne
                     dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
                     break;
             }
-
-            foreach (GameObject go in objects.ToList())
-            {
-                go.Draw(dc);
-            }
             foreach (Weapon wep in GameWorld.GameWeapons.ToList())
             {
                 wep.Draw(dc);
+            }
+            foreach (GameObject go in objects.ToList())
+            {
+                go.Draw(dc);
             }
 
             Font f = new Font("IMPACT", 16);
@@ -309,6 +310,10 @@ namespace GameLoopOne
                     removeList.Add(go);
                 }
             }
+            foreach (GameObject go in GameWeapons.ToList())
+            {
+                removeList.Add(go);
+            }
 
             switch (iLevel)
             {
@@ -319,9 +324,8 @@ namespace GameLoopOne
 
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new AssaultRifle(new Vector2D(770, 590), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new RPG(new Vector2D(770, 590), .3f))));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(470, 425), .75f, (new AssaultRifle(new Vector2D(470, 425), .3f))));
-
                     break;
 
                 case 1:
