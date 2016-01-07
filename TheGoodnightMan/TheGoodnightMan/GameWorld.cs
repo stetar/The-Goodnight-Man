@@ -383,6 +383,20 @@ namespace GameLoopOne
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(700, 67), .75f, (new AssaultRifle(new Vector2D(700, 67), .3f))));
 
                     break;
+
+                case 5:
+                    objects.Add(new Crate(new Vector2D(950, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 426), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 344), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 262), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 180), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 98), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 16), .5f));
+                    objects.Add(new Crate(new Vector2D(950, -16), .5f));
+                    objects.Add(new Crate(new Vector2D(900, 0), .5f));
+
+                    break;
             }
         }
 
