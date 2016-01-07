@@ -41,7 +41,7 @@ namespace GameLoopOne.Forms
         private void Level2_Click(object sender, EventArgs e)
         {
             GameWorld.LoadGameState();
-
+            GameWorld.eng.StopAllSounds();
             Form1 game = new Form1();
             game.Show();
             this.Hide();

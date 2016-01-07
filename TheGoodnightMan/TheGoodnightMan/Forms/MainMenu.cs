@@ -55,11 +55,14 @@ namespace GameLoopOne.Forms
             LevelMenu LevelMenu = new LevelMenu();
             LevelMenu.Show();
             this.Hide();
-            GameWorld.eng.StopAllSounds();
+            
         }
 
         private void HowToPlayButton_Click(object sender, EventArgs e)
         {
+            Instructions Instructions = new Instructions();
+            Instructions.Show();
+            this.Hide();
         }
 
         private void GetInsulted_Click(object sender, EventArgs e)
@@ -136,6 +139,18 @@ namespace GameLoopOne.Forms
             LevelMenu.Show();
             this.Hide();
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Avatarshop AvatarShop = new Avatarshop();
+            AvatarShop.Show();
+            this.Hide();
         }
     }
 }

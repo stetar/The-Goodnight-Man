@@ -52,6 +52,18 @@
   <ItemGroup>
     <Compile Include="Baby.cs" />
     <Compile Include="Bullet.cs" />
+    <Compile Include="Forms\Avatarshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Avatarshop.Designer.cs">
+      <DependentUpon>Avatarshop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Instructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Instructions.Designer.cs">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ShopMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +129,14 @@
     <Compile Include="Weapons\Weapon.cs" />
     <Compile Include="Weapons\Ranged\Pistol.cs" />
     <Compile Include="Weapons\Melee\Knife.cs" />
+    <EmbeddedResource Include="Forms\Avatarshop.resx">
+      <DependentUpon>Avatarshop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LevelMenu.resx">
       <DependentUpon>LevelMenu.cs</DependentUpon>
@@ -173,10 +191,12 @@
     <Content Include="Drawing.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Forms\AvatarShop.png" />
     <Content Include="Forms\back.png" />
     <Content Include="Forms\buy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Forms\instructions.png" />
     <Content Include="Forms\Shop.png" />
     <Content Include="Forms\shopmenu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
