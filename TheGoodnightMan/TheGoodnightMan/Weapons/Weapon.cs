@@ -66,12 +66,11 @@ namespace GameLoopOne.Weapons
                 {
                     GameWorld.eng.StopAllSounds();
                     GameWorld.iIncorrectness += 5;
+                    GameWorld.SaveGameState();
                     Form1.timer1.Stop();
                 }
                 if (MessageBox.Show("Well done, shithead! No more screaming babies! Enjoy the silence while it lasts...", "Level complete", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                 {
-                    Form1.ActiveForm.Dispose();
-                    GameWorld.SaveGameState();
                     new LevelMenu().Show();
                 }
 
