@@ -60,9 +60,12 @@ namespace GameLoopOne
                 {
                     if (hasAttacked)
                     {
-                        GameWorld.removeList.Add(this);
-                        GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - (sprite.Width / 2), this.position.Y - (sprite.Height / 2)), 1));
-                        hasAttacked = false;
+                        if (!(other is Enemy || other is RPG))
+                        {
+                            GameWorld.removeList.Add(this);
+                            GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - (sprite.Width / 2), this.position.Y - (sprite.Height / 2)), 1));
+                            hasAttacked = false;
+                        }
                     }
                 }
             }
