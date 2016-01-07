@@ -1,29 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using GameLoopOne.Forms;
 using GameLoopOne.Props;
-using System.IO;
-using System.Xml.Schema;
-using GameLoopOne.Forms;
 using GameLoopOne.Weapons;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
 using GameLoopOne.Weapons.Sprites;
-
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Schema;
 
 namespace GameLoopOne
 {
-    class Player : RigidBodyBox
+    internal class Player : RigidBodyBox
     {
         //Player Weapon
         public static Weapon currentPlayerWeapon;
-        public static Weapon tempWeapon;
 
         private float weaponTimer = 0;
         private float weaponPickupTimer = 0;
@@ -32,17 +30,22 @@ namespace GameLoopOne
 
         //Player health
         public static int health;
+
         //Player animations
         private bool movingLeft;
+
         private bool movingRight;
         private int speed = 100;
+
         //Gravity
         private int gravity = 290;//the force the player is taken down with.
+
         private int jumpVelocity = -300;
         public static Vector2D velocity;
         public static bool isGrounded;
         public bool isAlive;
         private bool test = false;
+
         public Player(string imagePath, Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
         {
             velocity = new Vector2D(0, 0);
@@ -54,42 +57,55 @@ namespace GameLoopOne
                 case 0:
                     currentPlayerWeapon = new BaseballBat(new Vector2D(0, 0), .3f);
                     break;
+
                 case 1:
-                    currentPlayerWeapon = new CricketPlayer(new Vector2D(0,0), .3f);
+                    currentPlayerWeapon = new CricketPlayer(new Vector2D(0, 0), .3f);
                     break;
+
                 case 2:
                     currentPlayerWeapon = new Knife(new Vector2D(0, 0), .3f);
                     break;
+
                 case 3:
                     currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .5f);
                     break;
+
                 case 4:
                     currentPlayerWeapon = new Katana(new Vector2D(0, 0), .3f);
                     break;
+
                 case 5:
                     currentPlayerWeapon = new DildoSword(new Vector2D(0, 0), .3f);
                     break;
+
                 case 6:
                     currentPlayerWeapon = new Axe(new Vector2D(0, 0), .3f);
                     break;
+
                 case 7:
                     currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .5f);
                     break;
+
                 case 8:
                     currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .5f);
                     break;
+
                 case 9:
                     currentPlayerWeapon = new AssaultRifle(new Vector2D(0, 0), .2f);
                     break;
+
                 case 10:
                     currentPlayerWeapon = new RPG(new Vector2D(0, 0), .3f);
                     break;
+
                 case 11:
                     currentPlayerWeapon = new SMG(new Vector2D(0, 0), .3f);
                     break;
+
                 case 12:
                     currentPlayerWeapon = new LMG(new Vector2D(0, 0), .3f);
                     break;
+
                 case 13:
                     currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .3f);
                     break;
@@ -99,13 +115,12 @@ namespace GameLoopOne
 
         public override void Update(float fps)
         {
-
             if (currentPlayerWeapon != null)
             {
                 currentPlayerWeapon.Position.X = position.X + currentPlayerWeapon.moveWeaponRight;
                 currentPlayerWeapon.Position.Y = position.Y + currentPlayerWeapon.moveWeaponUp;
             }
-           
+
             //Player animation & Movement
             movingLeft = false;
             movingRight = false;
@@ -115,55 +130,19 @@ namespace GameLoopOne
                 position.X -= 1 / fps * speed;
                 movingLeft = true;
             }
-            
+
             if (Keyboard.IsKeyDown(Keys.D))
             {
                 position.X += 1 / fps * speed;
                 movingRight = true;
-                
             }
             float deltaTime = 1f / fps;
-            if (Keyboard.IsKeyDown(Keys.Space) && weaponTimer > currentPlayerWeapon.AttackSpeed) 
+            if (Keyboard.IsKeyDown(Keys.Space) && weaponTimer > currentPlayerWeapon.AttackSpeed)
             {
                 currentPlayerWeapon.AttackMelee();
                 weaponTimer = 0;
             }
             weaponTimer += deltaTime;
-
-            if (Keyboard.IsKeyDown(Keys.S) && weaponPickupTimer > 3)
-            {
-                //Weapon
-                foreach (Weapon wep in GameWorld.GameWeapons.ToList())
-                {
-                    if (this.IsCollidingWith(wep))//If the player is colliding with a weapon and is pressing s
-                    {
-                        //tempWeapon = wep;
-                        //currentPlayerWeapon = null;
-                        ChangeWeapon(currentPlayerWeapon, wep);
-                    }
-                }
-                weaponPickupTimer = 0;
-            }
-            weaponPickupTimer += deltaTime;
-            //if (Keyboard.IsKeyDown(Keys.S) && weaponPickupTimer > 3)
-            //{
-            //    //Weapon
-            //    foreach (Weapon wep in Weapon.gameWeapons.ToList())
-            //    {
-            //        if (this.IsCollidingWith(wep) && Keyboard.IsKeyDown(Keys.S)/* && currentPlayerWeapon != wep*/)//If the player is colliding with a weapon and is pressing s
-            //        {
-            //            currentPlayerWeapon.DropWeapon(currentPlayerWeapon);
-            //            Weapon.removeWeapons.Add(currentPlayerWeapon);
-            //            currentPlayerWeapon = wep;
-
-            //            Weapon.removeWeapons.Add(wep);
-            //            GameWorld.removeList.Add(wep);
-            //            test = true;
-            //        }
-            //    }
-            //    weaponPickupTimer = 0;
-            //}
-            //weaponPickupTimer += deltaTime;
 
             //Jump
             if (Keyboard.IsKeyDown(Keys.W))
@@ -173,7 +152,6 @@ namespace GameLoopOne
                     velocity.Y = jumpVelocity;
                     isGrounded = false;
                 }
-
             }
 
             // Bottom collision
@@ -207,7 +185,6 @@ namespace GameLoopOne
 
                 GameWorld.SetupDifferentWorlds();
                 position.X = sprite.Width;
-
             }
             else if (position.X < (GameWorld.WindowRectangle.Left - 50))
             {
@@ -215,7 +192,6 @@ namespace GameLoopOne
                 GameWorld.iLevel--;
                 GameWorld.SetupDifferentWorlds();
                 position.X = 900;
-
             }
 
             if (Keyboard.IsKeyDown(Keys.I) && !SpeechBubble.insultActive)
@@ -226,20 +202,10 @@ namespace GameLoopOne
             base.Update(fps);
         }
 
-        public void ChangeWeapon(Weapon oldWeapon, Weapon newWeapon)
-        {
-            //GameWorld.removeList.Add(oldWeapon);
-            GameWorld.GameWeapons.Add(newWeapon);
-            GameWorld.GameWeapons.Remove(oldWeapon);
-            weaponIndexNumber = newWeapon.weaponIndex;
-            currentPlayerWeapon = newWeapon;
-            
-        }
-
         public override void UpdateAnimation(float fps)
         {
             float factor = 1 / fps;
-    
+
             if (movingLeft)
             {
                 // Calculate current frame index
@@ -261,14 +227,12 @@ namespace GameLoopOne
             }
             else if (currentFrameIndex < 0)
             {
-
                 currentFrameIndex = animationFrames.Count - 1;
             }
-            
+
             sprite = animationFrames[(int)currentFrameIndex];
-            
         }
-        
+
         /// <summary>
         /// Checks the player's collision each tick, only called on actual collision.
         /// </summary>
@@ -308,7 +272,6 @@ namespace GameLoopOne
                     Environment.Exit(0);
                 }
             }
-
         }
     }
 }
