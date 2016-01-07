@@ -15,17 +15,26 @@ namespace GameLoopOne
         public static Weapon currentEnemyWeapon;
         public int health;
         private bool isAlive = true;
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="imagePath"></param>
+        /// <param name="startPos"></param>
+        /// <param name="scaleFactor"></param>
+        /// <param name="enemyWeapon">Which weapon the enemy should use</param>
         public Enemy(string imagePath, Vector2D startPos, float scaleFactor, Weapon enemyWeapon) : base(imagePath, startPos, scaleFactor)
         {
             currentEnemyWeapon = enemyWeapon;
-            GameWorld.objects.Add(currentEnemyWeapon);//Weapon should also be added 
-            
+            GameWorld.objects.Add(currentEnemyWeapon);//Weapon should also be added to the list of objects
             Random hp = new Random();
             health = hp.Next(60, 101);
         }
 
         
-
+        /// <summary>
+        /// Handles the basic AI code and removes enemy on death
+        /// </summary>
+        /// <param name="fps"></param>
         public override void Update(float fps)
         {
             fps = 1f/fps;

@@ -21,13 +21,24 @@ namespace GameLoopOne
         private bool hasAttacked;
 
         private Vector2D velocity; //for storing the value
+        /// <summary>
+        /// Constructor for the bullet.
+        /// </summary>
+        /// <param name="imagePath"></param>
+        /// <param name="startPos"></param>
+        /// <param name="scaleFactor"></param>
+        /// <param name="speed">Bullet speed</param>
+        /// <param name="player">Player to follow</param>
         public Bullet(string imagePath, Vector2D startPos, float scaleFactor, float speed, GameObject player) : base(imagePath, startPos, scaleFactor)
         {
             this.player = player;
             this.speed = speed;
         }
 
-
+        /// <summary>
+        /// Handles the movement for the bullet
+        /// </summary>
+        /// <param name="fps"></param>
         public override void Update(float fps)
         {
             //Calculate distance between player and enemy
@@ -49,6 +60,10 @@ namespace GameLoopOne
             base.Update(fps);
 
         }
+        /// <summary>
+        /// Handles the collision for the bullet
+        /// </summary>
+        /// <param name="other"></param>
         public override void OnCollision(GameObject other)
         {
             if (other is Crate || other is Bridge)
@@ -68,8 +83,7 @@ namespace GameLoopOne
                     }
                 }
             }
-            //not removing bullets here, as they all would be removed when one collided with ANYTHING.
-            //GameWorld.removeList.Add(this); 
+           
         }
     }
 }

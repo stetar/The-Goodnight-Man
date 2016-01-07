@@ -26,17 +26,16 @@ namespace GameLoopOne
         private float currentFps;
         private BufferedGraphics backBuffer;
         private static Image level0Image = Image.FromFile("Levels/level0.png");
-        private static Image level1Image = Image.FromFile("Levels/level0.png");
         private static Rectangle displayRectangle;
         public static int iLevel = 0;
         public static int iIncorrectness = 0;
         public static List<Weapon> GameWeapons = new List<Weapon>();
-        private static float timer1 = 0;
-        private static float timeOut1 = 10f; //5 secs
+        private static float SoundTimer = 0;
+        private static float SoundTimeOut = 10f; //5 secs
         private static bool playSound;
         private static ISound levelChangeSound;
         public static ISoundEngine eng = new ISoundEngine();
-
+        //All the bools for saving and loading the weaponshop.
         public static bool OwnAssaultRifle = false;
         public static bool OwnRPG;
         public static bool OwnLMG;
@@ -62,7 +61,11 @@ namespace GameLoopOne
                 displayRectangle = value;
             }
         }
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="dc"></param>
+        /// <param name="displayRectangle"></param>
         public GameWorld(Graphics dc, Rectangle displayRectangle)
         {
             WindowRectangle = displayRectangle;
@@ -79,54 +82,24 @@ namespace GameLoopOne
             get { return objects; }
             set { objects = value; }
         }
-
+        /// <summary>
+        /// Setup of the first world. The rest are setup in SetupDifferentWorlds
+        /// </summary>
         public void SetupWorld()
         {
             endTime = DateTime.Now;
-            //Random rand = new Random();
-            //string imageString = "weapons/sprites/weaponSprite1.png;weapons/sprites/weaponSprite2.png;weapons/sprites/weaponSprite3.png;weapons/sprites/weaponSprite4.png";
-
+            
             string imageString = "Player/Sprites/Playersprite1.png;Player/Sprites/Playersprite2.png;Player/Sprites/Playersprite3.png;Player/Sprites/Playersprite4.png;Player/Sprites/Playersprite5.png;Player/Sprites/Playersprite6.png;Player/Sprites/Playersprite7.png;Player/Sprites/Playersprite8.png";
             objects.Add(new Player(imageString, new Vector2D(100, 550), .75f));
             objects.Add(new Sky(new Vector2D(10, 100), 1));
             objects.Add(new Sky(new Vector2D(850, 50), 1));
             objects.Add(new Sky(new Vector2D(440, 75), 1));
-            string text = File.ReadAllText("test.txt");
-
-            //string[] lines = System.IO.File.ReadAllLines("test.txt");
-            ////if (lines[0] != null)
-            ////{
-            ////    //GameWorld.iIncorrectness = Convert.ToInt32(lines[0]);
-            ////}
-            ////for (int i = 0; i < GameWorld.objects.Count; i++)
-            ////{
-            ////    lines[0] = Player.currentPlayerWeapon.ToString(); // the current player weapon.
-            ////    //lines[1] = GameWorld.iIncorrectness.ToString();
-            ////    //lines[2] = GameWorld.iLevel.ToString();
-            ////}
-            //string[] savedLines = new string[] { };
-
-            //for (int i = 0; i < lines.Count(); i++)
-            //{
-            //    savedLines[lines.Count()];
-            //}
-
-            //foreach (string line in lines)
-            //{
-            //    //lines[0] = Player.currentPlayerWeapon.ToString(); // the current player weapon.
-            //    //lines[1] = GameWorld.iIncorrectness.ToString();
-            //    //lines[2] = GameWorld.iLevel.ToString();
-            //    lines[0] = "Hej";
-            //    lines[1] = "line2";
-            //    lines[2] = "line 43";
-            //    File.WriteAllLines("test.txt", lines);
-            //}
-
-            //text = text.Replace("weapon", "new value");
-            //string penis = Player.currentPlayerWeapon.ToString();
-            //File.WriteAllText("test.txt", penis);
+           
         }
-
+        /// <summary>
+        /// Updates the animations for the gameobjects, in the following order.
+        /// </summary>
+        /// <param name="fps"></param>
         private void UpdateAnimations(float fps)
         {
             foreach (GameObject go in objects)
@@ -138,7 +111,9 @@ namespace GameLoopOne
                 wep.UpdateAnimation(fps);
             }
         }
-
+        /// <summary>
+        /// The main gameloop.
+        /// </summary>
         public void GameLoop()
         {
             DateTime startTime = DateTime.Now;
@@ -149,23 +124,26 @@ namespace GameLoopOne
             Update(currentFps);
             Draw();
         }
-
+        /// <summary>
+        /// Checks for several things, including animations and collisions.
+        /// </summary>
+        /// <param name="fps"></param>
         private void Update(float fps)
         {
-            if (timer1 > timeOut1)
+            if (SoundTimer > SoundTimeOut)
             {
                 if (playSound)
                 {
                     if (levelChangeSound == null || levelChangeSound.Finished)
                     {
                         levelChangeSound = eng.Play2D("Drawing.wav", false);
-                        timer1 = 10;
+                        SoundTimer = 10;
                     }
                 }
             }
             playSound = false;
 
-            timer1 += fps;
+            SoundTimer += fps;
             foreach (Weapon wep in GameWeapons.ToList()) //To list as you can't modify it in runtime elsewise.
             {
                 wep.UpdateAnimation(fps);
@@ -197,7 +175,10 @@ namespace GameLoopOne
             // Clear toremove
             removeList.Clear();
         }
-
+        /// <summary>
+        /// Teknisk vejledning.
+        /// Checks for objects that need a rigidbody
+        /// </summary>
         private void ResolveRigidbodyCollisions()
         {
             foreach (var a in objects)
@@ -221,7 +202,11 @@ namespace GameLoopOne
                 }
             }
         }
-
+        /// <summary>
+        /// Resolves collisions of two game objects.
+        /// </summary>
+        /// <param name="rigidbody">Player</param>
+        /// <param name="b"></param>
         private void ResolveAABBCollision(GameObject rigidbody, GameObject b)
         {
             RectangleF result = RectangleF.Intersect(rigidbody.CollisionBox, b.CollisionBox);
@@ -271,7 +256,9 @@ namespace GameLoopOne
                 }
             }
         }
-
+        /// <summary>
+        /// Draws all of the levels
+        /// </summary>
         private void Draw()
         {
             // Top background image
@@ -283,11 +270,11 @@ namespace GameLoopOne
                     break;
 
                 case 1:
-                    dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
+                    dc.DrawImage(level0Image, 0, 0, level0Image.Width, level0Image.Height);
                     break;
 
                 case 2:
-                    dc.DrawImage(level1Image, 0, 0, level1Image.Width, level1Image.Height);
+                    dc.DrawImage(level0Image, 0, 0, level0Image.Width, level0Image.Height);
                     break;
             }
             foreach (Weapon wep in GameWorld.GameWeapons.ToList())
@@ -313,7 +300,9 @@ namespace GameLoopOne
 
             backBuffer.Render();
         }
-
+        /// <summary>
+        /// Setups the different worlds
+        /// </summary>
         public static void SetupDifferentWorlds()
         {
             playSound = true;
@@ -349,7 +338,7 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(570, 590), .5f));
                     objects.Add(new Crate(new Vector2D(670, 590), .5f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(590, 518), .75f, (new EnemyAssaultRifle(new Vector2D(590, 518), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(590, 360), .75f, (new EnemyAssaultRifle(new Vector2D(590, 360), .3f))));
                     break;
 
                 case 3:
@@ -361,6 +350,8 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(0, 464), .5f));
                     objects.Add(new Crate(new Vector2D(950, 590), .5f));
                     objects.Add(new Crate(new Vector2D(950, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(800, 590), .5f));
+
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(75, 217), .75f, (new EnemyRPG(new Vector2D(75, 217), .3f))));
 
                     break;
@@ -381,7 +372,7 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(700, 150), .5f));
                     objects.Add(new Crate(new Vector2D(400, 200), .5f));
                     objects.Add(new Crate(new Vector2D(600, 450), .5f));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(700, 67), .75f, (new EnemyAssaultRifle(new Vector2D(700, 67), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(720, 67), .75f, (new EnemyAssaultRifle(new Vector2D(700, 67), .3f))));
 
                     break;
 
@@ -401,7 +392,9 @@ namespace GameLoopOne
                     break;
             }
         }
-
+        /// <summary>
+        /// Saves the gamestate into an array of lines
+        /// </summary>
         public static void SaveGameState()
         {
             List<string> lineList = new List<string>();
@@ -427,7 +420,9 @@ namespace GameLoopOne
             // and then closes the file.
             System.IO.File.WriteAllLines("test.txt", lineList);
         }
-
+        /// <summary>
+        /// Loads the gamestate.
+        /// </summary>
         public static void LoadGameState()
         {
             string[] lines = File.ReadAllLines("test.txt");

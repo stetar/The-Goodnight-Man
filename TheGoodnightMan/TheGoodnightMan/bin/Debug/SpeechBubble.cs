@@ -21,7 +21,13 @@ namespace GameLoopOne
         public static string insult;
         public static int insultLength;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="imagePath"></param>
+        /// <param name="startPos"></param>
+        /// <param name="scaleFactor"></param>
+        /// <param name="player">Target for speechbubble</param>
         public SpeechBubble(string imagePath, Vector2D startPos, float scaleFactor, Player player)
             : base(imagePath, startPos, scaleFactor)
         {
@@ -75,7 +81,10 @@ namespace GameLoopOne
             insultText.AutoSize = true;
             insultText.Hide();
         }
-
+        /// <summary>
+        /// Updates the movement for the speechbubble
+        /// </summary>
+        /// <param name="fps"></param>
         public override void Update(float fps)
         {
             this.Position.X = player.Position.X + 30;

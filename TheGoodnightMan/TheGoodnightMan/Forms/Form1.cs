@@ -30,7 +30,11 @@ namespace GameLoopOne
             MainMenuForm.showWarning = false;
             GameWorld.LoadGameState();
         }
-        
+        /// <summary>
+        /// The applications tick
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
     private void timer1_Tick(object sender, EventArgs e)
         {
             gw.GameLoop();
@@ -55,7 +59,11 @@ namespace GameLoopOne
                 }
             }
         }
-
+        /// <summary>
+        /// Loads our gameworld
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             if(dc == null)

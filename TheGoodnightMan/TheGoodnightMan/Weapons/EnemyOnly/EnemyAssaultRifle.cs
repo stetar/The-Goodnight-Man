@@ -13,7 +13,7 @@ namespace GameLoopOne.Weapons.EnemyOnly
 
         public EnemyAssaultRifle(Vector2D startPos, float scalefactor) : base(imagePath, startPos, scalefactor, weaponIndex)
         {
-            damage = 20;
+            damage = 15;
             this.AttackSpeed = 1;
         }
     }

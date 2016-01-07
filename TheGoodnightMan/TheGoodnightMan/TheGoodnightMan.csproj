@@ -85,7 +85,6 @@
     </Compile>
     <Compile Include="Impact.cs" />
     <Compile Include="Props\Bridge\Bridge.cs" />
-    <Compile Include="Props\Crate\CratePhys.cs" />
     <Compile Include="Props\Crate\Crate.cs" />
     <Compile Include="Props\Sky\Sky.cs" />
     <Compile Include="RigidBodyBox.cs" />

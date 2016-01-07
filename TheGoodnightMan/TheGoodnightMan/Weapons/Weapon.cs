@@ -25,13 +25,21 @@ namespace GameLoopOne.Weapons
         public float moveWeaponRight = 0;
         public int weaponIndex;
         private Graphics attackRange;
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="imagePath"></param>
+        /// <param name="startPos"></param>
+        /// <param name="scaleFactor"></param>
+        /// <param name="weaponIndex"></param>
         public Weapon(string imagePath, Vector2D startPos, float scaleFactor, int weaponIndex) : base(imagePath, startPos, scaleFactor)
         {
             didAttack = false;
             this.weaponIndex = weaponIndex;
         }
-
+        /// <summary>
+        /// The rectangle/melee range
+        /// </summary>
         public RectangleF attackRangeBox
         {
             get
@@ -39,7 +47,10 @@ namespace GameLoopOne.Weapons
                 return new RectangleF(position.X, position.Y, meleeRangeX, meleeRangeY);
             }
         }
-
+        /// <summary>
+        /// Draws the melee rectangle in debug
+        /// </summary>
+        /// <param name="dc"></param>
         public override void Draw(Graphics dc)
         {
             base.Draw(dc);
@@ -47,7 +58,9 @@ namespace GameLoopOne.Weapons
             dc.DrawRectangle(new Pen(Brushes.Red), position.X, position.Y, attackRangeBox.Width, attackRangeBox.Height);//don't draw the actual range in release
 #endif
         }
-
+        /// <summary>
+        /// This handles the player's attack, level ending and which sounds to play
+        /// </summary>
         public virtual void AttackMelee()
         {
             didAttack = true;
@@ -121,7 +134,9 @@ namespace GameLoopOne.Weapons
                 }
             }
         }
-
+        /// <summary>
+        /// This handles the enemy attack and corrisponding sounds
+        /// </summary>
         public virtual void AttackRanged()
         {
             foreach (GameObject player in GameWorld.objects)
@@ -182,9 +197,5 @@ namespace GameLoopOne.Weapons
             }
         }
 
-        public static implicit operator Weapon(string v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -12,6 +12,9 @@ namespace GameLoopOne.Forms
 {
     public partial class LevelMenu : Form
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public LevelMenu()
         {
             InitializeComponent();
@@ -20,24 +23,17 @@ namespace GameLoopOne.Forms
             this.CenterToScreen();
             WindowState = FormWindowState.Normal;
             Level1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            Label label1 = new Label();
-            Level1.BackColor = Color.Transparent;
             Level1.TabStop = false; //removes focus;
-            //Level2.TabStop = false; //removes focus;
-            //Level3.TabStop = false; //removes focus;
-            
-            Level1.FlatAppearance.BorderSize = 0;
-            Level1.FlatAppearance.BorderSize = 0;
-            Level2.FlatAppearance.BorderSize = 0;
-            Level3.FlatAppearance.BorderSize = 0;
-            Level4.FlatAppearance.BorderSize = 0;
-
 
 
         }
 
-        
 
+        /// <summary>
+        /// Loads a level
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Level2_Click(object sender, EventArgs e)
         {
             GameWorld.LoadGameState();
@@ -46,12 +42,27 @@ namespace GameLoopOne.Forms
             game.Show();
             this.Hide();
         }
+        /// <summary>
+        /// Exits the game
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
 
             Application.Exit();
             base.OnFormClosing(e);
 
+        }
+        /// <summary>
+        /// Goes back to main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            MainMenuForm.showWarning = false;
+            ActiveForm.Dispose();
+            new MainMenuForm().Show();
         }
     }
 }

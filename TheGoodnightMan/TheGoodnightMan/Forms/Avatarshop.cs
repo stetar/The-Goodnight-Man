@@ -12,6 +12,9 @@ namespace GameLoopOne.Forms
 {
     public partial class Avatarshop : Form
     {
+        /// <summary>
+        /// Constructer
+        /// </summary>
         public Avatarshop()
         {
             InitializeComponent();
@@ -20,7 +23,11 @@ namespace GameLoopOne.Forms
             this.CenterToScreen();
             WindowState = FormWindowState.Normal;
         }
-
+        /// <summary>
+        /// Handles the back button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackButton_Click(object sender, EventArgs e)
         {
            

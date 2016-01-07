@@ -30,9 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelMenu));
             this.Level1 = new System.Windows.Forms.Button();
-            this.Level2 = new System.Windows.Forms.Button();
-            this.Level3 = new System.Windows.Forms.Button();
-            this.Level4 = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).BeginInit();
             this.SuspendLayout();
             // 
             // Level1
@@ -44,82 +47,117 @@
             this.Level1.FlatAppearance.BorderSize = 0;
             this.Level1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Level1.Font = new System.Drawing.Font("Impact", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Level1.Location = new System.Drawing.Point(36, 89);
+            this.Level1.Location = new System.Drawing.Point(154, 154);
             this.Level1.Margin = new System.Windows.Forms.Padding(0);
             this.Level1.Name = "Level1";
-            this.Level1.Size = new System.Drawing.Size(244, 214);
+            this.Level1.Size = new System.Drawing.Size(112, 113);
             this.Level1.TabIndex = 1;
             this.Level1.TabStop = false;
             this.Level1.Text = " Level 1";
             this.Level1.UseVisualStyleBackColor = false;
             this.Level1.Click += new System.EventHandler(this.Level2_Click);
             // 
-            // Level2
+            // BackButton
             // 
-            this.Level2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Level2.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Level2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Level2.BackgroundImage")));
-            this.Level2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Level2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Level2.Font = new System.Drawing.Font("Impact", 8.142858F);
-            this.Level2.Location = new System.Drawing.Point(301, 89);
-            this.Level2.Margin = new System.Windows.Forms.Padding(0);
-            this.Level2.Name = "Level2";
-            this.Level2.Size = new System.Drawing.Size(244, 214);
-            this.Level2.TabIndex = 2;
-            this.Level2.TabStop = false;
-            this.Level2.Text = "Level 2(wip)";
-            this.Level2.UseVisualStyleBackColor = false;
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackButton.BackgroundImage")));
+            this.BackButton.Location = new System.Drawing.Point(188, 532);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(112, 56);
+            this.BackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.BackButton.TabIndex = 5;
+            this.BackButton.TabStop = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // Level3
+            // button1
             // 
-            this.Level3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Level3.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Level3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Level3.BackgroundImage")));
-            this.Level3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Level3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Level3.Font = new System.Drawing.Font("Impact", 8.142858F);
-            this.Level3.Location = new System.Drawing.Point(572, 89);
-            this.Level3.Margin = new System.Windows.Forms.Padding(0);
-            this.Level3.Name = "Level3";
-            this.Level3.Size = new System.Drawing.Size(244, 214);
-            this.Level3.TabIndex = 3;
-            this.Level3.TabStop = false;
-            this.Level3.Text = "Level 3 (wip)";
-            this.Level3.UseVisualStyleBackColor = false;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Impact", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(320, 154);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 113);
+            this.button1.TabIndex = 6;
+            this.button1.TabStop = false;
+            this.button1.Text = "Level 2 (soon)";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // Level4
+            // button2
             // 
-            this.Level4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Level4.BackColor = System.Drawing.SystemColors.Desktop;
-            this.Level4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Level4.BackgroundImage")));
-            this.Level4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Level4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Level4.Font = new System.Drawing.Font("Impact", 8.142858F);
-            this.Level4.Location = new System.Drawing.Point(842, 89);
-            this.Level4.Margin = new System.Windows.Forms.Padding(0);
-            this.Level4.Name = "Level4";
-            this.Level4.Size = new System.Drawing.Size(244, 214);
-            this.Level4.TabIndex = 4;
-            this.Level4.TabStop = false;
-            this.Level4.Text = "Level 3 (wip";
-            this.Level4.UseVisualStyleBackColor = false;
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Impact", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(486, 154);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 113);
+            this.button2.TabIndex = 7;
+            this.button2.TabStop = false;
+            this.button2.Text = "Level 3 (soon)";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Impact", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(648, 154);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 113);
+            this.button3.TabIndex = 8;
+            this.button3.TabStop = false;
+            this.button3.Text = "Level 4 (soon)";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Impact", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(809, 154);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 113);
+            this.button4.TabIndex = 9;
+            this.button4.TabStop = false;
+            this.button4.Text = "Level 5 (soon)";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // LevelMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1000, 704);
-            this.Controls.Add(this.Level4);
-            this.Controls.Add(this.Level3);
-            this.Controls.Add(this.Level2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.Level1);
             this.DoubleBuffered = true;
             this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "LevelMenu";
             this.Text = "LevelMenu";
+            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -128,8 +166,10 @@
 
       
         private System.Windows.Forms.Button Level1;
-        private System.Windows.Forms.Button Level2;
-        private System.Windows.Forms.Button Level3;
-        private System.Windows.Forms.Button Level4;
+        private System.Windows.Forms.PictureBox BackButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

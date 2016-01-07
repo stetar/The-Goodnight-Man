@@ -45,7 +45,12 @@ namespace GameLoopOne
         public static bool isGrounded;
         public bool isAlive;
         private bool test = false;
-
+        /// <summary>
+        /// Constructor for the player. Handles the weapon index as well.
+        /// </summary>
+        /// <param name="imagePath">sprite</param>
+        /// <param name="startPos">Starting position</param>
+        /// <param name="scaleFactor"></param>
         public Player(string imagePath, Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
         {
             velocity = new Vector2D(0, 0);
@@ -112,7 +117,10 @@ namespace GameLoopOne
             }
             GameWorld.GameWeapons.Add(currentPlayerWeapon); //add it to objects as it should get drawn
         }
-
+        /// <summary>
+        /// Update function for the player
+        /// </summary>
+        /// <param name="fps"></param>
         public override void Update(float fps)
         {
             if (currentPlayerWeapon != null)
@@ -201,7 +209,10 @@ namespace GameLoopOne
             }
             base.Update(fps);
         }
-
+        /// <summary>
+        /// Override of UpdateAnimation so the player gets animated correctly
+        /// </summary>
+        /// <param name="fps"></param>
         public override void UpdateAnimation(float fps)
         {
             float factor = 1 / fps;

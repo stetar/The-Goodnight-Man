@@ -41,7 +41,12 @@ namespace GameLoopOne
             }
             set { position = value; }
         }   
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="imagePath"></param>
+        /// <param name="startPos"></param>
+        /// <param name="scaleFactor"></param>
         public GameObject(string imagePath, Vector2D startPos, float scaleFactor)
         {
             
@@ -57,7 +62,10 @@ namespace GameLoopOne
             this.sprite = animationFrames[0];
         }
 
-
+        /// <summary>
+        /// Draws all GameObjects
+        /// </summary>
+        /// <param name="dc"></param>
         public virtual void Draw(Graphics dc) //virtual because we want to override
         {
            dc.DrawImage(sprite, position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
@@ -65,14 +73,20 @@ namespace GameLoopOne
             //dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, CollisionBox.Width, CollisionBox.Height);
         #endif
         }
-
+        /// <summary>
+        /// Handles the collisionCheck
+        /// </summary>
+        /// <param name="fps"></param>
         public virtual void Update(float fps) //virtual because we want to override
         {
             
             CheckCollision();
             
         }
-
+        /// <summary>
+        /// Handles the GameObjects animations
+        /// </summary>
+        /// <param name="fps"></param>
         public virtual void UpdateAnimation(float fps)
         {
             float factor = 1/fps;
@@ -103,10 +117,19 @@ namespace GameLoopOne
                 }
             }
         }
+        /// <summary>
+        /// Returns true if GameObject's collision box is colliding
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool IsCollidingWith(GameObject other)
         {
             return CollisionBox.IntersectsWith(other.CollisionBox);
         }
+        /// <summary>
+        /// Base OnCollision
+        /// </summary>
+        /// <param name="other"></param>
         public virtual void OnCollision(GameObject other)
         {
             

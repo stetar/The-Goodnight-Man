@@ -10,6 +10,11 @@ namespace GameLoopOne.Props
     {
 
         private static string imagePath = "Props/Bridge/Bridge.png";
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="startPos"></param>
+        /// <param name="scaleFactor"></param>
         public Bridge(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor)
         {
 
