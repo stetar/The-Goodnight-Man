@@ -68,7 +68,7 @@
             this.Level2.Size = new System.Drawing.Size(244, 214);
             this.Level2.TabIndex = 2;
             this.Level2.TabStop = false;
-            this.Level2.Text = " Level 1";
+            this.Level2.Text = "Level 2(wip)";
             this.Level2.UseVisualStyleBackColor = false;
             // 
             // Level3
@@ -85,7 +85,7 @@
             this.Level3.Size = new System.Drawing.Size(244, 214);
             this.Level3.TabIndex = 3;
             this.Level3.TabStop = false;
-            this.Level3.Text = " Level 1";
+            this.Level3.Text = "Level 3 (wip)";
             this.Level3.UseVisualStyleBackColor = false;
             // 
             // Level4
@@ -102,7 +102,7 @@
             this.Level4.Size = new System.Drawing.Size(244, 214);
             this.Level4.TabIndex = 4;
             this.Level4.TabStop = false;
-            this.Level4.Text = " Level 1";
+            this.Level4.Text = "Level 3 (wip";
             this.Level4.UseVisualStyleBackColor = false;
             // 
             // LevelMenu
