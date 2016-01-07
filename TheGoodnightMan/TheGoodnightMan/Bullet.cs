@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.EnemyOnly;
 using GameLoopOne.Weapons.Ranged;
 using GameLoopOne.Weapons.Sprites;
 
@@ -56,11 +57,11 @@ namespace GameLoopOne
             }
             foreach (GameObject pewpew in GameWorld.objects.ToList())
             {
-                if (pewpew is RPG)
+                if (pewpew is EnemyRPG)
                 {
                     if (hasAttacked)
                     {
-                        if (!(other is Enemy || other is Weapon || other is Sky))
+                        if (!(other is Enemy && other is Weapon && other is Sky))
                         {
                             GameWorld.removeList.Add(this);
                             GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - (sprite.Width / 2), this.position.Y - (sprite.Height / 2)), 1));
