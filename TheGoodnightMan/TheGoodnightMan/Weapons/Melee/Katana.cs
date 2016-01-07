@@ -14,7 +14,7 @@ namespace GameLoopOne.Weapons.Melee
 
         public Katana(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 10;
+            damage = 100;
             this.AttackSpeed = 1f;
             this.animationSpeed = 30;
             meleeRangeX = 80;

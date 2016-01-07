@@ -468,6 +468,18 @@
     <Content Include="Weapons\Sprites\Pistol4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Weapons\Sprites\RPG1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\RPG2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\RPG3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\RPG4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Weapons\Sprites\UZI1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

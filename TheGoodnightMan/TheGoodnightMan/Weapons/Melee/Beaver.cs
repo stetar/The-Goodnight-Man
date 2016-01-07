@@ -14,10 +14,10 @@ namespace GameLoopOne.Weapons.Melee
 
         public Beaver(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 2;
+            damage = 32;
             this.AttackSpeed = 0.7f;
             this.animationSpeed = 30;
-            meleeRangeX = 50f;
+            meleeRangeX = 85f;
             meleeRangeY = 100f;
 
             this.moveWeaponRight = 20;

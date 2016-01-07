@@ -8,13 +8,19 @@ namespace GameLoopOne.Weapons.Ranged
 {
     class LMG : Weapon
     {
-        private static string imagePath = "";
+        private static string imagePath = "weapons/sprites/LMG1.png;weapons/sprites/LMG2.png;weapons/sprites/LMG3.png;weapons/sprites/LMG4.png";
+
         private static int weaponIndex = 12;
 
         public LMG(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 10;
-            this.AttackSpeed = 0.8f;
+            damage = 42;
+            this.AttackSpeed = 1;
+            this.animationSpeed = 30;
+            meleeRangeX = 100;
+            meleeRangeY = 100;
+            moveWeaponUp = -40;
+            moveWeaponRight = 0;
         }
     }
 }

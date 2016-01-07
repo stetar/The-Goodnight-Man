@@ -366,3 +366,12 @@ C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\UZI3.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\UZI4.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\obj\Debug\GameLoopOne.Forms.ShopMenu.resources
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\EnemySprites\AssualtRifle1.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\EnemySprites\LMG1.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\EnemySprites\Pistol1.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\EnemySprites\RPG1.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\EnemySprites\UZI1.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\RPG1.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\RPG2.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\RPG3.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Weapons\Sprites\RPG4.png
