@@ -8,16 +8,19 @@ namespace GameLoopOne.Weapons.Melee
 {
     class DildoSword : Weapon
     {
-        private static string imagePath  = "";
+        private static string imagePath = "weapons/sprites/DildoSword1.png;weapons/sprites/DildoSword2.png;weapons/sprites/DildoSword3.png;weapons/sprites/DildoSword4.png";
+
         private static int weaponIndex = 7;
 
         public DildoSword(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 1;
+            damage = 100;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
             meleeRangeX = 40;
             meleeRangeY = 80;
+            moveWeaponRight = 20;
+            moveWeaponUp = -35;
         }
     }
 }

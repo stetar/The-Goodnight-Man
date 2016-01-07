@@ -47,7 +47,15 @@ namespace GameLoopOne.Weapons
 #endif
            
         }
-
+        public virtual void ChangeSprite(string imagePath)
+        {
+            animationFrames = new List<Image>();
+            animationFrames.Clear();
+            foreach (string s in imagePath.Split(';'))
+            {
+                animationFrames.Add(Image.FromFile(s));
+            }
+        }
         public virtual void AttackMelee()
         {
             didAttack = true;

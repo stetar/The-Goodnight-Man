@@ -34,8 +34,33 @@ namespace GameLoopOne
         private static float timeOut1 = 10f; //5 secs
         private static bool playSound;
         private static ISound levelChangeSound;
-
         public static ISoundEngine eng = new ISoundEngine();
+
+        public static bool OwnAssaultRifle = false;
+        public static bool OwnRPG;
+        public static bool OwnLMG;
+        public static bool OwnCricketPlayer;
+        public static bool OwnISISFlag;
+        public static bool OwnAxe;
+        public static bool OwnDildoSword;
+        public static bool OwnKatana;
+        public static bool OwnKnife;
+        public static bool OwnGuitar;
+        public static bool OwnBeaver;
+        public static bool OwnPistol;
+        public static bool OwnSmg;
+
+
+
+
+
+
+
+
+
+
+
+
 
         public static Rectangle WindowRectangle
         {
@@ -397,7 +422,22 @@ namespace GameLoopOne
             lineList.Add(GameWorld.iIncorrectness.ToString());
             lineList.Add(GameWorld.iLevel.ToString());
             lineList.Add(Player.weaponIndexNumber.ToString());
-            string[] lines = new string[] { GameWorld.iIncorrectness.ToString(), GameWorld.iLevel.ToString(), Player.currentPlayerWeapon.ToString() };
+            lineList.Add(OwnAssaultRifle.ToString());
+            lineList.Add(OwnRPG.ToString());
+            lineList.Add(OwnLMG.ToString());
+            lineList.Add(OwnCricketPlayer.ToString());
+            lineList.Add(OwnISISFlag.ToString());
+            lineList.Add(OwnAxe.ToString());
+            lineList.Add(OwnDildoSword.ToString());
+            lineList.Add(OwnKatana.ToString());
+            lineList.Add(OwnKnife.ToString());
+            lineList.Add(OwnGuitar.ToString());
+            lineList.Add(OwnBeaver.ToString());
+            lineList.Add(OwnSmg.ToString());
+            lineList.Add(OwnPistol.ToString());
+
+
+
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.
             System.IO.File.WriteAllLines("test.txt", lineList);
@@ -409,6 +449,30 @@ namespace GameLoopOne
             GameWorld.iIncorrectness = Convert.ToInt32(lines[0]);
             GameWorld.iLevel = Convert.ToInt32(lines[1]);
             Player.weaponIndexNumber = Convert.ToInt32(lines[2]);
+            OwnAssaultRifle = Convert.ToBoolean(lines[3]);
+            OwnRPG = Convert.ToBoolean(lines[4]);
+            OwnLMG = Convert.ToBoolean(lines[5]);
+            OwnCricketPlayer = Convert.ToBoolean(lines[6]);
+            OwnISISFlag = Convert.ToBoolean(lines[7]);
+            OwnAxe = Convert.ToBoolean(lines[8]);
+            OwnDildoSword = Convert.ToBoolean(lines[9]);
+            OwnKatana = Convert.ToBoolean(lines[10]);
+            OwnKnife = Convert.ToBoolean(lines[11]);
+            OwnGuitar = Convert.ToBoolean(lines[12]);
+            OwnBeaver = Convert.ToBoolean(lines[13]);
+            OwnSmg = Convert.ToBoolean(lines[14]);
+            OwnPistol = Convert.ToBoolean(lines[15]);
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
