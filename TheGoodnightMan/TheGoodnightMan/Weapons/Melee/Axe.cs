@@ -9,7 +9,7 @@ namespace GameLoopOne.Weapons.Melee
     class Axe : Weapon
     {
         private static string imagePath = "";
-        private static int weaponIndex = 8;
+        private static int weaponIndex = 6;
 
         public Axe(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

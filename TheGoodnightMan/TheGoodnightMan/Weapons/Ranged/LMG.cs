@@ -9,7 +9,7 @@ namespace GameLoopOne.Weapons.Ranged
     class LMG : Weapon
     {
         private static string imagePath = "";
-        private static int weaponIndex = 14;
+        private static int weaponIndex = 12;
 
         public LMG(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

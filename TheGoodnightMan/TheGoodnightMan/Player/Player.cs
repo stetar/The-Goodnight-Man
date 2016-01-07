@@ -52,51 +52,45 @@ namespace GameLoopOne
             switch (weaponIndexNumber)
             {
                 case 0:
-                    currentPlayerWeapon = new Wrench(new Vector2D(0,0), 1f);
+                    currentPlayerWeapon = new BaseballBat(new Vector2D(0, 0), .3f);
                     break;
                 case 1:
                     currentPlayerWeapon = new CricketPlayer(new Vector2D(0,0), .3f);
                     break;
                 case 2:
-                    currentPlayerWeapon = new Crowbar(new Vector2D(0,0), .3f);
-                    break;
-                case 3:
                     currentPlayerWeapon = new Knife(new Vector2D(0, 0), .3f);
                     break;
-                case 4:
+                case 3:
                     currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .5f);
                     break;
-                case 5:
+                case 4:
                     currentPlayerWeapon = new Katana(new Vector2D(0, 0), .3f);
                     break;
-                case 6:
-                    currentPlayerWeapon = new BaseballBat(new Vector2D(0, 0), .3f);
-                    break;
-                case 7:
+                case 5:
                     currentPlayerWeapon = new DildoSword(new Vector2D(0, 0), .3f);
                     break;
-                case 8:
+                case 6:
                     currentPlayerWeapon = new Axe(new Vector2D(0, 0), .3f);
                     break;
-                case 9:
+                case 7:
                     currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .5f);
                     break;
-                case 10:
+                case 8:
                     currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .5f);
                     break;
-                case 11:
-                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0,0), .2f);
+                case 9:
+                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0, 0), .2f);
                     break;
-                case 12:
+                case 10:
                     currentPlayerWeapon = new RPG(new Vector2D(0, 0), .3f);
                     break;
-                case 13:
+                case 11:
                     currentPlayerWeapon = new SMG(new Vector2D(0, 0), .3f);
                     break;
-                case 14:
+                case 12:
                     currentPlayerWeapon = new LMG(new Vector2D(0, 0), .3f);
                     break;
-                case 15:
+                case 13:
                     currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .3f);
                     break;
             }
