@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameLoopOne.Bullet" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAECAAAAAAAAAAAAAAAAAAAAAAAQABIAQAAAAAAAA=</HashCode>
+      <FileName>Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Enemy" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Form1" Collapsed="true">
+    <Position X="61.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAACAAAAAAAACAAAACAFAAIAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Forms\Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.GameObject" Collapsed="true">
+    <Position X="29.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAAAAgAgAAAAKAAAIBIAAASAIAAEAAAAAQA=</HashCode>
+      <FileName>GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.GameWorld" Collapsed="true">
+    <Position X="63.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERUAAIGBAAAwgAAAQAAgCAAAYgIABAFgAEASAAAAAA=</HashCode>
+      <FileName>GameWorld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Impact">
+    <Position X="56.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAgAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Keyboard" Collapsed="true">
+    <Position X="65" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Keyboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Player" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAgAAQAAAQAAAAiAAACAAAIAAQAILAQAAAEAABg=</HashCode>
+      <FileName>Player\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Program" Collapsed="true">
+    <Position X="65" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Coin">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAgAgCAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Props\Coin\Coin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.RigidBodyBox" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RigidBodyBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.SpeechBubble" Collapsed="true">
+    <Position X="52.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAACAAAAACAAAAAAAAAAABEAAAAAEAAAA=</HashCode>
+      <FileName>SpeechBubble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Vector2D" Collapsed="true">
+    <Position X="65" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAACAAAAAAAAAEAAAABgAAAAYAA=</HashCode>
+      <FileName>Vector2d.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Forms.LevelMenu" Collapsed="true">
+    <Position X="61.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAAAAAAAACAAAACAEAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\LevelMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Forms.MainMenuForm" Collapsed="true">
+    <Position X="63.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAABAAAACAAAACAhAEAAACAAAAAKEAAQA=</HashCode>
+      <FileName>Forms\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Properties.Resources" Collapsed="true">
+    <Position X="61.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Properties.Settings" Collapsed="true">
+    <Position X="63.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Props.Bridge" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Props\Bridge\Bridge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Props.Crate">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Props\Crate\Crate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Props.CratePhys" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Props\Crate\CratePhys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Props.Sky">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Props\Sky\Sky.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.Axe" Collapsed="true">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\Axe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.BaseballBat" Collapsed="true">
+    <Position X="23" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\BaseballBat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.Beaver" Collapsed="true">
+    <Position X="29.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\Beaver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.CricketPlayer">
+    <Position X="34.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\CricketPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.Crowbar" Collapsed="true">
+    <Position X="38.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\Crowbar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.DildoSword">
+    <Position X="43.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\DildoSword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.Guitar" Collapsed="true">
+    <Position X="47.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\Guitar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.ISISFlag">
+    <Position X="18.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\ISISFlag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.Katana" Collapsed="true">
+    <Position X="25.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\Katana.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.Knife">
+    <Position X="32" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\Knife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Melee.Wrench" Collapsed="true">
+    <Position X="36.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Melee\Wrench.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Ranged.AssaultRifle" Collapsed="true">
+    <Position X="41" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Ranged\AssaultRifle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Ranged.LMG" Collapsed="true">
+    <Position X="45.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Ranged\LMG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Ranged.Pistol" Collapsed="true">
+    <Position X="50" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Ranged\Pistol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Ranged.RPG" Collapsed="true">
+    <Position X="20.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Ranged\RPG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Ranged.SMG" Collapsed="true">
+    <Position X="27.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Weapons\Ranged\SMG.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Sprites.Explosion" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Weapons\Sprites\Explosion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLoopOne.Weapons.Weapon" Collapsed="true">
+    <Position X="33.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAABAAAgggAhhAAAAAAAAAIAAAIABAgAAEAJAAI=</HashCode>
+      <FileName>Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
