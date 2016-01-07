@@ -351,18 +351,14 @@ namespace GameLoopOne
 
                 case 3:
                     objects.Add(new Crate(new Vector2D(250, 590), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 508), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 426), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 344), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 344), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 262), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 180), .5f));
+                    objects.Add(new Bridge(new Vector2D(450, 490), .5f));
+                    objects.Add(new Crate(new Vector2D(450, 590), .5f));
                     objects.Add(new Crate(new Vector2D(0, 300), .5f));
                     objects.Add(new Crate(new Vector2D(0, 382), .5f));
                     objects.Add(new Crate(new Vector2D(0, 464), .5f));
                     objects.Add(new Crate(new Vector2D(950, 590), .5f));
                     objects.Add(new Crate(new Vector2D(950, 508), .5f));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(0, 217), .75f, (new AssaultRifle(new Vector2D(0, 217), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(75, 217), .75f, (new AssaultRifle(new Vector2D(75, 217), .3f))));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(950, 425), .75f, (new AssaultRifle(new Vector2D(950, 425), .3f))));
 
                     break;

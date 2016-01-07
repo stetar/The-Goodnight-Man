@@ -271,3 +271,9 @@ C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodn
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin4.png
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin5.png
 C:\Users\NFMynster\Source\Repos\The-Goodnight-Man-Final\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin6.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin1.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin2.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin3.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin4.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin5.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin6.png
