@@ -14,13 +14,14 @@ namespace GameLoopOne
         private float timer = 0;
         public static Weapon currentEnemyWeapon;
         public int health;
+        private bool isAlive = true;
         public Enemy(string imagePath, Vector2D startPos, float scaleFactor, Weapon enemyWeapon) : base(imagePath, startPos, scaleFactor)
         {
             currentEnemyWeapon = enemyWeapon;
             GameWorld.objects.Add(currentEnemyWeapon);//Weapon should also be added 
             
             Random hp = new Random();
-            health = hp.Next(40, 81);
+            health = hp.Next(60, 101);
         }
 
         
@@ -28,7 +29,7 @@ namespace GameLoopOne
         public override void Update(float fps)
         {
             fps = 1f/fps;
-            if (timer > currentEnemyWeapon.AttackSpeed)
+            if ((timer > currentEnemyWeapon.AttackSpeed) && isAlive)
             {
                 currentEnemyWeapon.AttackRanged();
                 timer = 0;
@@ -36,6 +37,7 @@ namespace GameLoopOne
             timer += fps;
             if (health <= 0)
             {
+                isAlive = false;
                 //GameWorld.GameWeapons.Add(currentEnemyWeapon);//Weapon should also be added
                 float x = (position.X - sprite.Width / 2) - 75;
                 float x1 = position.X + 10;

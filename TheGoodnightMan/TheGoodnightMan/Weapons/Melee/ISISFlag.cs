@@ -14,13 +14,13 @@ namespace GameLoopOne.Weapons.Melee
 
         public ISISFlag(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 2;
+            damage = 5;
             this.AttackSpeed = 0.1f;
             this.animationSpeed = 30;
-            meleeRangeX = 40;
+            meleeRangeX = 80;
             meleeRangeY = 80;
             this.moveWeaponRight = 20;
-            moveWeaponUp = -30;
+            moveWeaponUp = -28;
         }
     }
 }

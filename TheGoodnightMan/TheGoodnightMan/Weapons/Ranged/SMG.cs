@@ -14,8 +14,13 @@ namespace GameLoopOne.Weapons.Ranged
 
         public SMG(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 5;
-            this.AttackSpeed = .4f;
+            damage = 38;
+            this.AttackSpeed = 1;
+            this.animationSpeed = 30;
+            meleeRangeX = 100;
+            meleeRangeY = 100;
+            moveWeaponUp = -40;
+            moveWeaponRight = 15;
         }
     }
 }

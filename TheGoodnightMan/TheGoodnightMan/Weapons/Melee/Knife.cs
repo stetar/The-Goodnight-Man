@@ -8,10 +8,10 @@
 
         public Knife(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 1;
+            damage = 26;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
-            meleeRangeX = 40;
+            meleeRangeX = 43;
             meleeRangeY = 80;
             moveWeaponUp = 2;
             moveWeaponRight = 20;

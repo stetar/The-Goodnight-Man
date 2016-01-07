@@ -14,11 +14,11 @@ namespace GameLoopOne.Weapons.Melee
 
         public DildoSword(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 5;
-            this.AttackSpeed = 0.5f;
+            damage = 45;
+            this.AttackSpeed = 0.7f;
             this.animationSpeed = 30;
-            meleeRangeX = 40;
-            meleeRangeY = 80;
+            meleeRangeX = 100;
+            meleeRangeY = 90;
             moveWeaponRight = 20;
             moveWeaponUp = -35;
         }

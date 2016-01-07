@@ -14,12 +14,12 @@ namespace GameLoopOne.Weapons.Melee
 
         public CricketPlayer(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 3;
+            damage = 51;
             this.AttackSpeed = 1;
             this.animationSpeed = 30;
-            meleeRangeX = 40;
-            meleeRangeY = 80;
-            moveWeaponUp = -40;
+            meleeRangeX = 100;
+            meleeRangeY = 100;
+            moveWeaponUp = -80;
             moveWeaponRight = 10;
         }
     }
