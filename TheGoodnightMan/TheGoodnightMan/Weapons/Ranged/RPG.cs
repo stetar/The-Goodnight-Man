@@ -9,8 +9,7 @@ namespace GameLoopOne.Weapons.Ranged
     internal class RPG : Weapon
     {
         //public override float AttackSpeed { get; set; }
-        private static string imagePath =
-            "weapons/sprites/weaponSprite1.png;weapons/sprites/weaponSprite2.png;weapons/sprites/weaponSprite3.png;weapons/sprites/weaponSprite4.png";
+        private static string imagePath = "weapons/sprites/weaponSprite1.png;weapons/sprites/weaponSprite2.png;weapons/sprites/weaponSprite3.png;weapons/sprites/weaponSprite4.png";
 
         private static int weaponIndex = 12;
 

@@ -39,8 +39,13 @@ namespace GameLoopOne
             {
                 //GameWorld.GameWeapons.Add(currentEnemyWeapon);//Weapon should also be added
                 float x = (position.X - sprite.Width / 2) - 75;
+                float x1 = position.X + 10;
                 float y = position.Y - sprite.Height / 2;
+                float y1 = position.Y + 10;
+                GameWorld.objects.Add(new Coin(new Vector2D(x1, y1), .5f));
+
                 GameWorld.objects.Add(new Impact(new Vector2D(x,y), .5f));
+
                 GameWorld.removeList.Add(currentEnemyWeapon);
                 GameWorld.removeList.Add(this);
             }
