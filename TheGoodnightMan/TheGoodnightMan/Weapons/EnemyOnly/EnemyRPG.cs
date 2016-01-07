@@ -8,10 +8,10 @@ namespace GameLoopOne.Weapons.EnemyOnly
 {
     class EnemyRPG : Weapon
     {
-        private static string imagePath = "";
+        private static string imagePath = "Weapons/Sprites/EnemySprites/RPG1.png";
         private static int weaponIndex;
 
-        EnemyRPG(Vector2D startPos, float scalefactor) : base(imagePath, startPos, scalefactor, weaponIndex)
+        public EnemyRPG(Vector2D startPos, float scalefactor) : base(imagePath, startPos, scalefactor, weaponIndex)
         {
             damage = 10;
             this.AttackSpeed = 2;
