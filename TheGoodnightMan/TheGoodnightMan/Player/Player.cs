@@ -52,52 +52,46 @@ namespace GameLoopOne
             switch (weaponIndexNumber)
             {
                 case 0:
-                    currentPlayerWeapon = new Wrench(new Vector2D(0,0), 1f);
-                    break;
-                case 1:
-                    currentPlayerWeapon = new CricketPlayer(new Vector2D(0,0), .7f);
-                    break;
-                case 2:
-                    currentPlayerWeapon = new Crowbar(new Vector2D(0,0), .3f);
-                    break;
-                case 3:
-                    currentPlayerWeapon = new Knife(new Vector2D(0, 0), .3f);
-                    break;
-                case 4:
-                    currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .5f);
-                    break;
-                case 5:
-                    currentPlayerWeapon = new Katana(new Vector2D(0, 0), .3f);
-                    break;
-                case 6:
                     currentPlayerWeapon = new BaseballBat(new Vector2D(0, 0), .3f);
                     break;
-                case 7:
+                case 1:
+                    currentPlayerWeapon = new CricketPlayer(new Vector2D(0,0), .3f);
+                    break;
+                case 2:
+                    currentPlayerWeapon = new Knife(new Vector2D(0, 0), .3f);
+                    break;
+                case 3:
+                    currentPlayerWeapon = new Guitar(new Vector2D(0, 0), .5f);
+                    break;
+                case 4:
+                    currentPlayerWeapon = new Katana(new Vector2D(0, 0), .3f);
+                    break;
+                case 5:
                     currentPlayerWeapon = new DildoSword(new Vector2D(0, 0), .3f);
                     break;
-                case 8:
+                case 6:
                     currentPlayerWeapon = new Axe(new Vector2D(0, 0), .3f);
                     break;
-                case 9:
+                case 7:
                     currentPlayerWeapon = new Beaver(new Vector2D(0, 0), .5f);
                     break;
-                case 10:
+                case 8:
                     currentPlayerWeapon = new ISISFlag(new Vector2D(0, 0), .5f);
                     break;
-                case 11:
-                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0,0), .2f);
+                case 9:
+                    currentPlayerWeapon = new AssaultRifle(new Vector2D(0, 0), .2f);
                     break;
-                case 12:
+                case 10:
                     currentPlayerWeapon = new RPG(new Vector2D(0, 0), .3f);
                     break;
-                case 13:
+                case 11:
                     currentPlayerWeapon = new SMG(new Vector2D(0, 0), .3f);
                     break;
-                case 14:
+                case 12:
                     currentPlayerWeapon = new LMG(new Vector2D(0, 0), .3f);
                     break;
-                case 15:
-                    currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .1f);
+                case 13:
+                    currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .3f);
                     break;
             }
             GameWorld.GameWeapons.Add(currentPlayerWeapon); //add it to objects as it should get drawn
@@ -136,7 +130,41 @@ namespace GameLoopOne
             }
             weaponTimer += deltaTime;
 
-          
+            if (Keyboard.IsKeyDown(Keys.S) && weaponPickupTimer > 3)
+            {
+                //Weapon
+                foreach (Weapon wep in GameWorld.GameWeapons.ToList())
+                {
+                    if (this.IsCollidingWith(wep))//If the player is colliding with a weapon and is pressing s
+                    {
+                        //tempWeapon = wep;
+                        //currentPlayerWeapon = null;
+                        ChangeWeapon(currentPlayerWeapon, wep);
+                    }
+                }
+                weaponPickupTimer = 0;
+            }
+            weaponPickupTimer += deltaTime;
+            //if (Keyboard.IsKeyDown(Keys.S) && weaponPickupTimer > 3)
+            //{
+            //    //Weapon
+            //    foreach (Weapon wep in Weapon.gameWeapons.ToList())
+            //    {
+            //        if (this.IsCollidingWith(wep) && Keyboard.IsKeyDown(Keys.S)/* && currentPlayerWeapon != wep*/)//If the player is colliding with a weapon and is pressing s
+            //        {
+            //            currentPlayerWeapon.DropWeapon(currentPlayerWeapon);
+            //            Weapon.removeWeapons.Add(currentPlayerWeapon);
+            //            currentPlayerWeapon = wep;
+
+            //            Weapon.removeWeapons.Add(wep);
+            //            GameWorld.removeList.Add(wep);
+            //            test = true;
+            //        }
+            //    }
+            //    weaponPickupTimer = 0;
+            //}
+            //weaponPickupTimer += deltaTime;
+
             //Jump
             if (Keyboard.IsKeyDown(Keys.W))
             {
@@ -198,7 +226,15 @@ namespace GameLoopOne
             base.Update(fps);
         }
 
-       
+        public void ChangeWeapon(Weapon oldWeapon, Weapon newWeapon)
+        {
+            //GameWorld.removeList.Add(oldWeapon);
+            GameWorld.GameWeapons.Add(newWeapon);
+            GameWorld.GameWeapons.Remove(oldWeapon);
+            weaponIndexNumber = newWeapon.weaponIndex;
+            currentPlayerWeapon = newWeapon;
+            
+        }
 
         public override void UpdateAnimation(float fps)
         {
@@ -241,7 +277,6 @@ namespace GameLoopOne
         {
             if (other is Bullet)
             {
-                
                 health -= Enemy.currentEnemyWeapon.damage;
                 GameWorld.removeList.Add(other);
             }

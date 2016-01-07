@@ -10,11 +10,11 @@ namespace GameLoopOne.Weapons.Melee
     {
         private static string imagePath = "weapons/sprites/DildoSword1.png;weapons/sprites/DildoSword2.png;weapons/sprites/DildoSword3.png;weapons/sprites/DildoSword4.png";
 
-        private static int weaponIndex = 7;
+        private static int weaponIndex = 5;
 
         public DildoSword(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 100;
+            damage = 5;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
             meleeRangeX = 40;

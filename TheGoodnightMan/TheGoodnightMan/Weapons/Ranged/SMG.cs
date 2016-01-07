@@ -10,7 +10,7 @@ namespace GameLoopOne.Weapons.Ranged
     {
         private static string imagePath = "weapons/sprites/UZI1.png;weapons/sprites/UZI2.png;weapons/sprites/UZI3.png;weapons/sprites/UZI4.png";
 
-        private static int weaponIndex = 13;
+        private static int weaponIndex = 11;
 
         public SMG(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Baby.cs" />
     <Compile Include="Bullet.cs" />
     <Compile Include="Forms\ShopMenu.cs">
       <SubType>Form</SubType>
@@ -99,7 +100,6 @@
     <Compile Include="Weapons\Melee\BaseballBat.cs" />
     <Compile Include="Weapons\Melee\Beaver.cs" />
     <Compile Include="Weapons\Melee\CricketPlayer.cs" />
-    <Compile Include="Weapons\Melee\Crowbar.cs" />
     <Compile Include="Weapons\Melee\DildoSword.cs" />
     <Compile Include="Weapons\Melee\Guitar.cs" />
     <Compile Include="Weapons\Melee\ISISFlag.cs" />
@@ -112,7 +112,6 @@
     <Compile Include="Weapons\Weapon.cs" />
     <Compile Include="Weapons\Ranged\Pistol.cs" />
     <Compile Include="Weapons\Melee\Knife.cs" />
-    <Compile Include="Weapons\Melee\Wrench.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +135,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +152,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Babycar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BabyCrying.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Backgrounddoodle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

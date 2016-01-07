@@ -9,7 +9,7 @@ namespace GameLoopOne.Weapons.Ranged
     internal class AssaultRifle : Weapon
     {
         private static string imagePath = "weapons/sprites/AssaultRifle1.png;weapons/sprites/AssaultRifle2.png;weapons/sprites/AssaultRifle3.png;weapons/sprites/AssaultRifle4.png";
-        private static int weaponIndex = 11;
+        private static int weaponIndex = 9;
 
         public AssaultRifle(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

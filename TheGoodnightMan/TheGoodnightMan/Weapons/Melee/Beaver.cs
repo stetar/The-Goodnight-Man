@@ -10,7 +10,7 @@ namespace GameLoopOne.Weapons.Melee
     {
         private static string imagePath = "weapons/sprites/Beaver1.png;weapons/sprites/Beaver2.png;weapons/sprites/Beaver3.png;weapons/sprites/Beaver4.png";
         
-        private static int weaponIndex = 9;
+        private static int weaponIndex = 7;
 
         public Beaver(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

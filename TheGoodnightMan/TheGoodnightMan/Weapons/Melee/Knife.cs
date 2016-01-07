@@ -4,7 +4,7 @@
     {
         //public override float AttackSpeed { get; set; }
         private static string imagePath ="weapons/sprites/KnifeSprite1.png;weapons/sprites/KnifeSprite2.png;weapons/sprites/KnifeSprite3.png;weapons/sprites/KnifeSprite4.png";
-        private static int weaponIndex = 3;
+        private static int weaponIndex = 2;
 
         public Knife(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

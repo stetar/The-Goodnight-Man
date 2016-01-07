@@ -10,7 +10,7 @@ namespace GameLoopOne.Weapons.Melee
     {
         private static string imagePath = "weapons/sprites/ISISFlag1.png;weapons/sprites/ISISFlag2.png;weapons/sprites/ISISFlag3.png;weapons/sprites/ISISFlag4.png";
 
-        private static int weaponIndex = 10;
+        private static int weaponIndex = 8;
 
         public ISISFlag(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

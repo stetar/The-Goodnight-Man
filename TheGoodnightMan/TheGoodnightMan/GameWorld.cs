@@ -376,19 +376,15 @@ namespace GameLoopOne
 
                 case 3:
                     objects.Add(new Crate(new Vector2D(250, 590), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 508), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 426), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 344), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 344), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 262), .5f));
-                    objects.Add(new Crate(new Vector2D(250, 180), .5f));
+                    objects.Add(new Bridge(new Vector2D(450, 490), .5f));
+                    objects.Add(new Crate(new Vector2D(450, 590), .5f));
                     objects.Add(new Crate(new Vector2D(0, 300), .5f));
                     objects.Add(new Crate(new Vector2D(0, 382), .5f));
                     objects.Add(new Crate(new Vector2D(0, 464), .5f));
                     objects.Add(new Crate(new Vector2D(950, 590), .5f));
                     objects.Add(new Crate(new Vector2D(950, 508), .5f));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(0, 217), .75f, (new AssaultRifle(new Vector2D(0, 217), .3f))));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(950, 425), .75f, (new AssaultRifle(new Vector2D(950, 425), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(75, 217), .75f, (new RPG(new Vector2D(75, 217), .3f))));
+                    //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(950, 425), .75f, (new AssaultRifle(new Vector2D(950, 425), .3f))));
 
                     break;
 
@@ -410,6 +406,21 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(600, 450), .5f));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(600, 334), .75f, (new AssaultRifle(new Vector2D(600, 334), .3f))));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(700, 67), .75f, (new AssaultRifle(new Vector2D(700, 67), .3f))));
+
+                    break;
+
+                case 5:
+                    objects.Add(new Crate(new Vector2D(950, 590), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 508), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 426), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 344), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 262), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 180), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 98), .5f));
+                    objects.Add(new Crate(new Vector2D(950, 16), .5f));
+                    objects.Add(new Crate(new Vector2D(950, -16), .5f));
+                    objects.Add(new Crate(new Vector2D(900, 0), .5f));
+                    objects.Add(new Baby("Babycar.png", new Vector2D(500, 570), .5f));
 
                     break;
             }

@@ -12,7 +12,7 @@ namespace GameLoopOne.Weapons.Ranged
     {
         //public override float AttackSpeed { get; set; }
         private static string imagePath ="weapons/sprites/pistol1.png;weapons/sprites/pistol2.png;weapons/sprites/pistol3.png;weapons/sprites/pistol4.png";
-        private static int weaponIndex = 15;
+        private static int weaponIndex = 13;
 
         public Pistol(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
