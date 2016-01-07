@@ -8,12 +8,12 @@ namespace GameLoopOne.Weapons.EnemyOnly
 {
     class EnemyAssaultRifle : Weapon
     {
-        private static string imagePath = "";
+        private static string imagePath = "Weapons/Sprites/EnemySprites/AssualtRifle1.png";
         private static int weaponIndex;
 
-        EnemyAssaultRifle(Vector2D startPos, float scalefactor) : base(imagePath, startPos, scalefactor, weaponIndex)
+        public EnemyAssaultRifle(Vector2D startPos, float scalefactor) : base(imagePath, startPos, scalefactor, weaponIndex)
         {
-            damage = 3;
+            damage = 20;
             this.AttackSpeed = 1;
         }
     }

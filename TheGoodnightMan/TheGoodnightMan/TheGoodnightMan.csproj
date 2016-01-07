@@ -357,7 +357,7 @@
     <Content Include="Weapons\Sprites\DildoSword4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Weapons\Sprites\EnemySprites\AssualRifle1.png">
+    <Content Include="Weapons\Sprites\EnemySprites\AssualtRifle1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Weapons\Sprites\EnemySprites\LMG1.png">

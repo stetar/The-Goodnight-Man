@@ -61,7 +61,7 @@ namespace GameLoopOne
                 {
                     if (hasAttacked)
                     {
-                        if (!(other is Enemy || other is Weapon || other is Sky))
+                        if (!(other is Enemy && other is Weapon && other is Sky))
                         {
                             GameWorld.removeList.Add(this);
                             GameWorld.objects.Add(new Explosion(new Vector2D(this.position.X - (sprite.Width / 2), this.position.Y - (sprite.Height / 2)), 1));
