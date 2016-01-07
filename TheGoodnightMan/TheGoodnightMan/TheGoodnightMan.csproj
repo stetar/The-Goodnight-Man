@@ -108,7 +108,7 @@
     <Compile Include="Weapons\Ranged\LMG.cs" />
     <Compile Include="Weapons\Ranged\RPG.cs" />
     <Compile Include="Weapons\Ranged\SMG.cs" />
-    <Compile Include="Weapons\Sprites\Explosion.cs" />
+    <Compile Include="Explosion.cs" />
     <Compile Include="Weapons\Weapon.cs" />
     <Compile Include="Weapons\Ranged\Pistol.cs" />
     <Compile Include="Weapons\Melee\Knife.cs" />
