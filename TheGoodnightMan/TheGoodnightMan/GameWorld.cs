@@ -324,7 +324,7 @@ namespace GameLoopOne
 
                     //objects.Add(new Wrench(new Vector2D(470, 508), .5f));
 
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new Pistol(new Vector2D(770, 590), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new RPG(new Vector2D(770, 590), .3f))));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(470, 425), .75f, (new AssaultRifle(new Vector2D(470, 425), .3f))));
                     break;
 
@@ -380,7 +380,7 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(400, 200), .5f));
                     objects.Add(new Crate(new Vector2D(600, 450), .5f));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(600, 334), .75f, (new AssaultRifle(new Vector2D(600, 334), .3f))));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(700, 67), .75f, (new LMG(new Vector2D(700, 67), .3f))));
+                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(700, 67), .75f, (new AssaultRifle(new Vector2D(700, 67), .3f))));
 
                     break;
             }
