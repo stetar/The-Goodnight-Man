@@ -64,14 +64,18 @@ namespace GameLoopOne.Weapons
                 }
                 if (go is Baby)
                 {
-                    GameWorld.eng.StopAllSounds();
-                    GameWorld.iIncorrectness += 5;
-                    GameWorld.SaveGameState();
-                    Form1.timer1.Stop();
-                }
-                if (MessageBox.Show("Well done, shithead! No more screaming babies! Enjoy the silence while it lasts...", "Level complete", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
-                {
-                    new LevelMenu().Show();
+                    Baby b1 = go as Baby;
+                    if (attackRangeBox.IntersectsWith(go.CollisionBox))
+                    {
+                        GameWorld.eng.StopAllSounds();
+                        GameWorld.iIncorrectness += 5;
+                        GameWorld.SaveGameState();
+                        Form1.timer1.Stop();
+                        if (MessageBox.Show("Well done, shithead! No more screaming babies! Enjoy the silence while it lasts...", "Level complete", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
+                        {
+                            new LevelMenu().Show();
+                        }
+                    }
                 }
 
                 switch (Player.weaponIndexNumber)
