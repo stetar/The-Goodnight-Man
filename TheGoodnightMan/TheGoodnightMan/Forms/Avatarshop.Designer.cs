@@ -39,7 +39,7 @@
             this.BackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackButton.BackgroundImage")));
             this.BackButton.Location = new System.Drawing.Point(35, 622);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(100, 50);
+            this.BackButton.Size = new System.Drawing.Size(118, 55);
             this.BackButton.TabIndex = 0;
             this.BackButton.TabStop = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);

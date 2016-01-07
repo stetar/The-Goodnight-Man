@@ -340,6 +340,18 @@
     <Content Include="Weapons\Sprites\AxeSprite4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Weapons\Sprites\Baseballbat1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\Baseballbat2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\Baseballbat3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\Baseballbat4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Weapons\Sprites\beaver1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

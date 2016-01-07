@@ -418,14 +418,14 @@ namespace GameLoopOne
 
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.
-            System.IO.File.WriteAllLines("test.txt", lineList);
+            System.IO.File.WriteAllLines("PlayerStats.txt", lineList);
         }
         /// <summary>
         /// Loads the gamestate.
         /// </summary>
         public static void LoadGameState()
         {
-            string[] lines = File.ReadAllLines("test.txt");
+            string[] lines = File.ReadAllLines("PlayerStats.txt");
             GameWorld.iIncorrectness = Convert.ToInt32(lines[0]);
             GameWorld.iLevel = Convert.ToInt32(lines[1]);
             Player.weaponIndexNumber = Convert.ToInt32(lines[2]);
