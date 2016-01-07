@@ -11,14 +11,14 @@ namespace GameLoopOne.Weapons.Ranged
     internal class Pistol : Weapon
     {
         //public override float AttackSpeed { get; set; }
-        private static string imagePath ="weapons/sprites/weaponSprite1.png;weapons/sprites/weaponSprite2.png;weapons/sprites/weaponSprite3.png;weapons/sprites/weaponSprite4.png";
+        private static string imagePath ="weapons/sprites/pistol1.png;weapons/sprites/pistol2.png;weapons/sprites/pistol3.png;weapons/sprites/pistol4.png";
         private static int weaponIndex = 13;
 
         public Pistol(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
             damage = 3;
             this.AttackSpeed = 1;
-            this.animationSpeed = 10;
+            this.animationSpeed = 30;
             meleeRangeX = 10;
         }
     }

@@ -25,6 +25,7 @@ namespace GameLoopOne.Forms
             Level1.TabStop = false; //removes focus;
             //Level2.TabStop = false; //removes focus;
             //Level3.TabStop = false; //removes focus;
+            
             Level1.FlatAppearance.BorderSize = 0;
             Level1.FlatAppearance.BorderSize = 0;
             Level2.FlatAppearance.BorderSize = 0;

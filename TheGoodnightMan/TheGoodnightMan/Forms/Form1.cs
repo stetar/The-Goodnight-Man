@@ -28,6 +28,7 @@ namespace GameLoopOne
             this.CenterToScreen();
             WindowState = FormWindowState.Normal;
             MainMenuForm.showWarning = false;
+            GameWorld.LoadGameState();
         }
         
     private void timer1_Tick(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace GameLoopOne
                 GameWorld.SaveGameState();
                 MainMenuForm.showWarning = false;
                 timer1.Stop();
-                DialogResult dialogResult = MessageBox.Show("What?! Are you pussying out?? Are you fukcing leaving?! Don't you dare be gone for long, you hear me?", "Pause menu (sucker!)", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("What?! Are you pussying out?? Are you fucking leaving?! Don't you dare be gone for long, you hear me?", "Pause menu (sucker!)", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     GameWorld.objects.Clear();

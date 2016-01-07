@@ -41,6 +41,7 @@
             this.Level1.BackColor = System.Drawing.SystemColors.Desktop;
             this.Level1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Level1.BackgroundImage")));
             this.Level1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Level1.FlatAppearance.BorderSize = 0;
             this.Level1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Level1.Font = new System.Drawing.Font("Impact", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Level1.Location = new System.Drawing.Point(36, 89);
