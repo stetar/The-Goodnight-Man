@@ -50,7 +50,7 @@ namespace GameLoopOne
         }
         public override void OnCollision(GameObject other)
         {
-            if (other is Crate)
+            if (other is Crate || other is Bridge)
             {
                 GameWorld.removeList.Add(this);
             }
