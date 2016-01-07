@@ -128,7 +128,7 @@ namespace GameLoopOne.Forms
                 GameWorld.OwnAxe = true;
 
             }
-            else if (GameWorld.OwnISISFlag)
+            else if (GameWorld.OwnAxe)
             {
                 Player.weaponIndexNumber = 6;
 
@@ -262,7 +262,7 @@ namespace GameLoopOne.Forms
             }
             else if (GameWorld.OwnSmg)
             {
-                Player.weaponIndexNumber = 13;
+                Player.weaponIndexNumber = 11;
 
             }
             else if (GameWorld.iIncorrectness < 15)
