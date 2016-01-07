@@ -147,10 +147,6 @@ namespace GameLoopOne.Weapons
                     break;
 
                 case 15:
-                    GameWorld.eng.Play2D("Shotgun.wav");
-                    break;
-
-                case 16:
                     GameWorld.eng.Play2D("GunshotPistol.wav");
                     break;
             }

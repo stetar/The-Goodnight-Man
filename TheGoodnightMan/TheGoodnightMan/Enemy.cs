@@ -11,7 +11,6 @@ namespace GameLoopOne
 {
     class Enemy : GameObject
     {
-        
         private float timer = 0;
         public static Weapon currentEnemyWeapon;
         public int health;
