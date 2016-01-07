@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.EnemyOnly;
 using GameLoopOne.Weapons.Ranged;
 using GameLoopOne.Weapons.Sprites;
 
@@ -56,7 +57,7 @@ namespace GameLoopOne
             }
             foreach (GameObject pewpew in GameWorld.objects.ToList())
             {
-                if (pewpew is RPG)
+                if (pewpew is EnemyRPG)
                 {
                     if (hasAttacked)
                     {
