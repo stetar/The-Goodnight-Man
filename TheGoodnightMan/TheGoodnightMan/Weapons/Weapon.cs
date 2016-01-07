@@ -1,11 +1,12 @@
-﻿using System;
+﻿using GameLoopOne.Forms;
+using IrrKlang;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IrrKlang;
 
 namespace GameLoopOne.Weapons
 {
@@ -45,7 +46,6 @@ namespace GameLoopOne.Weapons
 #if DEBUG
             dc.DrawRectangle(new Pen(Brushes.Red), position.X, position.Y, attackRangeBox.Width, attackRangeBox.Height);//don't draw the actual range in release
 #endif
-           
         }
 
         public virtual void AttackMelee()
@@ -60,6 +60,21 @@ namespace GameLoopOne.Weapons
                     if (attackRangeBox.IntersectsWith(go.CollisionBox))
                     {
                         e1.health -= damage;
+                    }
+                }
+                if (go is Baby)
+                {
+                    Baby b1 = go as Baby;
+                    if (attackRangeBox.IntersectsWith(go.CollisionBox))
+                    {
+                        GameWorld.eng.StopAllSounds();
+                        GameWorld.iIncorrectness += 5;
+                        GameWorld.SaveGameState();
+                        Form1.timer1.Stop();
+                        if (MessageBox.Show("Well done, shithead! No more screaming babies! Enjoy the silence while it lasts...", "Level complete", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
+                        {
+                            new LevelMenu().Show();
+                        }
                     }
                 }
 
@@ -107,8 +122,6 @@ namespace GameLoopOne.Weapons
             }
         }
 
-        
-
         public virtual void AttackRanged()
         {
             foreach (GameObject player in GameWorld.objects)
@@ -155,21 +168,18 @@ namespace GameLoopOne.Weapons
         public override void UpdateAnimation(float fps)
         {
             float factor = 1 / fps;
-            
+
             if (didAttack)
             {
                 currentFrameIndex += factor * animationSpeed;
                 if (currentFrameIndex >= animationFrames.Count)
                 {
-                   
                     currentFrameIndex = 0;
                     didAttack = false;
                 }
 
                 sprite = animationFrames[(int)currentFrameIndex];
-                
             }
-            
         }
 
         public static implicit operator Weapon(string v)

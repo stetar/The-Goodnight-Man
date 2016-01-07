@@ -129,5 +129,13 @@ namespace GameLoopOne.Forms
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
         }
+
+        private void GoToBuyMenu_Click(object sender, EventArgs e)
+        {
+            ShopMenu LevelMenu = new ShopMenu();
+            LevelMenu.Show();
+            this.Hide();
+            
+        }
     }
 }
