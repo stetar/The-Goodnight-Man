@@ -10,7 +10,7 @@ namespace GameLoopOne.Weapons.Melee
     {
         private static string imagePath = "weapons/sprites/Guitar1.png;weapons/sprites/Guitar2.png;weapons/sprites/Guitar3.png;weapons/sprites/Guitar4.png";
 
-        private static int weaponIndex = 4;
+        private static int weaponIndex = 3;
 
         public Guitar(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

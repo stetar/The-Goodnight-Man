@@ -93,7 +93,6 @@
     <Compile Include="Weapons\Melee\BaseballBat.cs" />
     <Compile Include="Weapons\Melee\Beaver.cs" />
     <Compile Include="Weapons\Melee\CricketPlayer.cs" />
-    <Compile Include="Weapons\Melee\Crowbar.cs" />
     <Compile Include="Weapons\Melee\DildoSword.cs" />
     <Compile Include="Weapons\Melee\Guitar.cs" />
     <Compile Include="Weapons\Melee\ISISFlag.cs" />
@@ -106,7 +105,6 @@
     <Compile Include="Weapons\Weapon.cs" />
     <Compile Include="Weapons\Ranged\Pistol.cs" />
     <Compile Include="Weapons\Melee\Knife.cs" />
-    <Compile Include="Weapons\Melee\Wrench.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -173,13 +173,6 @@
       <FileName>Weapons\Melee\CricketPlayer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameLoopOne.Weapons.Melee.Crowbar" Collapsed="true">
-    <Position X="38.75" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
-      <FileName>Weapons\Melee\Crowbar.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="GameLoopOne.Weapons.Melee.DildoSword">
     <Position X="43.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
@@ -213,13 +206,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Weapons\Melee\Knife.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GameLoopOne.Weapons.Melee.Wrench" Collapsed="true">
-    <Position X="36.5" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
-      <FileName>Weapons\Melee\Wrench.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameLoopOne.Weapons.Ranged.AssaultRifle" Collapsed="true">

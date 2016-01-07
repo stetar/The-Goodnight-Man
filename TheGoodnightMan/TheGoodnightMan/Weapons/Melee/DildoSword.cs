@@ -9,7 +9,7 @@ namespace GameLoopOne.Weapons.Melee
     class DildoSword : Weapon
     {
         private static string imagePath  = "";
-        private static int weaponIndex = 7;
+        private static int weaponIndex = 5;
 
         public DildoSword(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {

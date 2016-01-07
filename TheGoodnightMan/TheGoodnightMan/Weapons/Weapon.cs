@@ -66,7 +66,7 @@ namespace GameLoopOne.Weapons
                 switch (Player.weaponIndexNumber)
                 {
                     case 0:
-                        GameWorld.eng.Play2D("Weapons/Sounds/Wrench.wav");
+                        GameWorld.eng.Play2D("Weapons/Sounds/BaseballBat.mp3");
                         break;
 
                     case 1:
@@ -74,19 +74,19 @@ namespace GameLoopOne.Weapons
                         break;
 
                     case 2:
-                        GameWorld.eng.Play2D("Weapons/Sounds/Wrench.wav");
+                        GameWorld.eng.Play2D("Weapons/Sounds/Knife.wav");
                         break;
 
                     case 3:
-                        GameWorld.eng.Play2D("Weapons/Sounds/Knife.wav");
-                        break;
-
-                    case 4:
                         GameWorld.eng.Play2D("Weapons/Sounds/Guitar slag.wav");
                         break;
 
-                    case 5:
+                    case 4:
                         GameWorld.eng.Play2D("Weapons/Sounds/Knife.wav");
+                        break;
+
+                    case 5:
+                        GameWorld.eng.Play2D("Weapons/Sounds/BaseballBat.mp3");
                         break;
 
                     case 6:
@@ -98,14 +98,6 @@ namespace GameLoopOne.Weapons
                         break;
 
                     case 8:
-                        GameWorld.eng.Play2D("Weapons/Sounds/BaseballBat.mp3");
-                        break;
-
-                    case 9:
-                        GameWorld.eng.Play2D("Weapons/Sounds/CricketPlayer.wav");
-                        break;
-
-                    case 10:
                         if (FlagSound == null || FlagSound.Finished)
                         {
                             FlagSound = GameWorld.eng.Play2D("Weapons/Sounds/ISISFlag.mp3", false);
@@ -130,23 +122,23 @@ namespace GameLoopOne.Weapons
             //Switch used to select the correct sound
             switch (Player.weaponIndexNumber)
             {
-                case 11:
+                case 9:
                     GameWorld.eng.Play2D("Machinegun.wav");
                     break;
 
-                case 12:
+                case 10:
                     GameWorld.eng.Play2D("RPG.flac");
                     break;
 
-                case 13:
+                case 11:
                     GameWorld.eng.Play2D("Submachinegun.wav");
                     break;
 
-                case 14:
+                case 12:
                     GameWorld.eng.Play2D("LMG.wav");
                     break;
 
-                case 15:
+                case 13:
                     GameWorld.eng.Play2D("GunshotPistol.wav");
                     break;
             }
