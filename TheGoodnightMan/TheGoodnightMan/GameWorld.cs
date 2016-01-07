@@ -395,6 +395,7 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(950, 16), .5f));
                     objects.Add(new Crate(new Vector2D(950, -16), .5f));
                     objects.Add(new Crate(new Vector2D(900, 0), .5f));
+                    objects.Add(new Baby("Babycar.png", new Vector2D(500, 570), .5f));
 
                     break;
             }

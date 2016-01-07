@@ -283,3 +283,5 @@ C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin4.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin5.png
 C:\Users\Jensenn\Documents\GitHubVisualStudio\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Props\Coin\Coin6.png
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\BabyCrying.wav
+C:\Users\Maks\Source\Repos\The-Goodnight-Man\TheGoodnightMan\TheGoodnightMan\bin\Debug\Babycar.png

@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Baby.cs" />
     <Compile Include="Bullet.cs" />
     <Compile Include="Props\Coin\Coin.cs" />
     <Compile Include="Forms\LevelMenu.cs">
@@ -141,6 +142,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Babycar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BabyCrying.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Backgrounddoodle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
