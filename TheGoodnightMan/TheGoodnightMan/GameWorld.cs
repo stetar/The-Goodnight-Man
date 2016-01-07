@@ -1,5 +1,6 @@
 ﻿using GameLoopOne.Props;
 using GameLoopOne.Weapons;
+using GameLoopOne.Weapons.EnemyOnly;
 using GameLoopOne.Weapons.Melee;
 using GameLoopOne.Weapons.Ranged;
 using GameLoopOne.Weapons.Sprites;
@@ -13,7 +14,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GameLoopOne.Weapons.EnemyOnly;
 
 namespace GameLoopOne
 {
@@ -50,18 +50,6 @@ namespace GameLoopOne
         public static bool OwnBeaver;
         public static bool OwnPistol;
         public static bool OwnSmg;
-
-
-
-
-
-
-
-
-
-
-
-
 
         public static Rectangle WindowRectangle
         {
@@ -347,18 +335,15 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(400, 590), .5f));
                     objects.Add(new Crate(new Vector2D(540, 590), .5f));
                     objects.Add(new Crate(new Vector2D(470, 508), .5f));
-                    //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 590), .75f, (new EnemyRPG(new Vector2D(770, 590), .3f))));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(470, 425), .75f, (new EnemyAssaultRifle(new Vector2D(470, 425), .3f))));
                     break;
 
                 case 1:
 
                     objects.Add(new Crate(new Vector2D(540, 590), .5f));
-                    //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 420),.75f));
-                    //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
+
                     objects.Add(new Bridge(new Vector2D(770, 500), .75f));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 417), .75f, (new EnemyAssaultRifle(new Vector2D(770, 417), .3f))));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(400, 590), .75f, (new EnemyRPG(new Vector2D(400, 590), .3f))));
 
                     break;
 
@@ -366,8 +351,6 @@ namespace GameLoopOne
 
                     objects.Add(new Crate(new Vector2D(570, 590), .5f));
                     objects.Add(new Crate(new Vector2D(670, 590), .5f));
-                    //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(770, 420), .75f));
-                    //objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(300, 590), .75f));
                     objects.Add(new Bridge(new Vector2D(590, 435), .75f));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(590, 518), .75f, (new EnemyAssaultRifle(new Vector2D(590, 518), .3f))));
                     break;
@@ -401,7 +384,6 @@ namespace GameLoopOne
                     objects.Add(new Crate(new Vector2D(700, 150), .5f));
                     objects.Add(new Crate(new Vector2D(400, 200), .5f));
                     objects.Add(new Crate(new Vector2D(600, 450), .5f));
-                    objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(600, 334), .75f, (new EnemyAssaultRifle(new Vector2D(600, 334), .3f))));
                     objects.Add(new Enemy("player/sprites/playersprite1.png", new Vector2D(700, 67), .75f, (new EnemyAssaultRifle(new Vector2D(700, 67), .3f))));
 
                     break;
@@ -444,8 +426,6 @@ namespace GameLoopOne
             lineList.Add(OwnSmg.ToString());
             lineList.Add(OwnPistol.ToString());
 
-
-
             // WriteAllLines creates a file, writes a collection of strings to the file,
             // and then closes the file.
             System.IO.File.WriteAllLines("test.txt", lineList);
@@ -470,17 +450,6 @@ namespace GameLoopOne
             OwnBeaver = Convert.ToBoolean(lines[13]);
             OwnSmg = Convert.ToBoolean(lines[14]);
             OwnPistol = Convert.ToBoolean(lines[15]);
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
