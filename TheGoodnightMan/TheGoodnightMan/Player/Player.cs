@@ -59,7 +59,7 @@ namespace GameLoopOne
                     break;
 
                 case 1:
-                    currentPlayerWeapon = new CricketPlayer(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new CricketPlayer(new Vector2D(0, 0), .8f);
                     break;
 
                 case 2:
@@ -79,7 +79,7 @@ namespace GameLoopOne
                     break;
 
                 case 6:
-                    currentPlayerWeapon = new Axe(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new Axe(new Vector2D(0, 0), .2f);
                     break;
 
                 case 7:
@@ -107,7 +107,7 @@ namespace GameLoopOne
                     break;
 
                 case 13:
-                    currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .3f);
+                    currentPlayerWeapon = new Pistol(new Vector2D(0, 0), .1f);
                     break;
             }
             GameWorld.GameWeapons.Add(currentPlayerWeapon); //add it to objects as it should get drawn

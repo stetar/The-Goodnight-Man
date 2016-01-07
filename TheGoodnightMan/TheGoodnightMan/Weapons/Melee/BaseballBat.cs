@@ -14,11 +14,11 @@ namespace GameLoopOne.Weapons.Melee
 
         public BaseballBat(Vector2D startPos, float scaleFactor) : base(imagePath, startPos, scaleFactor, weaponIndex)
         {
-            damage = 2;
+            damage = 20;
             this.AttackSpeed = 0.5f;
             this.animationSpeed = 30;
-            meleeRangeX = 40;
-            meleeRangeY = 40;
+            meleeRangeX = 80;
+            meleeRangeY = 80;
             moveWeaponUp = -40;
             moveWeaponRight = 20;
         }
