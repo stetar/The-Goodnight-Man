@@ -351,6 +351,21 @@
     <Content Include="Weapons\Sprites\DildoSword4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Weapons\Sprites\EnemySprites\AssualRifle1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\EnemySprites\LMG1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\EnemySprites\Pistol1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\EnemySprites\RPG1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Weapons\Sprites\EnemySprites\UZI1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Weapons\Sprites\Explosion1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
